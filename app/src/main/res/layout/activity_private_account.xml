@@ -25,7 +25,7 @@
             android:layout_centerInParent="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="25sp"
+            android:textSize="25dp"
             android:textColor="#ffffff"
             android:textStyle="bold"
             android:gravity="center_horizontal"
@@ -55,7 +55,7 @@
                 android:layout_width="0dp"
                 android:layout_weight="0.3"
                 android:layout_height="match_parent"
-                android:textSize="13sp"
+                android:textSize="13dp"
                 android:textColor="#c8a27a"
                 android:text="검색날짜"
                 />
@@ -129,7 +129,7 @@
                 android:layout_width="0dp"
                 android:layout_weight="0.3"
                 android:layout_height="match_parent"
-                android:textSize="13sp"
+                android:textSize="13dp"
                 android:textColor="#c8a27a"
                 android:text="검색종류"
                 />
@@ -211,7 +211,7 @@
                 android:layout_width="0dp"
                 android:layout_weight="0.25"
                 android:layout_height="match_parent"
-                android:textSize="13sp"
+                android:textSize="13dp"
                 android:textColor="#c8a27a"
                 android:text="NO "
                 />
@@ -221,7 +221,7 @@
                 android:layout_width="0dp"
                 android:layout_weight="0.25"
                 android:layout_height="match_parent"
-                android:textSize="13sp"
+                android:textSize="13dp"
                 android:textColor="#c8a27a"
                 android:text="거래일자"
                 />
@@ -230,7 +230,7 @@
                 android:layout_width="0dp"
                 android:layout_weight="0.25"
                 android:layout_height="match_parent"
-                android:textSize="13sp"
+                android:textSize="13dp"
                 android:textColor="#c8a27a"
                 android:text="입금액"
                 />
@@ -239,7 +239,7 @@
                 android:layout_width="0dp"
                 android:layout_weight="0.25"
                 android:layout_height="match_parent"
-                android:textSize="13sp"
+                android:textSize="13dp"
                 android:textColor="#c8a27a"
                 android:text="비고"
                 />
@@ -272,7 +272,7 @@
                 android:layout_width="0dp"
                 android:layout_weight="0.25"
                 android:layout_height="wrap_content"
-                android:textSize="13sp"
+                android:textSize="13dp"
                 android:textColor="#ffffff"
                 android:text="입금총액"
                 />
@@ -286,7 +286,7 @@
                     android:paddingRight="16dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="12sp"
+                    android:textSize="12dp"
                     android:textColor="#ffffff"
                     android:text="6,985,922,222원"
                     />

@@ -25,7 +25,7 @@
                 android:layout_width="0dp"
                 android:layout_weight="0.25"
                 android:layout_height="wrap_content"
-                android:textSize="13sp"
+                android:textSize="13dp"
                 android:textColor="#ffffff"
                 android:text="NO "
                 />
@@ -36,7 +36,7 @@
                 android:layout_width="0dp"
                 android:layout_weight="0.25"
                 android:layout_height="wrap_content"
-                android:textSize="13sp"
+                android:textSize="13dp"
                 android:textColor="#ffffff"
                 android:text="가맹점명
 연락처"
@@ -48,7 +48,7 @@
                 android:layout_width="0dp"
                 android:layout_weight="0.25"
                 android:layout_height="wrap_content"
-                android:textSize="13sp"
+                android:textSize="13dp"
                 android:textColor="#ffffff"
                 android:text="판매금액"
                 />
@@ -59,7 +59,7 @@
                 android:layout_width="0dp"
                 android:layout_weight="0.25"
                 android:layout_height="wrap_content"
-                android:textSize="13sp"
+                android:textSize="13dp"
                 android:textColor="#ffffff"
                 android:text="추천그룹액"
                 />

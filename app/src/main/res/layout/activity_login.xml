@@ -41,7 +41,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@null"
-                android:textSize="18sp"
+                android:textSize="18dp"
                 android:textColor="#ffffff"
                 android:hint="ID"
                 android:textColorHint="#7d7d7d"/>
@@ -71,7 +71,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@null"
-                android:textSize="18sp"
+                android:textSize="18dp"
                 android:textColor="#ffffff"
                 android:hint="PASSWORD"
                 android:textColorHint="#7d7d7d"/>
@@ -89,7 +89,7 @@
             android:layout_width="match_parent"
             android:gravity="center"
             android:layout_height="53dp"
-            android:textSize="18sp"
+            android:textSize="18dp"
             android:background="#926f4a"
             android:textColor="#ffffff"
             android:text="LOG IN"/>
@@ -102,7 +102,7 @@
         android:layout_marginBottom="28.5dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:textSize="8sp"
+        android:textSize="8dp"
         android:textColor="#9cbbbbbb"
         android:letterSpacing="0.05"
         android:gravity="bottom||center"

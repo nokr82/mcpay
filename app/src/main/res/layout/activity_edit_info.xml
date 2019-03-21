@@ -28,7 +28,7 @@
             android:layout_centerInParent="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="25sp"
+            android:textSize="25dp"
             android:textColor="#ffffff"
             android:textStyle="bold"
             android:gravity="center_horizontal"
@@ -396,7 +396,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="12dp"
                     android:textColor="#ffffff"
-                    android:lineSpacingExtra="24sp"
+                    android:lineSpacingExtra="24dp"
                     android:text="우심"
                     />
 
@@ -412,7 +412,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="12dp"
                     android:textColor="#ffffff"
-                    android:lineSpacingExtra="24sp"
+                    android:lineSpacingExtra="24dp"
                     android:text="세우"
                     />
 
@@ -513,7 +513,7 @@
             android:layout_centerInParent="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="25sp"
+            android:textSize="25dp"
             android:textColor="#000000"
             android:textStyle="bold"
             android:gravity="center_horizontal"

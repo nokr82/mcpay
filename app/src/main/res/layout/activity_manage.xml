@@ -25,7 +25,7 @@
             android:layout_centerInParent="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="25sp"
+            android:textSize="25dp"
             android:textColor="#ffffff"
             android:textStyle="bold"
             android:gravity="center_horizontal"
@@ -46,9 +46,9 @@
             android:paddingLeft="39.5dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="15sp"
+            android:textSize="15dp"
             android:textColor="#facd98"
-            android:lineSpacingExtra="-9sp"
+            android:lineSpacingExtra="-9dp"
             android:gravity="center_horizontal"
             android:text="김도윤2"
             />
@@ -57,9 +57,9 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:textSize="15sp"
+            android:textSize="15dp"
             android:textColor="#ffffff"
-            android:lineSpacingExtra="-9sp"
+            android:lineSpacingExtra="-9dp"
             android:text="님 환영합니다."
             />
 
@@ -122,7 +122,7 @@
                         android:layout_height="wrap_content"
                         android:textSize="12dp"
                         android:textColor="#c99e6b"
-                        android:lineSpacingExtra="-6sp"
+                        android:lineSpacingExtra="-6dp"
                         android:gravity="center_horizontal"
                         android:text="사용가능쿠폰"
                         />
@@ -139,9 +139,9 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="25sp"
+                        android:textSize="25dp"
                         android:textColor="#ffffff"
-                        android:lineSpacingExtra="-19sp"
+                        android:lineSpacingExtra="-19dp"
                         android:gravity="center_horizontal"
                         android:text="13"
                         />
@@ -151,7 +151,7 @@
                         android:layout_height="wrap_content"
                         android:textSize="12dp"
                         android:textColor="#c99e6b"
-                        android:lineSpacingExtra="-6sp"
+                        android:lineSpacingExtra="-6dp"
                         android:gravity="center_horizontal"
                         android:text="장"/>
                 </LinearLayout>
@@ -189,7 +189,7 @@
                         android:layout_height="wrap_content"
                         android:textSize="12dp"
                         android:textColor="#c99e6b"
-                        android:lineSpacingExtra="-6sp"
+                        android:lineSpacingExtra="-6dp"
                         android:gravity="center_horizontal"
                         android:text="전용계좌금액"
                         />
@@ -206,9 +206,9 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="25sp"
+                        android:textSize="25dp"
                         android:textColor="#ffffff"
-                        android:lineSpacingExtra="-19sp"
+                        android:lineSpacingExtra="-19dp"
                         android:gravity="center_horizontal"
                         android:text="5,251,200"
                         />
@@ -218,7 +218,7 @@
                         android:layout_height="wrap_content"
                         android:textSize="12dp"
                         android:textColor="#c99e6b"
-                        android:lineSpacingExtra="-6sp"
+                        android:lineSpacingExtra="-6dp"
                         android:gravity="center_horizontal"
                         android:text="원"/>
                 </LinearLayout>
@@ -262,7 +262,7 @@
                         android:layout_height="wrap_content"
                         android:textSize="12dp"
                         android:textColor="#c99e6b"
-                        android:lineSpacingExtra="-6sp"
+                        android:lineSpacingExtra="-6dp"
                         android:gravity="center_horizontal"
                         android:text="적립금 잔액"
                         />
@@ -279,9 +279,9 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="25sp"
+                        android:textSize="25dp"
                         android:textColor="#ffffff"
-                        android:lineSpacingExtra="-19sp"
+                        android:lineSpacingExtra="-19dp"
                         android:gravity="center_horizontal"
                         android:text="251,200"
                         />
@@ -291,7 +291,7 @@
                         android:layout_height="wrap_content"
                         android:textSize="12dp"
                         android:textColor="#c99e6b"
-                        android:lineSpacingExtra="-6sp"
+                        android:lineSpacingExtra="-6dp"
                         android:gravity="center_horizontal"
                         android:text="원"/>
                 </LinearLayout>
@@ -329,7 +329,7 @@
                         android:layout_height="wrap_content"
                         android:textSize="12dp"
                         android:textColor="#c99e6b"
-                        android:lineSpacingExtra="-6sp"
+                        android:lineSpacingExtra="-6dp"
                         android:gravity="center_horizontal"
                         android:text="구매내역/결제취소"
                         />
@@ -346,9 +346,9 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="25sp"
+                        android:textSize="25dp"
                         android:textColor="#ffffff"
-                        android:lineSpacingExtra="-19sp"
+                        android:lineSpacingExtra="-19dp"
                         android:gravity="center_horizontal"
                         android:text="6"
                         />
@@ -358,7 +358,7 @@
                         android:layout_height="wrap_content"
                         android:textSize="12dp"
                         android:textColor="#c99e6b"
-                        android:lineSpacingExtra="-6sp"
+                        android:lineSpacingExtra="-6dp"
                         android:gravity="center_horizontal"
                         android:text="건"/>
                 </LinearLayout>
@@ -666,7 +666,7 @@
                 android:layout_height="wrap_content"
                 android:textSize="14dp"
                 android:textColor="#ffffff"
-                android:lineSpacingExtra="-7.8sp"
+                android:lineSpacingExtra="-7.8dp"
                 android:gravity="center_horizontal"
                 android:text="전화걸기"
                 />

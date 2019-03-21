@@ -17,7 +17,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textStyle="bold"
-        android:textSize="12.5sp"
+        android:textSize="12.5dp"
         android:textColor="#ad8a5f"
         android:gravity="center_horizontal"
         android:text="MOBILE CREDIT\nCOMPANY "

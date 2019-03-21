@@ -172,7 +172,7 @@
         android:layout_height="wrap_content"
         android:textSize="12dp"
         android:textColor="#ba8a59"
-        android:lineSpacingExtra="14sp"
+        android:lineSpacingExtra="14dp"
         android:gravity="center"
         android:text="계좌 비밀번호 수정을 하시겠습니까?"
         />
