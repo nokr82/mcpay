@@ -41,6 +41,7 @@
         android:layout_width="match_parent"
         android:gravity="center_vertical"
         android:layout_height="wrap_content">
+
         <TextView
             android:paddingLeft="39.5dp"
             android:layout_width="wrap_content"
@@ -51,6 +52,7 @@
             android:gravity="center_horizontal"
             android:text="김도윤2"
             />
+
         <TextView
             android:layout_width="0dp"
             android:layout_weight="1"
@@ -82,7 +84,6 @@
     </LinearLayout>
 
 
-
     <LinearLayout
         android:layout_marginLeft="16.5dp"
         android:layout_marginRight="16.5dp"
@@ -102,16 +103,19 @@
                 android:layout_weight="1"
                 android:orientation="vertical"
                 android:layout_height="match_parent">
+
                 <LinearLayout
                     android:orientation="horizontal"
                     android:layout_marginTop="9.5dp"
                     android:gravity="center||center_vertical"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
+
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@mipmap/coupon_icon"/>
+
                     <TextView
                         android:layout_marginLeft="8.5dp"
                         android:layout_width="wrap_content"
@@ -141,6 +145,7 @@
                         android:gravity="center_horizontal"
                         android:text="13"
                         />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -165,16 +170,19 @@
                 android:layout_weight="1"
                 android:orientation="vertical"
                 android:layout_height="match_parent">
+
                 <LinearLayout
                     android:orientation="horizontal"
                     android:layout_marginTop="9.5dp"
                     android:gravity="center||center_vertical"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
+
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@mipmap/bankbook_icon"/>
+
                     <TextView
                         android:layout_marginLeft="8.5dp"
                         android:layout_width="wrap_content"
@@ -204,6 +212,7 @@
                         android:gravity="center_horizontal"
                         android:text="5,251,200"
                         />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -217,10 +226,12 @@
 
             </LinearLayout>
         </LinearLayout>
+
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:background="#926f4a"/>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -232,16 +243,19 @@
                 android:layout_weight="1"
                 android:orientation="vertical"
                 android:layout_height="match_parent">
+
                 <LinearLayout
                     android:orientation="horizontal"
                     android:layout_marginTop="9.5dp"
                     android:gravity="center||center_vertical"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
+
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@mipmap/payback_icon"/>
+
                     <TextView
                         android:layout_marginLeft="8.5dp"
                         android:layout_width="wrap_content"
@@ -271,6 +285,7 @@
                         android:gravity="center_horizontal"
                         android:text="251,200"
                         />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -283,26 +298,31 @@
 
 
             </LinearLayout>
+
             <View
                 android:layout_width="1dp"
                 android:layout_height="match_parent"
                 android:background="#926f4a"/>
+
             <LinearLayout
                 android:gravity="center"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:orientation="vertical"
                 android:layout_height="match_parent">
+
                 <LinearLayout
                     android:orientation="horizontal"
                     android:layout_marginTop="9.5dp"
                     android:gravity="center||center_vertical"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
+
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@mipmap/sell_icon"/>
+
                     <TextView
                         android:layout_marginLeft="8.5dp"
                         android:layout_width="wrap_content"
@@ -332,6 +352,7 @@
                         android:gravity="center_horizontal"
                         android:text="6"
                         />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -372,6 +393,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@mipmap/icon_pay"/>
+
             <TextView
                 android:layout_width="0dp"
                 android:layout_weight="1"
@@ -389,10 +411,12 @@
 
 
         </LinearLayout>
+
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:background="#cccccc"/>
+
         <LinearLayout
             android:paddingTop="2.5dp"
             android:paddingBottom="2.5dp"
@@ -407,6 +431,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@mipmap/icon_shop"/>
+
             <TextView
                 android:layout_width="0dp"
                 android:layout_weight="1"
@@ -424,10 +449,12 @@
 
 
         </LinearLayout>
+
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:background="#cccccc"/>
+
         <LinearLayout
             android:paddingTop="2.5dp"
             android:paddingBottom="2.5dp"
@@ -442,6 +469,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@mipmap/icon_remember"/>
+
             <TextView
                 android:layout_width="0dp"
                 android:layout_weight="1"
@@ -459,10 +487,12 @@
 
 
         </LinearLayout>
+
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:background="#cccccc"/>
+
         <LinearLayout
             android:paddingTop="2.5dp"
             android:paddingBottom="2.5dp"
@@ -477,6 +507,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@mipmap/icon_autologin"/>
+
             <TextView
                 android:layout_width="0dp"
                 android:layout_weight="1"
@@ -496,10 +527,12 @@
 
 
         </LinearLayout>
+
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:background="#cccccc"/>
+
         <LinearLayout
             android:paddingTop="2.5dp"
             android:paddingBottom="2.5dp"
@@ -514,6 +547,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@mipmap/icon_notice"/>
+
             <TextView
                 android:layout_width="0dp"
                 android:layout_weight="1"
@@ -531,10 +565,12 @@
 
 
         </LinearLayout>
+
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:background="#cccccc"/>
+
         <LinearLayout
             android:paddingTop="2.5dp"
             android:paddingBottom="2.5dp"
@@ -549,6 +585,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@mipmap/icon_update"/>
+
             <TextView
                 android:layout_width="0dp"
                 android:layout_weight="1"
@@ -566,6 +603,7 @@
 
 
         </LinearLayout>
+
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
@@ -573,7 +611,6 @@
 
 
     </LinearLayout>
-
 
 
     <LinearLayout
@@ -588,6 +625,7 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content">
+
             <TextView
                 android:textStyle="bold"
                 android:layout_width="wrap_content"
@@ -597,6 +635,7 @@
                 android:lineSpacingExtra="2.5dp"
                 android:text="고객센터  02-2124-6625"
                 />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -615,6 +654,7 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content">
+
             <TextView
                 android:layout_gravity="end"
                 android:paddingTop="12dp"

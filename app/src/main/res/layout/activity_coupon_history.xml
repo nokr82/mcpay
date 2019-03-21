@@ -35,7 +35,6 @@
     </RelativeLayout>
 
 
-
     <LinearLayout
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
@@ -50,6 +49,7 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:orientation="horizontal">
+
             <TextView
                 android:gravity="center"
                 android:layout_width="0dp"
@@ -113,17 +113,19 @@
             </LinearLayout>
 
 
-
         </LinearLayout>
+
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:background="#c8a27a"/>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
             android:orientation="horizontal">
+
             <TextView
                 android:gravity="center"
                 android:layout_width="0dp"
@@ -180,12 +182,10 @@
             </LinearLayout>
 
 
-
         </LinearLayout>
 
 
     </LinearLayout>
-
 
 
     <LinearLayout
@@ -197,16 +197,19 @@
         android:layout_weight="1"
         android:paddingTop="10dp"
         android:layout_marginTop="14dp">
+
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:background="#c8a27a"/>
+
         <LinearLayout
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
+
             <TextView
                 android:gravity="center"
                 android:layout_width="0dp"
@@ -227,6 +230,7 @@
                 android:text="발급일
 만료일"
                 />
+
             <TextView
                 android:gravity="center"
                 android:layout_width="0dp"
@@ -236,6 +240,7 @@
                 android:textColor="#c8a27a"
                 android:text="쿠폰금액"
                 />
+
             <TextView
                 android:gravity="center"
                 android:layout_width="0dp"
@@ -247,8 +252,8 @@
                 />
 
 
-
         </LinearLayout>
+
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
@@ -265,14 +270,12 @@
 
 
 
-
-
     </LinearLayout>
 
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="#ffffff"/>
+        android:background="#cccccc"/>
 
     <LinearLayout
         android:gravity="center_vertical"
@@ -295,7 +298,6 @@
             android:textColor="#000000"
             android:text="쿠폰선물"
             />
-
 
 
         <TextView
@@ -325,7 +327,6 @@
             android:textColor="#000000"
             android:text="쿠폰결제"
             />
-
 
 
     </LinearLayout>

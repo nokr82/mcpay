@@ -94,46 +94,6 @@
             android:textColor="#ffffff"
             android:text="LOG IN"/>
 
-        <LinearLayout
-            android:paddingBottom="20dp"
-            android:layout_marginTop="30dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <ImageView
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:src="@mipmap/check"
-                android:background="@drawable/background_border_strock_ffffff"/>
-
-            <TextView
-                android:layout_marginLeft="10dp"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:textSize="14.5sp"
-                android:textColor="#c99e6b"
-                android:gravity="center_horizontal"
-                android:text="아이디저장"
-                />
-
-            <ImageView
-                android:layout_marginLeft="50dp"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:background="@drawable/background_border_strock_ffffff"/>
-
-            <TextView
-                android:layout_marginLeft="10dp"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:textSize="14.5sp"
-                android:textColor="#c99e6b"
-                android:gravity="center_horizontal"
-                android:text="자동 로그인"
-                />
-        </LinearLayout>
     </LinearLayout>
 
 

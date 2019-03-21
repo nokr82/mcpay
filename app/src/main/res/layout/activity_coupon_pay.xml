@@ -32,7 +32,7 @@
             android:textColor="#ffffff"
             android:textStyle="bold"
             android:gravity="center_horizontal"
-            android:text="머니선물"
+            android:text="쿠폰결제"
             />
 
     </RelativeLayout>
@@ -63,72 +63,12 @@
             android:layout_height="wrap_content"
             android:textSize="13dp"
             android:textColor="#c8a27a"
-            android:text="사용자 인증"
+            android:text="결제내용"
             />
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:background="#c99e6b"/>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
-
-            <TextView
-                android:paddingBottom="10dp"
-                android:paddingTop="10dp"
-                android:gravity="center"
-                android:layout_width="0dp"
-                android:layout_weight="0.25"
-                android:layout_height="wrap_content"
-                android:textSize="12dp"
-                android:textColor="#999999"
-                android:text="판매합계"
-                />
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_weight="0.75"
-                android:gravity="center_vertical"
-                android:layout_height="match_parent">
-
-                <EditText
-                    android:background="#222222"
-                    android:layout_marginRight="14dp"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:textSize="12dp"
-                    android:textColor="#ffffff"
-                    />
-
-                <TextView
-                    android:layout_marginRight="35.5dp"
-                    android:textStyle="bold"
-                    android:paddingRight="17.5dp"
-                    android:paddingLeft="17.5dp"
-                    android:paddingTop="6.5dp"
-                    android:paddingBottom="6.5dp"
-                    android:background="#c99e6b"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="12dp"
-                    android:textColor="#000000"
-                    android:text="선택"
-                    />
-
-
-            </LinearLayout>
-
-
-        </LinearLayout>
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#999999"/>
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -143,7 +83,7 @@
                 android:layout_height="wrap_content"
                 android:textSize="12dp"
                 android:textColor="#999999"
-                android:text="계좌지급번호"
+                android:text="매장명"
                 />
             <LinearLayout
                 android:layout_width="0dp"
@@ -190,7 +130,101 @@
                 android:layout_height="wrap_content"
                 android:textSize="12dp"
                 android:textColor="#999999"
-                android:text="계좌잔액"
+                android:text="쿠폰금액"
+                />
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="0.75"
+                android:gravity="center_vertical"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:background="#222222"
+                    android:layout_marginRight="14dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:textSize="12dp"
+                    android:textColor="#ffffff"
+                    />
+
+
+
+
+            </LinearLayout>
+
+
+
+
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#999999"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <TextView
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_weight="0.25"
+                android:layout_height="wrap_content"
+                android:textSize="12dp"
+                android:textColor="#999999"
+                android:text="발행일자"
+                />
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="0.75"
+                android:gravity="center_vertical"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:background="#222222"
+                    android:layout_marginRight="14dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:textSize="12dp"
+                    android:textColor="#ffffff"
+                    />
+
+
+
+
+            </LinearLayout>
+
+
+
+
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#999999"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <TextView
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_weight="0.25"
+                android:layout_height="wrap_content"
+                android:textSize="12dp"
+                android:textColor="#999999"
+                android:text="만기일자"
                 />
             <LinearLayout
                 android:layout_width="0dp"
@@ -223,199 +257,65 @@
             android:layout_height="1dp"
             android:background="#999999"/>
     </LinearLayout>
+
+
+
+
+
+
+
 
     <LinearLayout
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="33.5dp"
         android:layout_below="@id/userLL"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginTop="17.5dp">
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#c99e6b"/>
+        android:layout_height="wrap_content">
+        <TextView
+            android:textStyle="bold"
+            android:layout_marginRight="6.5dp"
+            android:gravity="center"
+            android:background="#f0ba2f"
+            android:paddingRight="45dp"
+            android:paddingLeft="45dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:textColor="#000000"
+            android:lineSpacingExtra="35sp"
+            android:text="쿠폰스캔"
+            />
 
         <TextView
-            android:paddingTop="13dp"
-            android:paddingBottom="13dp"
             android:textStyle="bold"
+            android:layout_marginLeft="6.5dp"
             android:gravity="center"
-            android:layout_width="match_parent"
+            android:background="#f0ba2f"
+            android:paddingRight="45dp"
+            android:paddingLeft="45dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:textSize="13dp"
-            android:textColor="#c8a27a"
-            android:text="받는사람정보"
+            android:textSize="15dp"
+            android:textColor="#000000"
+            android:lineSpacingExtra="35sp"
+            android:text="쿠폰결제"
             />
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#c99e6b"/>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
-            <TextView
-                android:paddingBottom="10dp"
-                android:paddingTop="10dp"
-                android:gravity="center"
-                android:layout_width="0dp"
-                android:layout_weight="0.25"
-                android:layout_height="wrap_content"
-                android:textSize="12dp"
-                android:textColor="#999999"
-                android:text="전화번호"
-                />
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_weight="0.75"
-                android:gravity="center_vertical"
-                android:layout_height="match_parent">
-
-                <EditText
-                    android:background="#222222"
-                    android:layout_marginRight="14dp"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:textSize="12dp"
-                    android:textColor="#ffffff"
-                    />
 
 
 
-
-            </LinearLayout>
-
-
-
-
-
-        </LinearLayout>
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#999999"/>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
-            <TextView
-                android:paddingBottom="10dp"
-                android:paddingTop="10dp"
-                android:gravity="center"
-                android:layout_width="0dp"
-                android:layout_weight="0.25"
-                android:layout_height="wrap_content"
-                android:textSize="12dp"
-                android:textColor="#999999"
-                android:text="아이디"
-                />
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_weight="0.75"
-                android:gravity="center_vertical"
-                android:layout_height="match_parent">
-
-                <EditText
-                    android:background="#222222"
-                    android:layout_marginRight="14dp"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:textSize="12dp"
-                    android:textColor="#ffffff"
-                    />
-
-
-
-
-            </LinearLayout>
-
-
-
-
-
-        </LinearLayout>
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#999999"/>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
-            <TextView
-                android:paddingBottom="10dp"
-                android:paddingTop="10dp"
-                android:gravity="center"
-                android:layout_width="0dp"
-                android:layout_weight="0.25"
-                android:layout_height="wrap_content"
-                android:textSize="12dp"
-                android:textColor="#999999"
-                android:text="선물금액액"
-               />
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_weight="0.75"
-                android:gravity="center_vertical"
-                android:layout_height="match_parent">
-
-                <EditText
-                    android:background="#222222"
-                    android:layout_marginRight="14dp"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:textSize="12dp"
-                    android:textColor="#ffffff"
-                    />
-
-
-
-
-            </LinearLayout>
-
-
-
-
-
-        </LinearLayout>
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#999999"/>
     </LinearLayout>
 
 
 
 
-    <RelativeLayout
-        android:layout_alignParentBottom="true"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:background="#f0ba2f">
 
-        <TextView
-            android:layout_centerInParent="true"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="25sp"
-            android:textColor="#000000"
-            android:textStyle="bold"
-            android:gravity="center_horizontal"
-            android:text="선물하기"
-            />
-
-    </RelativeLayout>
 </RelativeLayout>
 
 

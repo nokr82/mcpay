@@ -29,11 +29,10 @@
             android:textColor="#ffffff"
             android:textStyle="bold"
             android:gravity="center_horizontal"
-            android:text="모집가맹점 현황"
+            android:text="판매내역"
             />
 
     </RelativeLayout>
-
 
 
     <LinearLayout
@@ -50,6 +49,7 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:orientation="horizontal">
+
             <TextView
                 android:gravity="center"
                 android:layout_width="0dp"
@@ -57,7 +57,7 @@
                 android:layout_height="match_parent"
                 android:textSize="13sp"
                 android:textColor="#c8a27a"
-                android:text="검색날짜 "
+                android:text="검색날짜"
                 />
 
             <View
@@ -113,17 +113,19 @@
             </LinearLayout>
 
 
-
         </LinearLayout>
+
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:background="#c8a27a"/>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
             android:orientation="horizontal">
+
             <TextView
                 android:gravity="center"
                 android:layout_width="0dp"
@@ -158,7 +160,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="12dp"
                     android:textColor="#000000"
-                    android:text="결재"
+                    android:text="결제"
                     />
 
                 <TextView
@@ -180,188 +182,150 @@
             </LinearLayout>
 
 
-
         </LinearLayout>
 
 
     </LinearLayout>
 
 
-
     <LinearLayout
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:paddingTop="10dp"
         android:layout_marginTop="14dp">
+
         <View
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:background="#c8a27a"/>
+
         <LinearLayout
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
+
             <TextView
+                android:textStyle="bold"
                 android:gravity="center"
                 android:layout_width="0dp"
                 android:layout_weight="0.25"
                 android:layout_height="match_parent"
-                android:textSize="13sp"
+                android:textSize="13dp"
                 android:textColor="#c8a27a"
                 android:text="NO "
                 />
 
             <TextView
+                android:textStyle="bold"
                 android:gravity="center"
                 android:layout_width="0dp"
                 android:layout_weight="0.25"
                 android:layout_height="match_parent"
-                android:textSize="13sp"
+                android:textSize="13dp"
                 android:textColor="#c8a27a"
-                android:text="가맹점명
-연락처"
+                android:text="거래일자"
                 />
+
             <TextView
+                android:textStyle="bold"
                 android:gravity="center"
                 android:layout_width="0dp"
                 android:layout_weight="0.25"
                 android:layout_height="match_parent"
-                android:textSize="13sp"
+                android:textSize="13dp"
                 android:textColor="#c8a27a"
                 android:text="판매금액"
                 />
+
             <TextView
+                android:textStyle="bold"
                 android:gravity="center"
                 android:layout_width="0dp"
                 android:layout_weight="0.25"
                 android:layout_height="match_parent"
-                android:textSize="13sp"
+                android:textSize="13dp"
                 android:textColor="#c8a27a"
-                android:text="추천그룹액"
+                android:text="결재금액
+승인번호"
                 />
 
-
+            <TextView
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_weight="0.25"
+                android:layout_height="match_parent"
+                android:textSize="13dp"
+                android:textColor="#c8a27a"
+                android:text="비고"
+                />
 
         </LinearLayout>
+
         <View
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:background="#c8a27a"/>
 
 
         <ListView
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
             android:id="@+id/listLV"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1">
         </ListView>
 
-        <LinearLayout
-            android:layout_marginTop="15dp"
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:background="#000000"
-            android:layout_height="wrap_content">
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="#cccccc"/>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_vertical"
-                android:orientation="horizontal">
-                <TextView
-                    android:paddingBottom="10dp"
-                    android:layout_marginTop="6.5dp"
-                    android:gravity="center"
-                    android:layout_width="0dp"
-                    android:layout_weight="0.25"
-                    android:layout_height="wrap_content"
-                    android:textSize="13sp"
-                    android:textColor="#ffffff"
-                    android:text="판매합계"
-                    />
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_weight="0.75"
-                    android:gravity="end||center_vertical"
-                    android:layout_height="match_parent">
-
-                    <TextView
-                        android:paddingRight="16dp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textSize="12sp"
-                        android:textColor="#ffffff"
-                        android:text="6,985,922,222원"
-                        />
-
-                </LinearLayout>
-
-
-
-
-
-            </LinearLayout>
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="#cccccc"/>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_vertical"
-                android:orientation="horizontal">
-                <TextView
-                    android:paddingBottom="10dp"
-                    android:layout_marginTop="6.5dp"
-                    android:gravity="center"
-                    android:layout_width="0dp"
-                    android:layout_weight="0.25"
-                    android:layout_height="wrap_content"
-                    android:textSize="13sp"
-                    android:textColor="#ffffff"
-                    android:text="추천합계"
-                    />
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_weight="0.75"
-                    android:gravity="end||center_vertical"
-                    android:layout_height="match_parent">
-
-                    <TextView
-                        android:paddingRight="16dp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textSize="12sp"
-                        android:textColor="#ffffff"
-                        android:text="6,985,922,222원"
-                        />
-
-                </LinearLayout>
-
-
-
-
-
-            </LinearLayout>
-        </LinearLayout>
 
     </LinearLayout>
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#cccccc"/>
+
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:gravity="center"
+            android:layout_marginTop="11dp"
+            android:layout_marginBottom="11dp"
+            android:textStyle="bold"
+            android:layout_marginLeft="14dp"
+            android:paddingTop="5.5dp"
+            android:paddingBottom="5.5dp"
+            android:paddingLeft="17.5dp"
+            android:paddingRight="17.5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12dp"
+            android:textColor="#cccccc"
+            android:text="판매금액"
+            />
+
+
+        <TextView
+            android:layout_marginRight="14.5dp"
+            android:textStyle="bold"
+            android:gravity="end"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textSize="12dp"
+            android:textColor="#ffffff"
+            android:text="7,000,000원"
+            />
+
+
+    </LinearLayout>
 
 
 </LinearLayout>
