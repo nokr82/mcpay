@@ -29,7 +29,7 @@
             android:textColor="#ffffff"
             android:textStyle="bold"
             android:gravity="center_horizontal"
-            android:text="모집가맹점 현황"
+            android:text="전용계좌 내역"
             />
 
     </RelativeLayout>
@@ -57,7 +57,7 @@
                 android:layout_height="match_parent"
                 android:textSize="13sp"
                 android:textColor="#c8a27a"
-                android:text="검색날짜 "
+                android:text="검색날짜"
                 />
 
             <View
@@ -158,7 +158,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="12dp"
                     android:textColor="#000000"
-                    android:text="결재"
+                    android:text="입금"
                     />
 
                 <TextView
@@ -173,7 +173,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="12dp"
                     android:textColor="#926f4a"
-                    android:text="취소"
+                    android:text="출금"
                     />
 
 
@@ -223,8 +223,7 @@
                 android:layout_height="match_parent"
                 android:textSize="13sp"
                 android:textColor="#c8a27a"
-                android:text="가맹점명
-연락처"
+                android:text="거래일자"
                 />
             <TextView
                 android:gravity="center"
@@ -233,7 +232,7 @@
                 android:layout_height="match_parent"
                 android:textSize="13sp"
                 android:textColor="#c8a27a"
-                android:text="판매금액"
+                android:text="입금액"
                 />
             <TextView
                 android:gravity="center"
@@ -242,7 +241,7 @@
                 android:layout_height="match_parent"
                 android:textSize="13sp"
                 android:textColor="#c8a27a"
-                android:text="추천그룹액"
+                android:text="비고"
                 />
 
 
@@ -257,29 +256,15 @@
         <ListView
             android:id="@+id/listLV"
             android:layout_width="match_parent"
-            android:layout_height="415dp">
+            android:layout_height="0dp"
+            android:layout_weight="1">
         </ListView>
-
-
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_marginTop="15dp"
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:background="#000000"
-        android:layout_height="wrap_content">
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#ffffff"/>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
             android:orientation="horizontal">
+
             <TextView
                 android:paddingBottom="10dp"
                 android:layout_marginTop="6.5dp"
@@ -289,7 +274,7 @@
                 android:layout_height="wrap_content"
                 android:textSize="13sp"
                 android:textColor="#ffffff"
-                android:text="판매합계"
+                android:text="입금총액"
                 />
             <LinearLayout
                 android:layout_width="0dp"
@@ -317,44 +302,9 @@
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:background="#ffffff"/>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
-            <TextView
-                android:paddingBottom="10dp"
-                android:layout_marginTop="6.5dp"
-                android:gravity="center"
-                android:layout_width="0dp"
-                android:layout_weight="0.25"
-                android:layout_height="wrap_content"
-                android:textSize="13sp"
-                android:textColor="#ffffff"
-                android:text="추천합계"
-                />
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_weight="0.75"
-                android:gravity="end||center_vertical"
-                android:layout_height="match_parent">
-
-                <TextView
-                    android:paddingRight="16dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="12sp"
-                    android:textColor="#ffffff"
-                    android:text="6,985,922,222원"
-                    />
-
-            </LinearLayout>
 
 
-
-
-
-        </LinearLayout>
     </LinearLayout>
+
 
 </LinearLayout>
