@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="#000000"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/titleRL"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#c99e6b">
+
+        <ImageView
+            android:padding="14dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/arrow_back"/>
+
+
+        <TextView
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:gravity="center_horizontal"
+            android:text="소프트웨어 업데이트"
+            />
+
+    </RelativeLayout>
+
+
+    
+    <LinearLayout
+        android:layout_below="@id/titleRL"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="13dp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#c99e6b"/>
+
+        <TextView
+            android:paddingTop="13dp"
+            android:paddingBottom="13dp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="13dp"
+            android:textColor="#c8a27a"
+            android:text="마지막 업데이트 정보"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#c99e6b"/>
+
+        <TextView
+            android:paddingBottom="13dp"
+            android:textStyle="bold"
+            android:layout_marginTop="13dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12dp"
+            android:textColor="#fffefe"
+            android:text="사용가능한 최선 버전으로 이미 업데이트했습니다.
+현재버전 : CM124512/123413
+마지막 업데이트 확인 : 19/2/25"
+            />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#fffefe"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#f0ba2f">
+
+        <TextView
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:gravity="center_horizontal"
+            android:text="업데이트"
+            />
+
+    </RelativeLayout>
+</RelativeLayout>
+
+
+
+
+</LinearLayout>

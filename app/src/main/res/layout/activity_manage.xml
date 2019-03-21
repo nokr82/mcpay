@@ -1,0 +1,639 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="#000000"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/titleRL"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#c99e6b">
+
+        <ImageView
+            android:padding="14dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/arrow_back"/>
+
+
+        <TextView
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:gravity="center_horizontal"
+            android:text="관리"
+            />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_marginBottom="12dp"
+        android:layout_marginTop="13dp"
+        android:layout_width="match_parent"
+        android:gravity="center_vertical"
+        android:layout_height="wrap_content">
+        <TextView
+            android:paddingLeft="39.5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textColor="#facd98"
+            android:lineSpacingExtra="-9sp"
+            android:gravity="center_horizontal"
+            android:text="김도윤2"
+            />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textColor="#ffffff"
+            android:lineSpacingExtra="-9sp"
+            android:text="님 환영합니다."
+            />
+
+
+        <TextView
+            android:layout_marginRight="16dp"
+            android:background="@drawable/background_border_strock_926f4a"
+            android:paddingLeft="24.5dp"
+            android:paddingRight="24.5dp"
+            android:textStyle="bold"
+            android:paddingTop="9dp"
+            android:paddingBottom="9dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13dp"
+            android:textColor="#ffffff"
+            android:gravity="center_horizontal"
+            android:text="로그아웃"
+            />
+
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_marginLeft="16.5dp"
+        android:layout_marginRight="16.5dp"
+        android:background="@drawable/background_border_strock_926f4a"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="143.5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_marginTop="9.5dp"
+                    android:gravity="center||center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/coupon_icon"/>
+                    <TextView
+                        android:layout_marginLeft="8.5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12dp"
+                        android:textColor="#c99e6b"
+                        android:lineSpacingExtra="-6sp"
+                        android:gravity="center_horizontal"
+                        android:text="사용가능쿠폰"
+                        />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_marginTop="9.5dp"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="25sp"
+                        android:textColor="#ffffff"
+                        android:lineSpacingExtra="-19sp"
+                        android:gravity="center_horizontal"
+                        android:text="13"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12dp"
+                        android:textColor="#c99e6b"
+                        android:lineSpacingExtra="-6sp"
+                        android:gravity="center_horizontal"
+                        android:text="장"/>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#926f4a"/>
+
+            <LinearLayout
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_marginTop="9.5dp"
+                    android:gravity="center||center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/bankbook_icon"/>
+                    <TextView
+                        android:layout_marginLeft="8.5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12dp"
+                        android:textColor="#c99e6b"
+                        android:lineSpacingExtra="-6sp"
+                        android:gravity="center_horizontal"
+                        android:text="전용계좌금액"
+                        />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_marginTop="9.5dp"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="25sp"
+                        android:textColor="#ffffff"
+                        android:lineSpacingExtra="-19sp"
+                        android:gravity="center_horizontal"
+                        android:text="5,251,200"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12dp"
+                        android:textColor="#c99e6b"
+                        android:lineSpacingExtra="-6sp"
+                        android:gravity="center_horizontal"
+                        android:text="원"/>
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#926f4a"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_marginTop="9.5dp"
+                    android:gravity="center||center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/payback_icon"/>
+                    <TextView
+                        android:layout_marginLeft="8.5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12dp"
+                        android:textColor="#c99e6b"
+                        android:lineSpacingExtra="-6sp"
+                        android:gravity="center_horizontal"
+                        android:text="적립금 잔액"
+                        />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_marginTop="9.5dp"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="25sp"
+                        android:textColor="#ffffff"
+                        android:lineSpacingExtra="-19sp"
+                        android:gravity="center_horizontal"
+                        android:text="251,200"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12dp"
+                        android:textColor="#c99e6b"
+                        android:lineSpacingExtra="-6sp"
+                        android:gravity="center_horizontal"
+                        android:text="원"/>
+                </LinearLayout>
+
+
+            </LinearLayout>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#926f4a"/>
+            <LinearLayout
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_marginTop="9.5dp"
+                    android:gravity="center||center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/sell_icon"/>
+                    <TextView
+                        android:layout_marginLeft="8.5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12dp"
+                        android:textColor="#c99e6b"
+                        android:lineSpacingExtra="-6sp"
+                        android:gravity="center_horizontal"
+                        android:text="구매내역/결제취소"
+                        />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_marginTop="9.5dp"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="25sp"
+                        android:textColor="#ffffff"
+                        android:lineSpacingExtra="-19sp"
+                        android:gravity="center_horizontal"
+                        android:text="6"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12dp"
+                        android:textColor="#c99e6b"
+                        android:lineSpacingExtra="-6sp"
+                        android:gravity="center_horizontal"
+                        android:text="건"/>
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_marginLeft="17dp"
+        android:layout_marginRight="17dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:paddingTop="2.5dp"
+            android:paddingBottom="2.5dp"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:padding="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/icon_pay"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textSize="14dp"
+                android:textColor="#cccccc"
+                android:text="결재내역"
+                />
+
+            <ImageView
+                android:padding="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/icon_more"/>
+
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#cccccc"/>
+        <LinearLayout
+            android:paddingTop="2.5dp"
+            android:paddingBottom="2.5dp"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:padding="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/icon_shop"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textSize="14dp"
+                android:textColor="#cccccc"
+                android:text="모집가맹점현황"
+                />
+
+            <ImageView
+                android:padding="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/icon_more"/>
+
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#cccccc"/>
+        <LinearLayout
+            android:paddingTop="2.5dp"
+            android:paddingBottom="2.5dp"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:padding="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/icon_remember"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textSize="14dp"
+                android:textColor="#cccccc"
+                android:text="회원정보수정"
+                />
+
+            <ImageView
+                android:padding="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/icon_more"/>
+
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#cccccc"/>
+        <LinearLayout
+            android:paddingTop="2.5dp"
+            android:paddingBottom="2.5dp"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:padding="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/icon_autologin"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textSize="14dp"
+                android:textColor="#cccccc"
+                android:text="자동로그인"
+                />
+
+            <ImageView
+                android:layout_marginRight="2dp"
+                android:padding="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/check"
+                android:background="@drawable/background_border_strock_ffffff"/>
+
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#cccccc"/>
+        <LinearLayout
+            android:paddingTop="2.5dp"
+            android:paddingBottom="2.5dp"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:padding="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/icon_notice"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textSize="14dp"
+                android:textColor="#cccccc"
+                android:text="공지사항"
+                />
+
+            <ImageView
+                android:padding="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/icon_more"/>
+
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#cccccc"/>
+        <LinearLayout
+            android:paddingTop="2.5dp"
+            android:paddingBottom="2.5dp"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:padding="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/icon_update"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textSize="14dp"
+                android:textColor="#cccccc"
+                android:text="소프트웨어 업데이트"
+                />
+
+            <ImageView
+                android:padding="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/icon_more"/>
+
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#cccccc"/>
+
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="22dp"
+        android:layout_marginRight="22dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14dp"
+                android:textColor="#ffffff"
+                android:lineSpacingExtra="2.5dp"
+                android:text="고객센터  02-2124-6625"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10dp"
+                android:textColor="#cccccc"
+                android:lineSpacingExtra="6.5dp"
+                android:text="상담시간 : AM 10:00 ~ PM 06:00
+점심시간 : PM 12:00 ~ 01:00
+주말/공휴일 휴무"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_gravity="end"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:background="#926f4a"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14dp"
+                android:textColor="#ffffff"
+                android:lineSpacingExtra="-7.8sp"
+                android:gravity="center_horizontal"
+                android:text="전화걸기"
+                />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>
