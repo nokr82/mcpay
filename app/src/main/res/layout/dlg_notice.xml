@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="226dp"
+    android:layout_height="wrap_content">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:background="#c99e6b">
+
+        <TextView
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:gravity="center_horizontal"
+            android:text="공지사항"
+            />
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:textStyle="bold"
+        android:paddingTop="24dp"
+        android:paddingBottom="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15dp"
+        android:textColor="#000000"
+        android:lineSpacingExtra="6sp"
+        android:gravity="center_horizontal"
+        android:text="프로그램 업데이트가 있으니
+관리항목에 가셔서
+업데이트를 해주시기
+바랍니다."
+        />
+
+
+    <LinearLayout
+        android:layout_marginBottom="7dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:background="@drawable/background_border_strock_926f4a"
+            android:layout_marginLeft="4.5dp"
+            android:textStyle="bold"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textSize="14dp"
+            android:textColor="#c99e6b"
+            android:gravity="center_horizontal"
+            android:text="취소"
+            />
+
+
+        <TextView
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:background="@drawable/background_border_strock_926f4a_solid2"
+            android:layout_marginLeft="4.5dp"
+            android:textStyle="bold"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textSize="14dp"
+            android:textColor="#ffffff"
+            android:gravity="center_horizontal"
+            android:text="카드"
+            />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

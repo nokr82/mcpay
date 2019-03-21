@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="226dp"
+    android:layout_height="wrap_content">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:background="#c99e6b">
+
+        <TextView
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:gravity="center_horizontal"
+            android:text="공지사항"
+            />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_marginLeft="18dp"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:gravity="end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12dp"
+                android:textColor="#000000"
+                android:text="현재비밀번호"
+                />
+            <LinearLayout
+                android:layout_marginLeft="11.5dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:background="@drawable/background_border_strock_000000"
+                    android:layout_marginRight="18dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:textSize="12dp"
+                    android:textColor="#ffffff"
+                    />
+
+
+
+
+            </LinearLayout>
+
+
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_marginLeft="27dp"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:gravity="end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12dp"
+                android:textColor="#000000"
+                android:text="새 비밀번호"
+                />
+            <LinearLayout
+                android:layout_marginLeft="11.5dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:background="@drawable/background_border_strock_000000"
+                    android:layout_marginRight="18dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:textSize="12dp"
+                    android:textColor="#ffffff"
+                    />
+
+
+
+
+            </LinearLayout>
+
+
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_marginLeft="15dp"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:gravity="end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12dp"
+                android:textColor="#000000"
+                android:text="비밀번호 확인"
+                />
+            <LinearLayout
+                android:layout_marginLeft="11.5dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:background="@drawable/background_border_strock_000000"
+                    android:layout_marginRight="18dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:textSize="12dp"
+                    android:textColor="#ffffff"
+                    />
+
+
+
+
+            </LinearLayout>
+
+
+
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+    <TextView
+        android:textStyle="bold"
+        android:layout_marginBottom="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12dp"
+        android:textColor="#ba8a59"
+        android:lineSpacingExtra="14sp"
+        android:gravity="center"
+        android:text="계좌 비밀번호 수정을 하시겠습니까?"
+        />
+
+
+
+    <LinearLayout
+        android:layout_marginBottom="7dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:background="@drawable/background_border_strock_926f4a"
+            android:layout_marginLeft="4.5dp"
+            android:textStyle="bold"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textSize="14dp"
+            android:textColor="#c99e6b"
+            android:gravity="center_horizontal"
+            android:text="취소"
+            />
+
+
+        <TextView
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:background="@drawable/background_border_strock_926f4a_solid2"
+            android:layout_marginLeft="4.5dp"
+            android:textStyle="bold"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textSize="14dp"
+            android:textColor="#ffffff"
+            android:gravity="center_horizontal"
+            android:text="확인"
+            />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
