@@ -1615,6 +1615,16 @@ public class Utils {
         return -1;
     }
 
+    public static long getLong(TextView textView) {
+        String val = textView.getText().toString().trim().replace(",", "");
+        try {
+            return Long.parseLong(val);
+        } catch (Exception e) {
+
+        }
+        return -1;
+    }
+
     public static double getDouble(JSONObject json, String key) {
         if(json != null && json.has(key) && !json.isNull(key)) {
             try {
