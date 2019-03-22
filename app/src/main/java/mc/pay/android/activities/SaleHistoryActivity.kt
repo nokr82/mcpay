@@ -68,8 +68,6 @@ class SaleHistoryActivity : RootActivity() {
     }
 
     private val dateSetListener = DatePickerDialog.OnDateSetListener { view, year, monthOfYear, dayOfMonth ->
-        // TODO Auto-generated method stub
-
         val msg = String.format("%d.%d.%d", year, monthOfYear + 1, dayOfMonth)
 
         firstTV.text = msg
@@ -77,7 +75,6 @@ class SaleHistoryActivity : RootActivity() {
 //        loadmainData(company_id)
     }
     private val dateSetListener2 = DatePickerDialog.OnDateSetListener { view, year, monthOfYear, dayOfMonth ->
-        // TODO Auto-generated method stub
         val msg = String.format("%d.%d.%d", year, monthOfYear + 1, dayOfMonth)
         val end_msg = String.format("%d-%d-%d", year, monthOfYear + 1, dayOfMonth)
         endTV.text = msg
