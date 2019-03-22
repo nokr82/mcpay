@@ -3,6 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="226dp"
+    android:background="#ffffff"
     android:layout_height="wrap_content">
 
 
@@ -19,7 +20,7 @@
             android:textColor="#ffffff"
             android:textStyle="bold"
             android:gravity="center_horizontal"
-            android:text="공지사항"
+            android:text="비밀번호변경"
             />
 
     </RelativeLayout>

@@ -64,7 +64,7 @@
                 android:text="추천그룹액"
                 />
 
-            <TextViewr
+            <TextView
                 android:layout_marginTop="6.5dp"
                 android:gravity="center"
                 android:layout_width="0dp"
@@ -72,7 +72,7 @@
                 android:layout_height="wrap_content"
                 android:textSize="13dp"
                 android:textColor="#ffffff"
-                android:text="NO "
+                android:text="NO"
                 />
 
         </LinearLayout>
