@@ -43,7 +43,18 @@
             android:name=".activities.MainActivity"
             android:screenOrientation="portrait"
             android:theme="@style/NoTitleDialog"
-            android:windowSoftInputMode="adjustResize|stateHidden"/>
+            android:windowSoftInputMode="adjustResize|stateHidden">
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="ok_by_card" />
+                <data android:scheme="cancelled_by_card" />
+                <data android:scheme="ok_by_cash" />
+                <data android:scheme="cancelled_by_cash" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".activities.FranchiseActivity"
             android:screenOrientation="portrait"
@@ -59,7 +70,7 @@
             android:screenOrientation="portrait"
             android:theme="@style/NoTitleDialog"
             android:windowSoftInputMode="adjustResize|stateHidden"/>
-        v
+
         <activity
             android:name=".activities.CouponHistoryActivity"
             android:screenOrientation="portrait"
