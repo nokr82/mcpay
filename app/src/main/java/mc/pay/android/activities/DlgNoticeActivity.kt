@@ -5,6 +5,7 @@ import android.content.Context
 import android.os.Bundle
 import mc.pay.android.R
 import kotlinx.android.synthetic.main.dlg_notice.*
+import mc.pay.android.base.Config
 import mc.pay.android.base.RootActivity
 
 class DlgNoticeActivity : RootActivity() {
@@ -20,6 +21,9 @@ class DlgNoticeActivity : RootActivity() {
         progressDialog!!.setProgressStyle(android.R.style.Widget_DeviceDefault_Light_ProgressBar_Large)
         progressDialog!!.setCancelable(false)
 
+        val url = Config.url + "/admin/agree1view"
+        agreeWV.settings.javaScriptEnabled = true
+        agreeWV.loadUrl(url)
 
 
     }

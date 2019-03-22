@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="226dp"
     android:background="#ffffff"
@@ -26,21 +27,16 @@
     </RelativeLayout>
 
 
-    <TextView
-        android:textStyle="bold"
-        android:paddingTop="24dp"
-        android:paddingBottom="24dp"
+  
+    <WebView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="15dp"
-        android:textColor="#000000"
-        android:lineSpacingExtra="6dp"
-        android:gravity="center_horizontal"
-        android:text="프로그램 업데이트가 있으니
-관리항목에 가셔서
-업데이트를 해주시기
-바랍니다."
-        />
+        android:layout_height="200dp"
+        tools:ignore="WebViewLayout"
+        android:id="@+id/agreeWV">
+
+    </WebView>
+    
+    
 
 
     <LinearLayout
@@ -79,7 +75,7 @@
             android:textSize="14dp"
             android:textColor="#ffffff"
             android:gravity="center_horizontal"
-            android:text="카드"
+            android:text="확인"
             />
 
 

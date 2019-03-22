@@ -153,13 +153,11 @@ class EditInfoActivity : RootActivity() {
     fun edit_profile() {
          name = Utils.getString(nameET)
          phone = Utils.getInt(phoneET)
+        email = Utils.getString(emailET)
         login_id = Utils.getString(login_idET)
         company_num = Utils.getInt(company_numET)
 
-        if (phone.toString().length != 11){
-            Toast.makeText(context,"핸드폰번호가 올바르지가 않습니다",Toast.LENGTH_SHORT).show()
-            return
-        }
+
         if (company_num.toString().length < 1){
             Toast.makeText(context,"사업자번호가 올바르지가 않습니다",Toast.LENGTH_SHORT).show()
             return
