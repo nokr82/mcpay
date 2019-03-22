@@ -73,7 +73,12 @@
                 android:gravity="center_vertical"
                 android:layout_height="match_parent">
 
+                <LinearLayout
+                    android:id="@+id/calLL"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
                 <TextView
+                    android:id="@+id/firstTV"
                     android:layout_marginLeft="12.5dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -87,6 +92,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@mipmap/icon_caladar"/>
+                </LinearLayout>
 
                 <TextView
                     android:padding="3.5dp"
@@ -95,8 +101,15 @@
                     android:textColor="#ffffff"
                     android:textSize="13dp"
                     android:text="~"/>
-
+                <LinearLayout
+                    android:id="@+id/cal2LL"
+                    android:orientation="horizontal"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.9"
+                    android:gravity="center_vertical"
+                    android:layout_height="match_parent">
                 <TextView
+                    android:id="@+id/endTV"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="12dp"
@@ -109,7 +122,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@mipmap/icon_caladar"/>
-
+                </LinearLayout>
 
             </LinearLayout>
 

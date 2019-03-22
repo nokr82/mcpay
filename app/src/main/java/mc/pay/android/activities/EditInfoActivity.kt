@@ -30,7 +30,7 @@ class EditInfoActivity : RootActivity() {
     var company_num = -1
     var login_id = ""
     var print_type = -1
-    var phone = -1
+    var phone = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -89,9 +89,9 @@ class EditInfoActivity : RootActivity() {
                         login_id =  Utils.getString(member, "login_id")
                         passwd = Utils.getString(member,"passwd")
                         company_num =  Utils.getInt(member, "company_num")
-                        phone = Utils.getInt(member,"phone")
+                        phone = Utils.getString(member,"phone")
 
-                        phoneET.setText(phone.toString())
+                        phoneET.setText(phone)
                         passwdET.setText(passwd)
                         nameET.setText(name)
                         login_idET.setText(login_id)
@@ -152,14 +152,12 @@ class EditInfoActivity : RootActivity() {
 
     fun edit_profile() {
          name = Utils.getString(nameET)
-         phone = Utils.getInt(phoneET)
+         phone = Utils.getString(phoneET)
+        email = Utils.getString(emailET)
         login_id = Utils.getString(login_idET)
         company_num = Utils.getInt(company_numET)
 
-        if (phone.toString().length != 11){
-            Toast.makeText(context,"핸드폰번호가 올바르지가 않습니다",Toast.LENGTH_SHORT).show()
-            return
-        }
+
         if (company_num.toString().length < 1){
             Toast.makeText(context,"사업자번호가 올바르지가 않습니다",Toast.LENGTH_SHORT).show()
             return
@@ -197,7 +195,7 @@ class EditInfoActivity : RootActivity() {
                     if ("ok" == result) {
 
                         Toast.makeText(context, "변경되었습니다.", Toast.LENGTH_SHORT).show()
-                        finish()
+                        Utils.hideKeyboard(context)
 
                     } else {
 

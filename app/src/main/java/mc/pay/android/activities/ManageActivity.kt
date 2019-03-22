@@ -7,7 +7,6 @@ import android.os.Bundle
 import com.loopj.android.http.JsonHttpResponseHandler
 import com.loopj.android.http.RequestParams
 import cz.msebera.android.httpclient.Header
-import mc.pay.android.R
 import kotlinx.android.synthetic.main.activity_manage.*
 import mc.pay.android.Actions.MemberAction
 import mc.pay.android.base.PrefUtils
@@ -15,6 +14,8 @@ import mc.pay.android.base.RootActivity
 import mc.pay.android.base.Utils
 import org.json.JSONException
 import org.json.JSONObject
+import android.net.Uri
+
 
 class ManageActivity : RootActivity() {
 
@@ -23,18 +24,24 @@ class ManageActivity : RootActivity() {
     var autoLogin = false
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_manage)
+        setContentView(mc.pay.android.R.layout.activity_manage)
         context = this
-        progressDialog = ProgressDialog(context, R.style.progressDialogTheme)
+        progressDialog = ProgressDialog(context, mc.pay.android.R.style.progressDialogTheme)
         progressDialog!!.setProgressStyle(android.R.style.Widget_DeviceDefault_Light_ProgressBar_Large)
         progressDialog!!.setCancelable(false)
         loadInfo()
         autoLogin = PrefUtils.getBooleanPreference(context, "autoLogin")
 
         if (autoLogin){
-            autoIV.setImageResource(R.mipmap.check)
+            autoIV.setImageResource(mc.pay.android.R.mipmap.check)
         }else{
             autoIV.setImageResource(0)
+        }
+
+        callTV.setOnClickListener {
+            val tt = Intent(Intent.ACTION_DIAL, Uri.parse("tel:0221246625"))
+            startActivity(tt)
+
         }
 
 
@@ -76,7 +83,7 @@ class ManageActivity : RootActivity() {
             }else{
                 autoLogin = true
                 PrefUtils.setPreference(context, "autoLogin", autoLogin)
-                autoIV.setImageResource(R.mipmap.check)
+                autoIV.setImageResource(mc.pay.android.R.mipmap.check)
             }
         }
 
