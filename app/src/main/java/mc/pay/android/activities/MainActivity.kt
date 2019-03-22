@@ -18,6 +18,7 @@ import mc.pay.android.R
 import mc.pay.android.base.PrefUtils
 import org.json.JSONException
 import org.json.JSONObject
+import java.net.URLDecoder
 import java.net.URLEncoder
 
 
@@ -32,6 +33,27 @@ class MainActivity : RootActivity() {
     val code = "1903200013"
     val memberCode = "SMC031001"
     val passwd = "6619"
+
+    var pay_type = "CASH"
+
+    var cardCashSe = ""
+    var delngSe = ""
+    var setleSuccesAt = "X"
+    var setleMssage = ""
+    var setleSe = ""
+    var rciptNo = ""
+    var confmNo = ""
+    var confmDe = ""
+    var confmTime = ""
+    var splpc = ""
+    var vat = ""
+    var cardNo = ""
+    var instlmtMonth = ""
+    var issuCmpnyCode = ""
+    var issuCmpnyNm = ""
+    var puchasCmpnyCode = ""
+    var puchasCmpnyNm = ""
+    var type = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -115,6 +137,16 @@ class MainActivity : RootActivity() {
             priceTV.text = "0"
         }
 
+        cardLL.setOnClickListener {
+            if (pay_type == "CARD") {
+                pay_type = "CASH"
+                cardLL.setBackgroundResource(R.drawable.background_border_strock_7b593e)
+            } else {
+                pay_type = "CARD"
+                cardLL.setBackgroundResource(R.drawable.background_2d0e6b_border_strock_7b593e)
+            }
+        }
+
         confirmLL.setOnClickListener {
 
             val price = Utils.getLong(priceTV)
@@ -133,25 +165,125 @@ class MainActivity : RootActivity() {
                 startActivity(intent)
 
             } else {
-
-                var query = ""
-                URLEncoder.encode(query, "UTF-8");
-
-                val str = "fpswipepay://setle?crtftCode=${code}&mberCode=${memberCode}&cardCashSe=CARD&delngSe=1&splpc=500&vat=100&admitInfo=order_id=1"
-
-                var intent = Intent(Intent.ACTION_VIEW, Uri.parse(str))
-                startActivity(intent)
-//                order("CARD")
+                order()
             }
 
         }
 
+        shemeCheck()
+
     }
 
-    fun order(pay_type: String) {
+    fun shemeCheck() {
+        var data_string = intent!!.dataString
+
+        if (data_string != null) {
+
+            data_string = URLDecoder.decode(data_string, "UTF-8")
+
+            println("data_string::::::::::::::::::::::::$data_string")
+
+            val str = data_string.split("?")
+
+            println("str::::::::::::::::::::::::::::::::::::::::$str")
+
+            if(str.count() == 2) {
+                val sheme = str[0]
+                val dataStr = str[1]
+
+                var order_id = "-1"
+
+                var datas = dataStr.split("&")
+
+                for (i in 0 until datas.size) {
+                    var data = datas[i].split("=")
+
+                    if (data.count() == 2) {
+                        val key = data[0]
+                        val value = data[1]
+
+                        if (key == "cardCashSe"){
+                            cardCashSe = value
+                        } else if (key == "setleSuccesAt") {
+                            setleSuccesAt = value
+                        } else if (key == "setleMssage") {
+                            setleMssage = value
+                        } else if (key == "setleSe") {
+                            setleSe = value
+                        } else if (key == "rciptNo") {
+                            rciptNo = value
+                        } else if (key == "confmNo") {
+                            confmNo = value
+                        } else if (key == "confmDe") {
+                            confmDe = value
+                        } else if (key == "confmTime") {
+                            confmTime = value
+                        } else if (key == "splpc") {
+                            splpc = value
+                        } else if (key == "vat") {
+                            vat = value
+                        } else if (key == "cardNo") {
+                            cardNo = value
+                        } else if (key == "instlmtMonth") {
+                            instlmtMonth = value
+                        } else if (key == "issuCmpnyCode") {
+                            issuCmpnyCode = value
+                        } else if (key == "issuCmpnyNm") {
+                            issuCmpnyNm = value
+                        } else if (key == "puchasCmpnyCode") {
+                            puchasCmpnyCode = value
+                        } else if (key == "puchasCmpnyNm") {
+                            puchasCmpnyNm = value
+                        } else if (key == "admitInfo") {
+
+                            val parameters = value.split("_-_")
+
+                            for (j in 0 until parameters.count()) {
+                                val param = parameters[j].split("__")
+
+                                if (param.count() == 2) {
+                                    val param_key = param[0]
+                                    val param_val = param[1]
+
+                                    if (param_key == "order_id") {
+                                        order_id = param_val
+                                    } else if (param_key == "type") {
+                                        type = param_val
+                                    }
+
+                                }
+
+                            }
+
+                        }
+
+                    }
+                }
+
+                if((sheme.contains("ok_by_card") || sheme.contains("ok_by_cash")) && order_id.toInt() > 0) {
+
+                    var state = 2
+
+                    if (setleSuccesAt == "O") {
+                        state = 1
+                    }
+
+                    orderDone(order_id, state)
+                }
+
+            }
+
+
+        }
+    }
+
+    fun order() {
+
+        val price = Utils.getLong(priceTV)
+
         val params = RequestParams()
         params.put("member_id", member_id)
-        params.put("price", Utils.getLong(priceTV))
+        params.put("price", price)
         params.put("state", 0)
         params.put("pay_type", pay_type)
 
@@ -169,7 +301,12 @@ class MainActivity : RootActivity() {
 
                         var order_id = Utils.getInt(response, "order_id")
 
-                        val str = "fpswipepay://setle?crtftCode=${code}&mberCode=${memberCode}&cardCashSe=${pay_type}&delngSe=1&splpc=1000&vat=1000&admitInfo=order_id=${order_id}"
+                        var query = "order_id__${order_id}_-_type__pay"
+                        query = URLEncoder.encode(query, "UTF-8");
+
+                        val str = "fpswipepay://setle?crtftCode=${code}&mberCode=${memberCode}&cardCashSe=${pay_type}&delngSe=1&splpc=${price}&vat=${(price * 0.1).toInt()}&admitInfo=${query}"
+
+                        println("str::::::::::::::::::::::::::::::::::::::$str")
 
                         var intent = Intent(Intent.ACTION_VIEW, Uri.parse(str))
                         startActivity(intent)
@@ -202,7 +339,96 @@ class MainActivity : RootActivity() {
                     progressDialog!!.dismiss()
                 }
 
+                 System.out.println(responseString);
+
+                throwable.printStackTrace()
+                error()
+            }
+
+
+            override fun onStart() {
+                // show dialog
+                if (progressDialog != null) {
+
+                    progressDialog!!.show()
+                }
+            }
+
+            override fun onFinish() {
+                if (progressDialog != null) {
+                    progressDialog!!.dismiss()
+                }
+            }
+        })
+    }
+
+    fun orderDone(order_id: String, state: Int) {
+        val params = RequestParams()
+        params.put("order_id", order_id)
+        params.put("state", state)
+        params.put("card_cash_se", cardCashSe)
+        params.put("setle_mssage", setleMssage)
+        params.put("setle_se", setleSe)
+        params.put("rcipt_no", rciptNo)
+        params.put("confm_de", confmDe)
+        params.put("confm_time", confmTime)
+        params.put("splpc", splpc)
+        params.put("vat", vat)
+        params.put("card_no", cardNo)
+        params.put("instlmt_month", instlmtMonth)
+        params.put("issu_cmpny_code", issuCmpnyCode)
+        params.put("issu_cmpny_nm", issuCmpnyNm)
+        params.put("puchas_cmpny_code", puchasCmpnyCode)
+        params.put("puchas_cmpny_nm", puchasCmpnyNm)
+
+        OrderAction.done(params, object : JsonHttpResponseHandler() {
+
+            override fun onSuccess(statusCode: Int, headers: Array<Header>?, response: JSONObject?) {
+                if (progressDialog != null) {
+                    progressDialog!!.dismiss()
+                }
+
+                try {
+                    val result = response!!.getString("result")
+
+                    if ("ok" == result) {
+
+                        if (state == 1) {
+                            Toast.makeText(context, "결제가 완료 되었습니다.", Toast.LENGTH_LONG).show()
+                        } else {
+                            Toast.makeText(context, setleMssage, Toast.LENGTH_LONG).show()
+                        }
+
+                    } else {
+
+                    }
+
+                } catch (e: JSONException) {
+                    e.printStackTrace()
+                }
+
+            }
+
+            override fun onSuccess(statusCode: Int, headers: Array<Header>?, responseString: String?) {
+
                 // System.out.println(responseString);
+            }
+
+            private fun error() {
+                Utils.alert(context, "조회중 장애가 발생하였습니다.")
+            }
+
+            override fun onFailure(
+                statusCode: Int,
+                headers: Array<Header>?,
+                responseString: String?,
+                throwable: Throwable
+            ) {
+                if (progressDialog != null) {
+                    progressDialog!!.dismiss()
+                }
+
+                 System.out.println(responseString);
 
                 throwable.printStackTrace()
                 error()
@@ -256,4 +482,5 @@ class MainActivity : RootActivity() {
             progressDialog!!.dismiss()
         }
     }
+
 }

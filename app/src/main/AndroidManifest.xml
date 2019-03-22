@@ -49,10 +49,10 @@
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
-                <data android:scheme="ok_by_card" />
-                <data android:scheme="cancelled_by_card" />
-                <data android:scheme="ok_by_cash" />
-                <data android:scheme="cancelled_by_cash" />
+                <data android:host="ok_by_card" android:scheme="mc_pay" />
+                <data android:host="cancelled_by_card" android:scheme="mc_pay" />
+                <data android:host="ok_by_cash" android:scheme="mc_pay" />
+                <data android:host="cancelled_by_cash" android:scheme="mc_pay" />
             </intent-filter>
         </activity>
         <activity
