@@ -48,6 +48,7 @@
 
 
         <TextView
+            android:id="@+id/cancelTV"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
             android:background="@drawable/background_border_strock_926f4a"
@@ -64,6 +65,7 @@
 
 
         <TextView
+            android:id="@+id/confirmTV"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
             android:background="@drawable/background_border_strock_926f4a_solid2"

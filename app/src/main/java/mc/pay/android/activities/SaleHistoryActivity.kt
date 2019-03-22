@@ -68,8 +68,6 @@ class SaleHistoryActivity : RootActivity() {
     }
 
     private val dateSetListener = DatePickerDialog.OnDateSetListener { view, year, monthOfYear, dayOfMonth ->
-        // TODO Auto-generated method stub
-
         val msg = String.format("%d.%d.%d", year, monthOfYear + 1, dayOfMonth)
 
         firstTV.text = msg
@@ -77,7 +75,6 @@ class SaleHistoryActivity : RootActivity() {
 //        loadmainData(company_id)
     }
     private val dateSetListener2 = DatePickerDialog.OnDateSetListener { view, year, monthOfYear, dayOfMonth ->
-        // TODO Auto-generated method stub
         val msg = String.format("%d.%d.%d", year, monthOfYear + 1, dayOfMonth)
         val end_msg = String.format("%d-%d-%d", year, monthOfYear + 1, dayOfMonth)
         endTV.text = msg
@@ -88,8 +85,12 @@ class SaleHistoryActivity : RootActivity() {
 
     //은행정보보
     fun pay_history() {
+
+
+
         val params = RequestParams()
         params.put("member_id", PrefUtils.getIntPreference(context,"member_id"))
+
 
         BankAction.pay_history(params, object : JsonHttpResponseHandler() {
 
