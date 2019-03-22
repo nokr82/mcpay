@@ -15,12 +15,11 @@ class MoneyGiftActivity : RootActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_money_gift)
+
         context = this
         progressDialog = ProgressDialog(context, R.style.progressDialogTheme)
         progressDialog!!.setProgressStyle(android.R.style.Widget_DeviceDefault_Light_ProgressBar_Large)
         progressDialog!!.setCancelable(false)
-
-
 
         backIV.setOnClickListener {
             finish()
