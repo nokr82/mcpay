@@ -7,39 +7,41 @@
     android:orientation="vertical"
     android:layout_height="match_parent">
 
+
     <RelativeLayout
+        android:id="@+id/titleRL"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="60dp"
+        android:background="#c99e6b">
 
-        <RelativeLayout
-            android:id="@+id/titleRL"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:background="#c99e6b">
-
-            <ImageView
-                android:id="@+id/backIV"
-                android:padding="14dp"
-                android:layout_alignParentLeft="true"
-                android:layout_centerInParent="true"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@mipmap/arrow_back"/>
+        <ImageView
+            android:id="@+id/backIV"
+            android:padding="14dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/arrow_back"/>
 
 
-            <TextView
-                android:layout_centerInParent="true"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="25dp"
-                android:textColor="#ffffff"
-                android:textStyle="bold"
-                android:gravity="center_horizontal"
-                android:text="회원정보수정"
-                />
+        <TextView
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25dp"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:gravity="center_horizontal"
+            android:text="회원정보수정"
+            />
 
-        </RelativeLayout>
+    </RelativeLayout>
 
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
 
         <LinearLayout
             android:id="@+id/userLL"
@@ -47,7 +49,7 @@
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical"
             android:layout_marginTop="13dp">
 
@@ -144,6 +146,7 @@
                     android:layout_height="match_parent">
 
                     <EditText
+                        android:inputType="textPassword"
                         android:id="@+id/passwdET"
                         android:background="#222222"
                         android:layout_marginRight="14dp"
@@ -499,30 +502,29 @@
         </LinearLayout>
 
 
-        <LinearLayout
-            android:id="@+id/editLL"
-            android:gravity="center"
-            android:layout_alignParentBottom="true"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:background="#f0ba2f"
-            android:layout_marginBottom="0dp">
+    </ScrollView>
 
-            <TextView
-                android:layout_centerInParent="true"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="25dp"
-                android:textColor="#000000"
-                android:textStyle="bold"
-                android:gravity="center_horizontal"
-                android:text="수정"
-                />
+    <LinearLayout
+        android:id="@+id/editLL"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#f0ba2f"
+        android:layout_marginBottom="0dp">
 
-        </LinearLayout>
+        <TextView
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25dp"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:gravity="center_horizontal"
+            android:text="수정"
+            />
 
-
-    </RelativeLayout>
+    </LinearLayout>
 
 
 </LinearLayout>

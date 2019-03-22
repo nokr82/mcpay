@@ -83,18 +83,15 @@ class IntroActivity : RootActivity() {
             intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
             startActivity(intent)
         } else {
-            PrefUtils.clear(context)
-            val intent = Intent(context, LoginActivity::class.java)
-            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-            startActivity(intent)
-//            handler.sendEmptyMessage(0)
+
+            handler.sendEmptyMessage(0)
         }
 
     }
 
     internal var handler: Handler = object : Handler() {
         override fun handleMessage(msg: Message) {
-//            login()
+            login()
         }
     }
 

@@ -45,7 +45,11 @@ class LoginActivity : RootActivity() {
         }else{
             rememberIV.setImageResource(0)
         }
-
+        if (autoLogin){
+            autoIV.setImageResource(R.mipmap.check)
+        }else{
+            autoIV.setImageResource(0)
+        }
 
         loginTV.setOnClickListener {
             login()
