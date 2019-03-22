@@ -44,6 +44,7 @@
         android:layout_height="wrap_content">
 
         <TextView
+            android:id="@+id/nameTV"
             android:paddingLeft="39.5dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -522,6 +523,7 @@
                 android:text="자동로그인"
                 />
 
+
             <ImageView
                 android:id="@+id/autoIV"
                 android:layout_marginRight="2dp"
@@ -530,7 +532,6 @@
                 android:layout_height="wrap_content"
                 android:src="@mipmap/check"
                 android:background="@drawable/background_border_strock_ffffff"/>
-
 
         </LinearLayout>
 
