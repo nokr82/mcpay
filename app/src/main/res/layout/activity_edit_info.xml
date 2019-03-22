@@ -1,535 +1,528 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:background="#000000"
     android:orientation="vertical"
     android:layout_height="match_parent">
-<RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
 
     <RelativeLayout
-        android:id="@+id/titleRL"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:background="#c99e6b">
+        android:layout_height="match_parent">
 
-        <ImageView
-            android:id="@+id/backIV"
-            android:padding="14dp"
-            android:layout_alignParentLeft="true"
-            android:layout_centerInParent="true"
-            android:layout_width="wrap_content"
+        <RelativeLayout
+            android:id="@+id/titleRL"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="#c99e6b">
+
+            <ImageView
+                android:id="@+id/backIV"
+                android:padding="14dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/arrow_back"/>
+
+
+            <TextView
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="25dp"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:gravity="center_horizontal"
+                android:text="회원정보수정"
+                />
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:id="@+id/userLL"
+            android:layout_below="@id/titleRL"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:src="@mipmap/arrow_back"/>
+            android:orientation="vertical"
+            android:layout_marginTop="13dp">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#c99e6b"/>
+
+            <TextView
+                android:paddingTop="13dp"
+                android:paddingBottom="13dp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="13dp"
+                android:textColor="#c8a27a"
+                android:text="정보수정"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#c99e6b"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.25"
+                    android:layout_height="wrap_content"
+                    android:textSize="12dp"
+                    android:textColor="#999999"
+                    android:text="회원아이디"
+                    />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="0.75"
+                    android:gravity="center_vertical"
+                    android:layout_height="match_parent">
+
+                    <EditText
+                        android:id="@+id/login_idET"
+                        android:background="#222222"
+                        android:layout_marginRight="14dp"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:textSize="12dp"
+                        android:textColor="#ffffff"
+                        />
 
 
-        <TextView
-            android:layout_centerInParent="true"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="25dp"
-            android:textColor="#ffffff"
-            android:textStyle="bold"
-            android:gravity="center_horizontal"
-            android:text="회원정보수정"
-            />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#999999"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.25"
+                    android:layout_height="wrap_content"
+                    android:textSize="12dp"
+                    android:textColor="#999999"
+                    android:text="비밀번호"
+                    />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="0.75"
+                    android:gravity="center_vertical"
+                    android:layout_height="match_parent">
+
+                    <EditText
+                        android:id="@+id/passwdET"
+                        android:background="#222222"
+                        android:layout_marginRight="14dp"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:textSize="12dp"
+                        android:textColor="#ffffff"
+                        />
+
+                    <TextView
+                        android:id="@+id/changeTV"
+                        android:layout_marginRight="35.5dp"
+                        android:textStyle="bold"
+                        android:paddingRight="17.5dp"
+                        android:paddingLeft="17.5dp"
+                        android:paddingTop="6.5dp"
+                        android:paddingBottom="6.5dp"
+                        android:background="#c99e6b"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12dp"
+                        android:textColor="#000000"
+                        android:text="비밀번호변경"
+                        />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#999999"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.25"
+                    android:layout_height="wrap_content"
+                    android:textSize="12dp"
+                    android:textColor="#999999"
+                    android:text="가맹점명"
+                    />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="0.75"
+                    android:gravity="center_vertical"
+                    android:layout_height="match_parent">
+
+                    <EditText
+                        android:id="@+id/nameET"
+                        android:background="#222222"
+                        android:layout_marginRight="14dp"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:textSize="12dp"
+                        android:textColor="#ffffff"
+                        />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#999999"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.25"
+                    android:layout_height="wrap_content"
+                    android:textSize="12dp"
+                    android:textColor="#999999"
+                    android:text="사업자번호"
+                    />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="0.75"
+                    android:gravity="center_vertical"
+                    android:layout_height="match_parent">
+
+                    <EditText
+                        android:id="@+id/company_numET"
+                        android:background="#222222"
+                        android:layout_marginRight="14dp"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:textSize="12dp"
+                        android:textColor="#ffffff"
+                        />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#999999"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.25"
+                    android:layout_height="wrap_content"
+                    android:textSize="12dp"
+                    android:textColor="#999999"
+                    android:text="이메일"
+                    />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="0.75"
+                    android:gravity="center_vertical"
+                    android:layout_height="match_parent">
+
+                    <EditText
+                        android:id="@+id/emailET"
+                        android:background="#222222"
+                        android:layout_marginRight="14dp"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:textSize="12dp"
+                        android:textColor="#ffffff"
+                        />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#999999"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.25"
+                    android:layout_height="wrap_content"
+                    android:textSize="12dp"
+                    android:textColor="#999999"
+                    android:text="휴대폰번호"
+                    />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="0.75"
+                    android:gravity="center_vertical"
+                    android:layout_height="match_parent">
+
+                    <EditText
+                        android:id="@+id/phoneET"
+                        android:background="#222222"
+                        android:layout_marginRight="14dp"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:textSize="12dp"
+                        android:textColor="#ffffff"
+                        />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#999999"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.25"
+                    android:layout_height="wrap_content"
+                    android:textSize="12dp"
+                    android:textColor="#999999"
+                    android:text="프린터설정"
+                    />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="0.75"
+                    android:gravity="center_vertical"
+                    android:layout_height="match_parent">
+
+
+                    <ImageView
+                        android:id="@+id/printtype1IV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/radio_on"/>
+
+                    <TextView
+                        android:layout_marginLeft="3.5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12dp"
+                        android:textColor="#ffffff"
+                        android:lineSpacingExtra="24dp"
+                        android:text="우심"
+                        />
+
+                    <ImageView
+                        android:id="@+id/printtype2IV"
+                        android:layout_marginLeft="23dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/radio_off"/>
+
+                    <TextView
+                        android:layout_marginLeft="3.5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12dp"
+                        android:textColor="#ffffff"
+                        android:lineSpacingExtra="24dp"
+                        android:text="세우"
+                        />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#999999"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.25"
+                    android:layout_height="wrap_content"
+                    android:textSize="12dp"
+                    android:textColor="#999999"
+                    android:text="프린터 초기화"
+                    />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="0.75"
+                    android:gravity="center_vertical"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/printTV"
+                        android:gravity="center"
+                        android:layout_marginRight="14dp"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:textStyle="bold"
+                        android:text="EPSON 312sm"
+                        android:layout_height="wrap_content"
+                        android:textSize="12dp"
+                        android:textColor="#ffffff"
+                        />
+
+                    <TextView
+                        android:layout_marginRight="35.5dp"
+                        android:textStyle="bold"
+                        android:paddingRight="17.5dp"
+                        android:paddingLeft="17.5dp"
+                        android:paddingTop="6.5dp"
+                        android:paddingBottom="6.5dp"
+                        android:background="#c99e6b"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12dp"
+                        android:textColor="#000000"
+                        android:text="프린터초기화"
+                        />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#999999"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/editLL"
+            android:gravity="center"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="#f0ba2f"
+            android:layout_marginBottom="0dp">
+
+            <TextView
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="25dp"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:gravity="center_horizontal"
+                android:text="수정"
+                />
+
+        </LinearLayout>
+
 
     </RelativeLayout>
-
-
-    
-    <LinearLayout
-        android:id="@+id/userLL"
-        android:layout_below="@id/titleRL"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginTop="13dp">
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#c99e6b"/>
-
-        <TextView
-            android:paddingTop="13dp"
-            android:paddingBottom="13dp"
-            android:textStyle="bold"
-            android:gravity="center"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="13dp"
-            android:textColor="#c8a27a"
-            android:text="정보수정"
-            />
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#c99e6b"/>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
-            <TextView
-                android:paddingBottom="10dp"
-                android:paddingTop="10dp"
-                android:gravity="center"
-                android:layout_width="0dp"
-                android:layout_weight="0.25"
-                android:layout_height="wrap_content"
-                android:textSize="12dp"
-                android:textColor="#999999"
-                android:text="회원아이디"
-                />
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_weight="0.75"
-                android:gravity="center_vertical"
-                android:layout_height="match_parent">
-
-                <EditText
-                    android:background="#222222"
-                    android:layout_marginRight="14dp"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:textSize="12dp"
-                    android:textColor="#ffffff"
-                    />
-
-
-
-
-            </LinearLayout>
-
-
-
-
-
-        </LinearLayout>
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#999999"/>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
-            <TextView
-                android:paddingBottom="10dp"
-                android:paddingTop="10dp"
-                android:gravity="center"
-                android:layout_width="0dp"
-                android:layout_weight="0.25"
-                android:layout_height="wrap_content"
-                android:textSize="12dp"
-                android:textColor="#999999"
-                android:text="비밀번호"
-                />
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_weight="0.75"
-                android:gravity="center_vertical"
-                android:layout_height="match_parent">
-
-                <EditText
-                    android:background="#222222"
-                    android:layout_marginRight="14dp"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:textSize="12dp"
-                    android:textColor="#ffffff"
-                    />
-
-                <TextView
-                    android:layout_marginRight="35.5dp"
-                    android:textStyle="bold"
-                    android:paddingRight="17.5dp"
-                    android:paddingLeft="17.5dp"
-                    android:paddingTop="6.5dp"
-                    android:paddingBottom="6.5dp"
-                    android:background="#c99e6b"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="12dp"
-                    android:textColor="#000000"
-                    android:text="비밀번호변경"
-                    />
-
-
-            </LinearLayout>
-
-
-
-
-
-        </LinearLayout>
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#999999"/>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
-            <TextView
-                android:paddingBottom="10dp"
-                android:paddingTop="10dp"
-                android:gravity="center"
-                android:layout_width="0dp"
-                android:layout_weight="0.25"
-                android:layout_height="wrap_content"
-                android:textSize="12dp"
-                android:textColor="#999999"
-                android:text="가맹점명"
-                />
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_weight="0.75"
-                android:gravity="center_vertical"
-                android:layout_height="match_parent">
-
-                <EditText
-                    android:background="#222222"
-                    android:layout_marginRight="14dp"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:textSize="12dp"
-                    android:textColor="#ffffff"
-                    />
-
-
-
-
-            </LinearLayout>
-
-
-
-
-
-        </LinearLayout>
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#999999"/>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
-
-            <TextView
-                android:paddingBottom="10dp"
-                android:paddingTop="10dp"
-                android:gravity="center"
-                android:layout_width="0dp"
-                android:layout_weight="0.25"
-                android:layout_height="wrap_content"
-                android:textSize="12dp"
-                android:textColor="#999999"
-                android:text="사업자번호"
-                />
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_weight="0.75"
-                android:gravity="center_vertical"
-                android:layout_height="match_parent">
-
-                <EditText
-                    android:background="#222222"
-                    android:layout_marginRight="14dp"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:textSize="12dp"
-                    android:textColor="#ffffff"
-                    />
-
-
-
-
-            </LinearLayout>
-
-
-
-
-
-        </LinearLayout>
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#999999"/>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
-            <TextView
-                android:paddingBottom="10dp"
-                android:paddingTop="10dp"
-                android:gravity="center"
-                android:layout_width="0dp"
-                android:layout_weight="0.25"
-                android:layout_height="wrap_content"
-                android:textSize="12dp"
-                android:textColor="#999999"
-                android:text="이메일"
-                />
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_weight="0.75"
-                android:gravity="center_vertical"
-                android:layout_height="match_parent">
-
-                <EditText
-                    android:background="#222222"
-                    android:layout_marginRight="14dp"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:textSize="12dp"
-                    android:textColor="#ffffff"
-                    />
-
-
-
-
-            </LinearLayout>
-
-
-
-
-
-        </LinearLayout>
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#999999"/>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
-            <TextView
-                android:paddingBottom="10dp"
-                android:paddingTop="10dp"
-                android:gravity="center"
-                android:layout_width="0dp"
-                android:layout_weight="0.25"
-                android:layout_height="wrap_content"
-                android:textSize="12dp"
-                android:textColor="#999999"
-                android:text="휴대폰번호"
-                />
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_weight="0.75"
-                android:gravity="center_vertical"
-                android:layout_height="match_parent">
-
-                <EditText
-                    android:background="#222222"
-                    android:layout_marginRight="14dp"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:textSize="12dp"
-                    android:textColor="#ffffff"
-                    />
-
-
-
-
-            </LinearLayout>
-
-
-
-
-
-        </LinearLayout>
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#999999"/>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
-            <TextView
-                android:paddingBottom="10dp"
-                android:paddingTop="10dp"
-                android:gravity="center"
-                android:layout_width="0dp"
-                android:layout_weight="0.25"
-                android:layout_height="wrap_content"
-                android:textSize="12dp"
-                android:textColor="#999999"
-                android:text="프린터설정"
-                />
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_weight="0.75"
-                android:gravity="center_vertical"
-                android:layout_height="match_parent">
-
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@mipmap/radio_on"/>
-
-                <TextView
-                    android:layout_marginLeft="3.5dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="12dp"
-                    android:textColor="#ffffff"
-                    android:lineSpacingExtra="24dp"
-                    android:text="우심"
-                    />
-
-                <ImageView
-                    android:layout_marginLeft="23dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@mipmap/radio_off"/>
-
-                <TextView
-                    android:layout_marginLeft="3.5dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="12dp"
-                    android:textColor="#ffffff"
-                    android:lineSpacingExtra="24dp"
-                    android:text="세우"
-                    />
-
-
-            </LinearLayout>
-
-
-
-
-
-        </LinearLayout>
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#999999"/>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
-            <TextView
-                android:paddingBottom="10dp"
-                android:paddingTop="10dp"
-                android:gravity="center"
-                android:layout_width="0dp"
-                android:layout_weight="0.25"
-                android:layout_height="wrap_content"
-                android:textSize="12dp"
-                android:textColor="#999999"
-                android:text="프린터 초기화"
-                />
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_weight="0.75"
-                android:gravity="center_vertical"
-                android:layout_height="match_parent">
-
-                <TextView
-                    android:gravity="center"
-                    android:layout_marginRight="14dp"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:textStyle="bold"
-                    android:text="EPSON 312sm"
-                    android:layout_height="wrap_content"
-                    android:textSize="12dp"
-                    android:textColor="#ffffff"
-                    />
-
-                <TextView
-                    android:layout_marginRight="35.5dp"
-                    android:textStyle="bold"
-                    android:paddingRight="17.5dp"
-                    android:paddingLeft="17.5dp"
-                    android:paddingTop="6.5dp"
-                    android:paddingBottom="6.5dp"
-                    android:background="#c99e6b"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="12dp"
-                    android:textColor="#000000"
-                    android:text="프린터초기화"
-                    />
-
-
-            </LinearLayout>
-
-
-
-
-
-        </LinearLayout>
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#999999"/>
-    </LinearLayout>
-
-
-
-
-
-
-
-
-
-
-
-    <LinearLayout
-        android:gravity="center"
-        android:layout_alignParentBottom="true"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:background="#f0ba2f"
-        android:layout_marginBottom="0dp">
-
-        <TextView
-            android:layout_centerInParent="true"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="25dp"
-            android:textColor="#000000"
-            android:textStyle="bold"
-            android:gravity="center_horizontal"
-            android:text="수정"
-            />
-
-    </LinearLayout>
-
-
-
-
-
-</RelativeLayout>
-
-
 
 
 </LinearLayout>

@@ -37,9 +37,10 @@
                 android:src="@mipmap/icon_login"/>
 
             <EditText
+                android:id="@+id/emailET"
                 android:paddingLeft="18dp"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="25dp"
                 android:background="@null"
                 android:textSize="18dp"
                 android:textColor="#ffffff"
@@ -67,9 +68,11 @@
                 android:src="@mipmap/icon_pw"/>
 
             <EditText
+                android:inputType="textPassword"
+                android:id="@+id/pwET"
                 android:paddingLeft="18dp"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="25dp"
                 android:background="@null"
                 android:textSize="18dp"
                 android:textColor="#ffffff"
@@ -82,7 +85,60 @@
             android:layout_height="0.5dp"
             android:background="#7d7d7d"/>
 
+        <LinearLayout
+            android:paddingBottom="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <LinearLayout
+            android:gravity="center"
+            android:id="@+id/rememberLL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_border_strock_ffffff">
+            <ImageView
+                android:id="@+id/rememberIV"
+                android:padding="2dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                />
+        </LinearLayout>
 
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:textSize="14.5sp"
+                android:textColor="#c99e6b"
+                android:gravity="center_horizontal"
+                android:text="아이디저장"
+                />
+            <LinearLayout
+                android:gravity="center"
+                android:id="@+id/autoLL"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_border_strock_ffffff">
+            <ImageView
+                android:id="@+id/autoIV"
+                android:padding="2dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/background_border_strock_ffffff"/>
+            </LinearLayout>
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:textSize="14.5sp"
+                android:textColor="#c99e6b"
+                android:gravity="center_horizontal"
+                android:text="자동 로그인"
+                />
+        </LinearLayout>
         <TextView
             android:id="@+id/loginTV"
             android:textStyle="bold"
