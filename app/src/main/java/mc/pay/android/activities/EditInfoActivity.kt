@@ -151,10 +151,38 @@ class EditInfoActivity : RootActivity() {
     }
 
     fun edit_profile() {
+         name = Utils.getString(nameET)
+         phone = Utils.getInt(phoneET)
+        login_id = Utils.getString(login_idET)
+        company_num = Utils.getInt(company_numET)
+
+        if (phone.toString().length != 11){
+            Toast.makeText(context,"핸드폰번호가 올바르지가 않습니다",Toast.LENGTH_SHORT).show()
+            return
+        }
+        if (company_num.toString().length < 1){
+            Toast.makeText(context,"사업자번호가 올바르지가 않습니다",Toast.LENGTH_SHORT).show()
+            return
+        }
+        if (name.length < 2){
+            Toast.makeText(context,"가맹점명이 올바르지가 않습니다",Toast.LENGTH_SHORT).show()
+            return
+        }
+        if (login_id.length < 3){
+            Toast.makeText(context,"아이디가 올바르지가 않습니다",Toast.LENGTH_SHORT).show()
+            return
+        }
+
+
         val params = RequestParams()
         params.put("member_id", PrefUtils.getIntPreference(context, "member_id"))
         params.put("name", name)
         params.put("phone", phone)
+        params.put("email", email)
+        params.put("login_id", login_id)
+        params.put("passwd", passwd)
+        params.put("company_num", company_num)
+        params.put("print_type", print_type)
 
         MemberAction.update_info(params, object : JsonHttpResponseHandler() {
 
