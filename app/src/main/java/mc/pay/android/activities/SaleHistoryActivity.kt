@@ -85,8 +85,12 @@ class SaleHistoryActivity : RootActivity() {
 
     //은행정보보
     fun pay_history() {
+
+
+
         val params = RequestParams()
         params.put("member_id", PrefUtils.getIntPreference(context,"member_id"))
+
 
         BankAction.pay_history(params, object : JsonHttpResponseHandler() {
 

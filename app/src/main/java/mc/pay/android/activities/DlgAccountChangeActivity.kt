@@ -20,6 +20,14 @@ class DlgAccountChangeActivity : RootActivity() {
         progressDialog!!.setProgressStyle(android.R.style.Widget_DeviceDefault_Light_ProgressBar_Large)
         progressDialog!!.setCancelable(false)
 
+        cancelTV.setOnClickListener {
+            finish()
+        }
+        confirmTV.setOnClickListener {
+            finish()
+        }
+
+
 
     }
 

@@ -24,7 +24,12 @@ class DlgNoticeActivity : RootActivity() {
         val url = Config.url + "/admin/agree1view"
         agreeWV.settings.javaScriptEnabled = true
         agreeWV.loadUrl(url)
-
+        cancelTV.setOnClickListener {
+            finish()
+        }
+        confirmTV.setOnClickListener {
+            finish()
+        }
 
     }
 
