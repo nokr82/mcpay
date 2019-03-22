@@ -194,7 +194,8 @@
         android:layout_marginRight="15dp"
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:paddingTop="10dp"
         android:layout_marginTop="14dp">
         <View
@@ -305,7 +306,81 @@
             android:background="#cccccc"/>
 
 
-    </LinearLayout>
 
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#cccccc"/>
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/giftTV"
+            android:gravity="center"
+            android:layout_marginTop="11dp"
+            android:layout_marginBottom="11dp"
+            android:layout_marginLeft="14dp"
+            android:paddingTop="5.5dp"
+            android:background="#f0ba2f"
+            android:paddingBottom="5.5dp"
+            android:paddingLeft="17.5dp"
+            android:paddingRight="17.5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12dp"
+            android:textColor="#000000"
+            android:text="머니선물"
+            />
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12dp"
+                android:textColor="#c8a27a"
+                android:text="계좌잔액"
+                />
+        <TextView
+            android:layout_marginRight="14.5dp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginLeft="7dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12dp"
+            android:textColor="#ffffff"
+            android:text="7,000,000원"
+            />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/accountTV"
+            android:gravity="center"
+            android:layout_marginTop="11dp"
+            android:layout_marginBottom="11dp"
+            android:layout_marginRight="14dp"
+            android:paddingTop="5.5dp"
+            android:background="#f0ba2f"
+            android:paddingBottom="5.5dp"
+            android:paddingLeft="17.5dp"
+            android:paddingRight="17.5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12dp"
+            android:textColor="#000000"
+            android:text="은행이체"
+            />
+
+    </LinearLayout>
 
 </LinearLayout>

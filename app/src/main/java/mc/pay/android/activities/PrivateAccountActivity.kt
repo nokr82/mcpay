@@ -2,6 +2,7 @@ package mc.pay.android.activities
 
 import android.app.ProgressDialog
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import mc.pay.android.R
 import kotlinx.android.synthetic.main.activity_private_account.*
@@ -23,6 +24,16 @@ class PrivateAccountActivity : RootActivity() {
 
         backIV.setOnClickListener {
             finish()
+        }
+
+        giftTV.setOnClickListener {
+            var intent = Intent(context, MoneyGiftActivity::class.java)
+            startActivity(intent)
+        }
+
+        accountTV.setOnClickListener {
+            var intent = Intent(context, BankChoiceActivity::class.java)
+            startActivity(intent)
         }
 
     }

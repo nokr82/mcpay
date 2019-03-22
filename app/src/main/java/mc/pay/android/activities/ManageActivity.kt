@@ -38,6 +38,12 @@ class ManageActivity : RootActivity() {
             autoIV.setImageResource(0)
         }
 
+        accountLL.setOnClickListener {
+            var intent = Intent(context, PrivateAccountActivity::class.java)
+            startActivity(intent)
+        }
+
+
         callTV.setOnClickListener {
             val tt = Intent(Intent.ACTION_DIAL, Uri.parse("tel:0221246625"))
             startActivity(tt)
