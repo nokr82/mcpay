@@ -41,7 +41,7 @@ open class SaleAdapter(context: Context, view:Int, data:ArrayList<JSONObject>) :
         var pay_type = Utils.getString(json,"pay_type")
         var created_at = Utils.getString(json,"created_at")
         var confm_no = Utils.getString(json,"confm_no")
-        item.numTV.text = position.toString()
+        item.numTV.text = (position+1).toString()
         item.createdTV.text = created_at
         item.priceTV.text = Utils._comma(price.toString())
         item.acceptTV.text = confm_no.toString()
