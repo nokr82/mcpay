@@ -1,15 +1,16 @@
 package mc.pay.android.activities
 
+import android.app.DatePickerDialog
 import android.app.ProgressDialog
 import android.content.Context
 import android.os.Bundle
+import android.widget.Toast
 import com.loopj.android.http.JsonHttpResponseHandler
 import com.loopj.android.http.RequestParams
 import cz.msebera.android.httpclient.Header
 import mc.pay.android.R
 import kotlinx.android.synthetic.main.activity_sale_history.*
 import mc.pay.android.Actions.BankAction
-import mc.pay.android.adapter.CouponAdapter
 import mc.pay.android.adapter.SaleAdapter
 import mc.pay.android.base.PrefUtils
 import mc.pay.android.base.RootActivity
@@ -24,7 +25,9 @@ class SaleHistoryActivity : RootActivity() {
 
     private lateinit var adapter: SaleAdapter
     var adapterData:ArrayList<JSONObject> = ArrayList<JSONObject>()
-
+    var year: Int = 1
+    var month: Int = 1
+    var day: Int = 1
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,11 +41,50 @@ class SaleHistoryActivity : RootActivity() {
         listLV.adapter = adapter
 
 
+        calLL.setOnClickListener {
+            datedlg()
+        }
+        cal2LL.setOnClickListener {
+            datedlg2()
+        }
+
+
         backIV.setOnClickListener {
             finish()
         }
         pay_history()
     }
+
+    fun datedlg() {
+        var day = Utils.todayStr()
+        var days =    day.split("-")
+        DatePickerDialog(context, dateSetListener, days[0].toInt(), days[1].toInt()-1, days[2].toInt()).show()
+    }
+
+    fun datedlg2() {
+        var day = Utils.todayStr()
+        var days =    day.split("-")
+        DatePickerDialog(context, dateSetListener2,days[0].toInt(), days[1].toInt(), days[2].toInt()).show()
+    }
+
+    private val dateSetListener = DatePickerDialog.OnDateSetListener { view, year, monthOfYear, dayOfMonth ->
+        // TODO Auto-generated method stub
+
+        val msg = String.format("%d.%d.%d", year, monthOfYear + 1, dayOfMonth)
+
+        firstTV.text = msg
+        Toast.makeText(context, msg, Toast.LENGTH_SHORT).show()
+//        loadmainData(company_id)
+    }
+    private val dateSetListener2 = DatePickerDialog.OnDateSetListener { view, year, monthOfYear, dayOfMonth ->
+        // TODO Auto-generated method stub
+        val msg = String.format("%d.%d.%d", year, monthOfYear + 1, dayOfMonth)
+        val end_msg = String.format("%d-%d-%d", year, monthOfYear + 1, dayOfMonth)
+        endTV.text = msg
+        Toast.makeText(context, msg, Toast.LENGTH_SHORT).show()
+//        loadmainData(company_id)
+    }
+
 
     //은행정보보
     fun pay_history() {
