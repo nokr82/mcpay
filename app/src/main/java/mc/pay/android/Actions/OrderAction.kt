@@ -13,4 +13,8 @@ object OrderAction {
         HttpClient.post("/api/order/order", params, handler)
     }
 
+    fun done(params: RequestParams, handler: JsonHttpResponseHandler) {
+        HttpClient.post("/api/order/done", params, handler)
+    }
+
 }
