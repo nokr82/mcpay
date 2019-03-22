@@ -67,6 +67,7 @@
         android:layout_height="wrap_content">
 
         <LinearLayout
+            android:id="@+id/cardLL"
             android:layout_marginRight="3.5dp"
             android:layout_width="0dp"
             android:layout_weight="1"
@@ -93,6 +94,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/couponLL"
             android:layout_marginLeft="3.5dp"
             android:layout_width="0dp"
             android:layout_weight="1"
@@ -183,6 +185,7 @@
                 android:layout_height="match_parent"
                 android:background="#c99e6b"/>
             <LinearLayout
+                android:id="@+id/delLL"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="match_parent">
@@ -251,6 +254,7 @@
                 android:layout_height="match_parent"
                 android:background="#c99e6b"/>
             <LinearLayout
+                android:id="@+id/removeLL"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="match_parent">
@@ -400,6 +404,7 @@
                 android:orientation="vertical"
                 android:layout_height="match_parent">
                 <LinearLayout
+                    android:id="@+id/confirmLL"
                     android:layout_width="match_parent"
                     android:orientation="vertical"
                     android:gravity="center"
@@ -436,6 +441,7 @@
             android:layout_height="wrap_content">
 
             <LinearLayout
+                android:id="@+id/cancelLL"
                 android:layout_marginRight="3.5dp"
                 android:layout_width="0dp"
                 android:layout_weight="1"
@@ -461,6 +467,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/manageLL"
                 android:layout_marginLeft="3.5dp"
                 android:layout_width="0dp"
                 android:layout_weight="1"

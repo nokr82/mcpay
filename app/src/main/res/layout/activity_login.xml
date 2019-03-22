@@ -84,6 +84,7 @@
 
 
         <TextView
+            android:id="@+id/loginTV"
             android:textStyle="bold"
             android:layout_marginTop="42.5dp"
             android:layout_width="match_parent"
@@ -105,7 +106,7 @@
         android:textSize="8dp"
         android:textColor="#9cbbbbbb"
         android:letterSpacing="0.05"
-        android:gravity="bottom||center"
+        android:gravity="bottom|center"
         android:text="\ufeff@ 2019 MC. ALL RIGHTS RESERVED."
         />
 

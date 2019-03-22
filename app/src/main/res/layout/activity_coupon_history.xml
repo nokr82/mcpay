@@ -13,6 +13,7 @@
         android:background="#c99e6b">
 
         <ImageView
+            android:id="@+id/backIV"
             android:padding="14dp"
             android:layout_alignParentLeft="true"
             android:layout_centerInParent="true"
@@ -283,6 +284,7 @@
         android:layout_height="wrap_content">
 
         <TextView
+            android:id="@+id/coupongiftTV"
             android:layout_marginTop="11dp"
             android:layout_marginBottom="11dp"
             android:textStyle="bold"
@@ -312,6 +314,7 @@
             />
 
         <TextView
+            android:id="@+id/couponpayTV"
             android:layout_marginTop="11dp"
             android:layout_marginBottom="11dp"
             android:textStyle="bold"

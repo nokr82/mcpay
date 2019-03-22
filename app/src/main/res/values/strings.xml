@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">MCPay</string>
+
+    <string name="interval_day">%1$d일전</string>
+    <string name="interval_yesterday">어제</string>
+    <string name="interval_hour">%1$d시간전</string>
+    <string name="interval_minite">%1$d분전</string>
+    <string name="interval_spot">방금전</string>
+    <string name="account_status_title"><b>계정상태</b></string>
+    <string name="login_status_title"><b>로그인상태</b></string>
+
 </resources>

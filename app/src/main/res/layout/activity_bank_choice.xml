@@ -13,6 +13,7 @@
         android:background="#f0ba2f">
 
         <ImageView
+            android:id="@+id/closeIV"
             android:padding="14dp"
             android:layout_alignParentLeft="true"
             android:layout_centerInParent="true"

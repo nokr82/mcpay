@@ -13,6 +13,7 @@
         android:background="#c99e6b">
 
         <ImageView
+            android:id="@+id/backIV"
             android:padding="14dp"
             android:layout_alignParentLeft="true"
             android:layout_centerInParent="true"
@@ -65,6 +66,7 @@
 
 
         <TextView
+            android:id="@+id/logoutTV"
             android:layout_marginRight="16dp"
             android:background="@drawable/background_border_strock_926f4a"
             android:paddingLeft="24.5dp"
@@ -107,7 +109,7 @@
                 <LinearLayout
                     android:orientation="horizontal"
                     android:layout_marginTop="9.5dp"
-                    android:gravity="center||center_vertical"
+                    android:gravity="center|center_vertical"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
@@ -174,7 +176,7 @@
                 <LinearLayout
                     android:orientation="horizontal"
                     android:layout_marginTop="9.5dp"
-                    android:gravity="center||center_vertical"
+                    android:gravity="center|center_vertical"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
@@ -247,7 +249,7 @@
                 <LinearLayout
                     android:orientation="horizontal"
                     android:layout_marginTop="9.5dp"
-                    android:gravity="center||center_vertical"
+                    android:gravity="center|center_vertical"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
@@ -314,7 +316,7 @@
                 <LinearLayout
                     android:orientation="horizontal"
                     android:layout_marginTop="9.5dp"
-                    android:gravity="center||center_vertical"
+                    android:gravity="center|center_vertical"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
@@ -380,6 +382,7 @@
         android:layout_weight="1">
 
         <LinearLayout
+            android:id="@+id/payLL"
             android:paddingTop="2.5dp"
             android:paddingBottom="2.5dp"
             android:gravity="center_vertical"
@@ -418,6 +421,7 @@
             android:background="#cccccc"/>
 
         <LinearLayout
+            android:id="@+id/franLL"
             android:paddingTop="2.5dp"
             android:paddingBottom="2.5dp"
             android:gravity="center_vertical"
@@ -456,6 +460,7 @@
             android:background="#cccccc"/>
 
         <LinearLayout
+            android:id="@+id/editLL"
             android:paddingTop="2.5dp"
             android:paddingBottom="2.5dp"
             android:gravity="center_vertical"
@@ -518,6 +523,7 @@
                 />
 
             <ImageView
+                android:id="@+id/autoIV"
                 android:layout_marginRight="2dp"
                 android:padding="8dp"
                 android:layout_width="wrap_content"
@@ -534,6 +540,7 @@
             android:background="#cccccc"/>
 
         <LinearLayout
+            android:id="@+id/noticeLL"
             android:paddingTop="2.5dp"
             android:paddingBottom="2.5dp"
             android:gravity="center_vertical"
@@ -572,6 +579,7 @@
             android:background="#cccccc"/>
 
         <LinearLayout
+            android:id="@+id/softLL"
             android:paddingTop="2.5dp"
             android:paddingBottom="2.5dp"
             android:gravity="center_vertical"
@@ -656,6 +664,7 @@
             android:layout_height="wrap_content">
 
             <TextView
+                android:id="@+id/callTV"
                 android:layout_gravity="end"
                 android:paddingTop="12dp"
                 android:paddingBottom="12dp"
