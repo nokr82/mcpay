@@ -2,6 +2,7 @@ package mc.pay.android.activities
 
 import android.app.ProgressDialog
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import mc.pay.android.R
 import kotlinx.android.synthetic.main.activity_bank_send.*
@@ -22,6 +23,11 @@ class BankSendActivity : RootActivity() {
 
         backIV.setOnClickListener {
             finish()
+        }
+
+        bankTV.setOnClickListener {
+            var intent = Intent(context, BankChoiceActivity::class.java)
+            startActivity(intent)
         }
 
     }

@@ -20,6 +20,7 @@
             android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/numTV"
                 android:layout_marginTop="6.5dp"
                 android:gravity="center"
                 android:layout_width="0dp"
@@ -27,22 +28,23 @@
                 android:layout_height="wrap_content"
                 android:textSize="13dp"
                 android:textColor="#ffffff"
-                android:text="NO "
+                android:text="1"
                 />
 
             <TextView
+                android:id="@+id/createdTV"
                 android:layout_marginTop="6.5dp"
-                android:gravity="center"
+                android:gravity="center_horizontal"
                 android:layout_width="0dp"
                 android:layout_weight="0.25"
                 android:layout_height="wrap_content"
-                android:textSize="13dp"
+                android:textSize="12dp"
                 android:textColor="#ffffff"
-                android:text="가맹점명
-연락처"
+                android:text="2028.12.12\n13:24"
                 />
 
             <TextView
+                android:id="@+id/priceTV"
                 android:layout_marginTop="6.5dp"
                 android:gravity="center"
                 android:layout_width="0dp"
@@ -50,10 +52,11 @@
                 android:layout_height="wrap_content"
                 android:textSize="13dp"
                 android:textColor="#ffffff"
-                android:text="판매금액"
+                android:text="7,213,0000"
                 />
 
             <TextView
+                android:id="@+id/acceptTV"
                 android:layout_marginTop="6.5dp"
                 android:gravity="center"
                 android:layout_width="0dp"
@@ -61,10 +64,11 @@
                 android:layout_height="wrap_content"
                 android:textSize="13dp"
                 android:textColor="#ffffff"
-                android:text="추천그룹액"
+                android:text="결제금액승인번호"
                 />
 
             <TextView
+                android:id="@+id/paytypeTV"
                 android:layout_marginTop="6.5dp"
                 android:gravity="center"
                 android:layout_width="0dp"
@@ -72,7 +76,7 @@
                 android:layout_height="wrap_content"
                 android:textSize="13dp"
                 android:textColor="#ffffff"
-                android:text="NO"
+                android:text="카드"
                 />
 
         </LinearLayout>
