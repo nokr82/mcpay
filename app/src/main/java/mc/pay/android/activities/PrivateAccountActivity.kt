@@ -32,7 +32,7 @@ class PrivateAccountActivity : RootActivity() {
         }
 
         accountTV.setOnClickListener {
-            var intent = Intent(context, BankChoiceActivity::class.java)
+            var intent = Intent(context, BankSendActivity::class.java)
             startActivity(intent)
         }
 

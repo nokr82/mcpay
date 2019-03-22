@@ -11,7 +11,9 @@ import kotlinx.android.synthetic.main.activity_bank_choice.*
 import kotlinx.android.synthetic.main.activity_edit_info.*
 import mc.pay.android.Actions.BankAction
 import mc.pay.android.Actions.MemberAction
+import mc.pay.android.adapter.BankAdapter
 import mc.pay.android.adapter.CouponAdapter
+import mc.pay.android.adapter.SaleAdapter
 import mc.pay.android.base.PrefUtils
 import mc.pay.android.base.RootActivity
 import mc.pay.android.base.Utils
@@ -22,7 +24,11 @@ class BankChoiceActivity : RootActivity() {
 
     private lateinit var context: Context
     private var progressDialog: ProgressDialog? = null
-    private lateinit var adapter: CouponAdapter
+
+    private lateinit var adapter: BankAdapter
+    var adapterData:ArrayList<JSONObject> = ArrayList<JSONObject>()
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_bank_choice)
@@ -32,8 +38,10 @@ class BankChoiceActivity : RootActivity() {
         progressDialog!!.setCancelable(false)
 
         loadbank()
-        adapter = CouponAdapter(context, R.layout.item_bank, 7)
-       listLV.adapter = adapter
+        adapter = BankAdapter(context, R.layout.item_bank, adapterData)
+        listLV.adapter = adapter
+
+
 
         closeIV.setOnClickListener {
             finish()
@@ -62,7 +70,15 @@ class BankChoiceActivity : RootActivity() {
                     print("result : $response")
 
                     if ("ok" == result) {
-
+                        val banks = response.getJSONArray("bank")
+                        adapterData.clear()
+                        if (banks.length() > 0){
+                            for (i in 0 until banks.length()){
+                                val bank = banks.get(i) as JSONObject
+                                adapterData.add(bank)
+                            }
+                        }
+                        adapter.notifyDataSetChanged()
 
 
                     } else {
