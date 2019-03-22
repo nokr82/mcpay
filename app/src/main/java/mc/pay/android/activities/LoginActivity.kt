@@ -26,6 +26,9 @@ class LoginActivity : RootActivity() {
 
     var autoLogin = false
 
+    var remember_id = false
+
+    var re_login_id = ""
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
@@ -34,6 +37,15 @@ class LoginActivity : RootActivity() {
         progressDialog = ProgressDialog(context, R.style.progressDialogTheme)
         progressDialog!!.setProgressStyle(android.R.style.Widget_DeviceDefault_Light_ProgressBar_Large)
         progressDialog!!.setCancelable(false)
+        remember_id = intent.getBooleanExtra("remember_id",false)
+        if (remember_id){
+            re_login_id = intent.getStringExtra("login_id")
+            emailET.setText(re_login_id)
+            rememberIV.setImageResource(R.mipmap.check)
+        }else{
+            rememberIV.setImageResource(0)
+        }
+
 
         loginTV.setOnClickListener {
             login()
@@ -52,6 +64,14 @@ class LoginActivity : RootActivity() {
         }
 
         rememberLL.setOnClickListener {
+            if (!remember_id){
+                remember_id = true
+                rememberIV.setImageResource(R.mipmap.check)
+            }else{
+                remember_id = false
+                rememberIV.setImageResource(0)
+            }
+
 
         }
 
@@ -94,11 +114,12 @@ class LoginActivity : RootActivity() {
 
                         PrefUtils.setPreference(context, "member_id", Utils.getInt(data, "id"))
                         PrefUtils.setPreference(context, "name", Utils.getString(data, "name"))
+                        PrefUtils.setPreference(context, "login_id", Utils.getString(data, "login_id"))
                         PrefUtils.setPreference(context, "email", Utils.getString(data, "email"))
                         PrefUtils.setPreference(context, "passwd", Utils.getString(data, "passwd"))
                         PrefUtils.setPreference(context, "company_num", Utils.getString(data, "company_num"))
                         PrefUtils.setPreference(context, "autoLogin", autoLogin)
-
+                        PrefUtils.setPreference(context, "remember_id", remember_id)
                         Utils.hideKeyboard(context)
 
                         val intent = Intent(context, MainActivity::class.java)

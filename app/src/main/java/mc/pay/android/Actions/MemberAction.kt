@@ -12,32 +12,32 @@ object MemberAction {
 
     // 회원 페이지
     fun my_info(params: RequestParams, handler: JsonHttpResponseHandler) {
-        HttpClient.post("/member/my_info.json", params, handler)
+        HttpClient.post("/api/member/my_info", params, handler)
     }
     //닉네임변경
-    fun edit_info(params: RequestParams, handler: JsonHttpResponseHandler) {
-        HttpClient.post("/member/edit_info.json", params, handler)
+    fun update_info(params: RequestParams, handler: JsonHttpResponseHandler) {
+        HttpClient.post("/api/member/update_info", params, handler)
     }
 
     // 회원 페이지
     fun my_page_index(params: RequestParams, handler: JsonHttpResponseHandler) {
-        HttpClient.post("/member/my_page_index.json", params, handler)
+        HttpClient.post("/api/member/my_page_index", params, handler)
     }
 
     //사업자 쿠폰목록
     fun company_page(params: RequestParams, handler: JsonHttpResponseHandler) {
-        HttpClient.post("/member/company_page.json", params, handler)
+        HttpClient.post("/api/member/company_page", params, handler)
     }
     //회원탈퇴
     fun secession(params: RequestParams, handler: JsonHttpResponseHandler) {
-        HttpClient.post("/member/secession.json", params, handler)
+        HttpClient.post("/api/member/secession", params, handler)
     }
 
     fun cirtySchoolEmail(params: RequestParams, handler: JsonHttpResponseHandler) {
-        HttpClient.post("/member/cirty_school_email.json", params, handler)
+        HttpClient.post("/api/member/cirty_school_email", params, handler)
     }
 
     fun uploadSchoolId(params: RequestParams, handler: JsonHttpResponseHandler) {
-        HttpClient.post("/member/upload_school_id.json", params, handler)
+        HttpClient.post("/api/member/upload_school_id", params, handler)
     }
 }
