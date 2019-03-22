@@ -40,6 +40,7 @@ class DlgCommonActivity : RootActivity() {
         doneTV.setOnClickListener {
             var intent = Intent()
             setResult(Activity.RESULT_OK, intent)
+            finish()
         }
 
     }
