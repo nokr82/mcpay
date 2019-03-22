@@ -24,7 +24,7 @@ class FranchiseActivity : RootActivity() {
         progressDialog!!.setCancelable(false)
 
 
-        adapter = CouponAdapter(context, R.layout.item_sale_history, 7)
+        adapter = CouponAdapter(context, R.layout.item_franchise_history, 12)
         listLV.adapter = adapter
 
 
