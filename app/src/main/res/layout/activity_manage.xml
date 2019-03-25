@@ -309,6 +309,7 @@
                 android:background="#926f4a"/>
 
             <LinearLayout
+                android:id="@+id/saleLL"
                 android:gravity="center"
                 android:layout_width="0dp"
                 android:layout_weight="1"

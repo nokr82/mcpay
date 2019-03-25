@@ -3,6 +3,7 @@ package mc.pay.android.activities
 import android.app.DatePickerDialog
 import android.app.ProgressDialog
 import android.content.Context
+import android.graphics.Color
 import android.os.Bundle
 import android.widget.Toast
 import com.loopj.android.http.JsonHttpResponseHandler
@@ -29,6 +30,12 @@ class SaleHistoryActivity : RootActivity() {
     var month: Int = 1
     var day: Int = 1
 
+    var first_day = ""
+    var last_day = ""
+
+    var type = 1
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sale_history)
@@ -39,6 +46,22 @@ class SaleHistoryActivity : RootActivity() {
 
         adapter = SaleAdapter(context, R.layout.item_sale_history, adapterData)
         listLV.adapter = adapter
+
+
+        cancelTV.setOnClickListener {
+            type = 2
+            pay_history()
+            setmenu()
+            cancelTV.setBackgroundColor(Color.parseColor("#f0ba2f"))
+            cancelTV.setTextColor(Color.parseColor("#000000"))
+        }
+        payTV.setOnClickListener {
+            type = 1
+            pay_history()
+            setmenu()
+            payTV.setBackgroundColor(Color.parseColor("#f0ba2f"))
+            payTV.setTextColor(Color.parseColor("#000000"))
+        }
 
 
         calLL.setOnClickListener {
@@ -54,6 +77,14 @@ class SaleHistoryActivity : RootActivity() {
         }
         pay_history()
     }
+
+    fun setmenu(){
+        cancelTV.setBackgroundResource(R.drawable.background_border_strock_926f4a)
+        payTV.setBackgroundResource(R.drawable.background_border_strock_926f4a)
+        cancelTV.setTextColor(Color.parseColor("#926f4a"))
+        payTV.setTextColor(Color.parseColor("#926f4a"))
+    }
+
 
     fun datedlg() {
         var day = Utils.todayStr()
@@ -72,25 +103,28 @@ class SaleHistoryActivity : RootActivity() {
 
         firstTV.text = msg
         Toast.makeText(context, msg, Toast.LENGTH_SHORT).show()
-//        loadmainData(company_id)
+        first_day = msg
+        pay_history()
+
     }
     private val dateSetListener2 = DatePickerDialog.OnDateSetListener { view, year, monthOfYear, dayOfMonth ->
         val msg = String.format("%d.%d.%d", year, monthOfYear + 1, dayOfMonth)
         val end_msg = String.format("%d-%d-%d", year, monthOfYear + 1, dayOfMonth)
         endTV.text = msg
         Toast.makeText(context, msg, Toast.LENGTH_SHORT).show()
-//        loadmainData(company_id)
+        last_day = msg
+        pay_history()
     }
 
 
     //은행정보보
     fun pay_history() {
 
-
-
         val params = RequestParams()
         params.put("member_id", PrefUtils.getIntPreference(context,"member_id"))
-
+        params.put("type",type)
+        params.put("first_day",first_day)
+        params.put("last_day",last_day)
 
         BankAction.pay_history(params, object : JsonHttpResponseHandler() {
 
