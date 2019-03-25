@@ -32,7 +32,7 @@
                 />
 
             <TextView
-                android:id="@+id/phoneTV"
+                android:id="@+id/limitTV"
                 android:gravity="center"
                 android:layout_width="0dp"
                 android:layout_weight="0.25"
@@ -54,7 +54,7 @@
                 />
 
             <TextView
-                android:id="@+id/grouppriceTV"
+                android:id="@+id/couponnumTV"
                 android:gravity="center"
                 android:layout_width="0dp"
                 android:layout_weight="0.25"

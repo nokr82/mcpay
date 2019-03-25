@@ -125,8 +125,9 @@ class ManageActivity : RootActivity() {
                     if ("ok" == result) {
 
                         var sale_count = response.getInt("sale_count")
+                        var coupon = response.getInt("coupon")
                         salecountTV.text = sale_count.toString()
-
+                        couponTV.text = coupon.toString()
 
                         var member = response.getJSONObject("member")
 

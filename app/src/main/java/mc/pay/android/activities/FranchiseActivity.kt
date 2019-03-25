@@ -10,7 +10,6 @@ import com.loopj.android.http.RequestParams
 import cz.msebera.android.httpclient.Header
 import mc.pay.android.R
 import kotlinx.android.synthetic.main.activity_franchisee.*
-import mc.pay.android.Actions.BankAction.pay_history
 import mc.pay.android.Actions.FranchiesAction
 import mc.pay.android.adapter.FranchiesAdapter
 import mc.pay.android.base.PrefUtils
