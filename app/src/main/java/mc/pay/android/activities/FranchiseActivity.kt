@@ -5,6 +5,7 @@ import android.app.ProgressDialog
 import android.content.Context
 import android.graphics.Color
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import com.loopj.android.http.JsonHttpResponseHandler
 import com.loopj.android.http.RequestParams
@@ -26,7 +27,7 @@ class FranchiseActivity : RootActivity() {
     private var progressDialog: ProgressDialog? = null
 
     var adapterData:ArrayList<JSONObject> = ArrayList<JSONObject>()
-    private lateinit var adapter: FranchiesAdapter
+    lateinit var adapter: FranchiesAdapter
 
     var type = 1
     var first_day = ""
@@ -41,7 +42,7 @@ class FranchiseActivity : RootActivity() {
         progressDialog!!.setCancelable(false)
 
 
-        adapter = FranchiesAdapter(context, R.layout.item_franchise_history, adapterData)
+        adapter = FranchiesAdapter(context, R.layout.item_franchise_history, adapterData,this)
         listLV.adapter = adapter
 
 
@@ -141,6 +142,17 @@ class FranchiseActivity : RootActivity() {
                             }
                         }
                         adapter.notifyDataSetChanged()
+                        var r_sum = 0
+                        if (adapterData.size > 0){
+                            for (i in 0 until franchies.length()){
+                                val su = adapterData.get(i) as JSONObject
+                                Log.d("수",su.toString())
+                                var sum = Utils.getInt(su,"sum")
+                                r_sum = r_sum+sum
+
+                            }
+                        }
+                        sumTV.text = Utils._comma(r_sum.toString())+"원"
                     } else {
                     }
 
