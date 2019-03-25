@@ -79,15 +79,15 @@
                     android:gravity="center_vertical"
                     android:layout_height="wrap_content">
 
-                <TextView
-                    android:id="@+id/firstTV"
-                    android:layout_marginLeft="12.5dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="12dp"
-                    android:textColor="#ffffff"
-                    android:text="2019.01.21"
-                    />
+                    <TextView
+                        android:id="@+id/firstTV"
+                        android:layout_marginLeft="12.5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12dp"
+                        android:textColor="#ffffff"
+                        android:text=""
+                        />
 
                 <ImageView
                     android:layout_marginLeft="3.5dp"
@@ -116,7 +116,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="12dp"
                     android:textColor="#ffffff"
-                    android:text="2019.01.21"
+                    android:text=""
                     />
 
                 <ImageView
@@ -164,6 +164,7 @@
                 android:layout_height="match_parent">
 
                 <TextView
+                    android:id="@+id/payTV"
                     android:textStyle="bold"
                     android:layout_marginLeft="14dp"
                     android:paddingTop="5.5dp"
@@ -175,10 +176,11 @@
                     android:layout_height="wrap_content"
                     android:textSize="12dp"
                     android:textColor="#000000"
-                    android:text="결재"
+                    android:text="결제"
                     />
 
                 <TextView
+                    android:id="@+id/cancelTV"
                     android:textStyle="bold"
                     android:layout_marginLeft="14dp"
                     android:paddingTop="5.5dp"
@@ -275,6 +277,7 @@
             android:layout_height="1dp"
             android:background="#c8a27a"/>
         <ListView
+            android:scrollbars="none"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
             android:id="@+id/listLV"
