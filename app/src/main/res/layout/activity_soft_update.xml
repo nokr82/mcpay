@@ -72,6 +72,18 @@
                 android:background="#c99e6b"/>
 
             <TextView
+                android:id="@+id/guideTV"
+                android:textStyle="bold"
+                android:layout_marginTop="13dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12dp"
+                android:textColor="#fffefe"
+                android:lineSpacingExtra="6dp"
+                android:text="사용가능한 최선 버전으로 이미 업데이트했습니다."
+                />
+            <TextView
+                android:id="@+id/versionTV"
                 android:paddingBottom="13dp"
                 android:textStyle="bold"
                 android:layout_marginTop="13dp"
@@ -80,10 +92,11 @@
                 android:textSize="12dp"
                 android:textColor="#fffefe"
                 android:lineSpacingExtra="6dp"
-                android:text="사용가능한 최선 버전으로 이미 업데이트했습니다.\n
-현재버전 : CM124512/123413\n
-마지막 업데이트 확인 : 19/2/25\n"
+                android:text="현재버전 : CM124512/123413\n
+마지막 업데이트 확인 : 19/2/25"
                 />
+
+
 
 
             <View
@@ -93,6 +106,7 @@
         </LinearLayout>
 
         <RelativeLayout
+            android:id="@+id/upRL"
             android:layout_alignParentBottom="true"
             android:layout_width="match_parent"
             android:layout_height="60dp"

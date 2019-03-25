@@ -50,6 +50,11 @@ class ManageActivity : RootActivity() {
 
         }
 
+        saleLL.setOnClickListener {
+            var intent = Intent(context, SaleHistoryActivity::class.java)
+            startActivity(intent)
+        }
+
 
         backIV.setOnClickListener {
             finish()
