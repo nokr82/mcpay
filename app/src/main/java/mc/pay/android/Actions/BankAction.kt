@@ -19,4 +19,8 @@ object BankAction {
     fun transfer(params: RequestParams, handler: JsonHttpResponseHandler) {
         HttpClient.post("/api/bank/transfer", params, handler)
     }
+
+    fun coupon_history(params: RequestParams, handler: JsonHttpResponseHandler) {
+        HttpClient.post("/api/bank/coupon_history", params, handler)
+    }
 }
