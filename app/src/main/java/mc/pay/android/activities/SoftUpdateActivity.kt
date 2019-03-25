@@ -71,8 +71,8 @@ class SoftUpdateActivity : RootActivity() {
                         upRL.visibility = View.GONE
                         guideTV.text = "사용가능한 최선 버전으로 이미 업데이트했습니다."
 
-                        versionTV.text = "현재버전 : " + my_version
-                        "마지막 업데이트 확인 : "
+                        versionTV.text = "현재버전 : " + my_version+
+                        "\n마지막 업데이트 확인 : "
 
                     } else if ("false" == result) {
 
@@ -83,7 +83,7 @@ class SoftUpdateActivity : RootActivity() {
                         guideTV.text = "최신버전이 아닙니다. 업데이트 해주세요."
 
                         versionTV.text = "현재버전 : " + android+
-                                "마지막 업데이트 확인 : "
+                                "\n마지막 업데이트 확인 : "
                         upRL.visibility = View.VISIBLE
 
                         upRL.setOnClickListener {
