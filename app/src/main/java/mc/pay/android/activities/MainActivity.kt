@@ -21,8 +21,6 @@ import org.json.JSONException
 import org.json.JSONObject
 import java.net.URLDecoder
 import java.net.URLEncoder
-import android.bluetooth.BluetoothAdapter
-import android.bluetooth.BluetoothDevice
 
 class MainActivity : RootActivity() {
 
@@ -325,6 +323,8 @@ class MainActivity : RootActivity() {
                         query = URLEncoder.encode(query, "UTF-8");
 
                         val str = "fpswipepay://setle?crtftCode=${code}&mberCode=${memberCode}&cardCashSe=${pay_type}&delngSe=1&splpc=${price}&vat=0&admitInfo=${query}"
+
+                        println("str::::::::::::::::::::$str")
 
                         var intent = Intent(Intent.ACTION_VIEW, Uri.parse(str))
                         startActivity(intent)

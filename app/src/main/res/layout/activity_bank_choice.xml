@@ -44,25 +44,4 @@
 
     </ListView>
 
-
-    <RelativeLayout
-        android:layout_alignParentBottom="true"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:background="#f0ba2f">
-
-        <TextView
-            android:layout_centerInParent="true"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="25dp"
-            android:textColor="#000000"
-            android:textStyle="bold"
-            android:gravity="center_horizontal"
-            android:text="선물하기"
-            />
-
-    </RelativeLayout>
-
-
 </LinearLayout>
