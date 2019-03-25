@@ -283,8 +283,10 @@ class EditInfoActivity : RootActivity() {
     }
 
 
-
-
+    override fun onResume() {
+        super.onResume()
+        loadInfo()
+    }
 
     override fun onDestroy() {
         super.onDestroy()
