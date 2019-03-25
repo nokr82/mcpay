@@ -4,6 +4,7 @@ import android.app.DatePickerDialog
 import android.app.ProgressDialog
 import android.content.Context
 import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
 import android.widget.Toast
 import com.loopj.android.http.JsonHttpResponseHandler
@@ -46,6 +47,23 @@ class CouponHistoryActivity : RootActivity() {
         listLV.adapter = adapter
 
 
+        useTV.setOnClickListener {
+            type = 2
+            coupon_history()
+            setmenu()
+            useTV.setBackgroundColor(Color.parseColor("#f0ba2f"))
+            useTV.setTextColor(Color.parseColor("#000000"))
+        }
+        unuseTV.setOnClickListener {
+            type = 1
+            coupon_history()
+            setmenu()
+            unuseTV.setBackgroundColor(Color.parseColor("#f0ba2f"))
+            unuseTV.setTextColor(Color.parseColor("#000000"))
+        }
+
+
+
         backIV.setOnClickListener {
             finish()
         }
@@ -67,7 +85,12 @@ class CouponHistoryActivity : RootActivity() {
         coupon_history()
 
     }
-
+    fun setmenu(){
+        useTV.setBackgroundResource(R.drawable.background_border_strock_926f4a)
+        unuseTV.setBackgroundResource(R.drawable.background_border_strock_926f4a)
+        useTV.setTextColor(Color.parseColor("#926f4a"))
+        unuseTV.setTextColor(Color.parseColor("#926f4a"))
+    }
 
 
     fun datedlg() {
