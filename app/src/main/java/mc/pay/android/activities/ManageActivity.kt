@@ -38,6 +38,13 @@ class ManageActivity : RootActivity() {
             autoIV.setImageResource(0)
         }
 
+
+        couponLL.setOnClickListener {
+            var intent = Intent(context, CouponHistoryActivity::class.java)
+            startActivity(intent)
+        }
+
+
         accountLL.setOnClickListener {
             var intent = Intent(context, PrivateAccountActivity::class.java)
             startActivity(intent)

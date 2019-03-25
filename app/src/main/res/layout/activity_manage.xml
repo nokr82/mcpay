@@ -101,6 +101,7 @@
             android:layout_weight="1">
 
             <LinearLayout
+                android:id="@+id/couponLL"
                 android:gravity="center"
                 android:layout_width="0dp"
                 android:layout_weight="1"
