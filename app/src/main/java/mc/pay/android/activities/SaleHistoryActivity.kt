@@ -138,6 +138,8 @@ class SaleHistoryActivity : RootActivity() {
                     print("result : $response")
                     if ("ok" == result) {
                         val orders = response.getJSONArray("orders")
+                        val sum = response.getInt("sum")
+                        sumTV.text = sum.toString()+"원"
                         adapterData.clear()
                         if (orders.length() > 0){
                             for (i in 0 until orders.length()){
