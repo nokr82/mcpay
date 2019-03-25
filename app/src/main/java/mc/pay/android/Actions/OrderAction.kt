@@ -13,6 +13,14 @@ object OrderAction {
         HttpClient.post("/api/order/order", params, handler)
     }
 
+    fun detail(params: RequestParams, handler: JsonHttpResponseHandler) {
+        HttpClient.post("/api/order/detail", params, handler)
+    }
+
+    fun cancel(params: RequestParams, handler: JsonHttpResponseHandler) {
+        HttpClient.post("/api/order/cancel", params, handler)
+    }
+
     fun done(params: RequestParams, handler: JsonHttpResponseHandler) {
         HttpClient.post("/api/order/done", params, handler)
     }
