@@ -52,6 +52,17 @@ class EditInfoActivity : RootActivity() {
 
         }
 
+        printtype1IV.setOnClickListener {
+            setmenu()
+            print_type = 1
+            printtype1IV.setImageResource(R.mipmap.radio_on)
+        }
+
+        printtype2IV.setOnClickListener {
+            setmenu()
+            print_type = 2
+            printtype2IV.setImageResource(R.mipmap.radio_on)
+        }
 
         backIV.setOnClickListener {
             finish()
@@ -63,6 +74,12 @@ class EditInfoActivity : RootActivity() {
 
 
     }
+
+    fun setmenu(){
+        printtype1IV.setImageResource(R.mipmap.radio_off)
+        printtype2IV.setImageResource(R.mipmap.radio_off)
+    }
+
 
     //회원정보
     fun loadInfo() {
