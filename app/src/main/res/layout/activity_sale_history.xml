@@ -163,6 +163,7 @@
                 android:layout_height="match_parent">
 
                 <TextView
+                    android:id="@+id/payTV"
                     android:textStyle="bold"
                     android:layout_marginLeft="14dp"
                     android:paddingTop="5.5dp"
@@ -178,6 +179,7 @@
                     />
 
                 <TextView
+                    android:id="@+id/cancelTV"
                     android:textStyle="bold"
                     android:layout_marginLeft="14dp"
                     android:paddingTop="5.5dp"
