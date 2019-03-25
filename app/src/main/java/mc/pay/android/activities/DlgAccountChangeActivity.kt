@@ -7,7 +7,6 @@ import android.widget.Toast
 import com.loopj.android.http.JsonHttpResponseHandler
 import com.loopj.android.http.RequestParams
 import cz.msebera.android.httpclient.Header
-import kotlinx.android.synthetic.main.activity_edit_info.*
 import mc.pay.android.R
 import kotlinx.android.synthetic.main.dlg_account_change.*
 import mc.pay.android.Actions.MemberAction
@@ -80,7 +79,7 @@ class DlgAccountChangeActivity : RootActivity() {
                     val result = response!!.getString("result")
 
                     if ("ok" == result) {
-
+                        PrefUtils.setPreference(context, "passwd", passwd)
                         Toast.makeText(context, "변경되었습니다.", Toast.LENGTH_SHORT).show()
                         Utils.hideKeyboard(context)
                         finish()

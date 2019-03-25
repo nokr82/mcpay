@@ -21,6 +21,7 @@
             android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/noTV"
                 android:gravity="center"
                 android:layout_width="0dp"
                 android:layout_weight="0.25"
@@ -31,6 +32,7 @@
                 />
 
             <TextView
+                android:id="@+id/phoneTV"
                 android:gravity="center"
                 android:layout_width="0dp"
                 android:layout_weight="0.25"
@@ -42,6 +44,7 @@
                 />
 
             <TextView
+                android:id="@+id/priceTV"
                 android:gravity="center"
                 android:layout_width="0dp"
                 android:layout_weight="0.25"
@@ -52,6 +55,7 @@
                 />
 
             <TextView
+                android:id="@+id/grouppriceTV"
                 android:gravity="center"
                 android:layout_width="0dp"
                 android:layout_weight="0.25"
