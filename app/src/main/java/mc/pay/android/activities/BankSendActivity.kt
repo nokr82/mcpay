@@ -129,6 +129,12 @@ class BankSendActivity : RootActivity() {
 
     }
 
+    override fun finish() {
+        super.finish()
+
+        Utils.hideKeyboard(context)
+    }
+
     fun transfer(){
         val params = RequestParams()
         params.put("member_id", member_id)

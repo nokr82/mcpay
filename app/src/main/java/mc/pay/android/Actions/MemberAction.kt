@@ -44,4 +44,7 @@ object MemberAction {
     fun uploadSchoolId(params: RequestParams, handler: JsonHttpResponseHandler) {
         HttpClient.post("/api/member/upload_school_id", params, handler)
     }
+    fun gift_money(params: RequestParams, handler: JsonHttpResponseHandler) {
+        HttpClient.post("/api/member/gift_money", params, handler)
+    }
 }
