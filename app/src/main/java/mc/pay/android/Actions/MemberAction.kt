@@ -14,6 +14,10 @@ object MemberAction {
     fun my_info(params: RequestParams, handler: JsonHttpResponseHandler) {
         HttpClient.post("/api/member/my_info", params, handler)
     }
+    //비밀번호변경
+    fun change_passwd(params: RequestParams, handler: JsonHttpResponseHandler) {
+        HttpClient.post("/api/member/change_passwd", params, handler)
+    }
     //닉네임변경
     fun update_info(params: RequestParams, handler: JsonHttpResponseHandler) {
         HttpClient.post("/api/member/update_info", params, handler)

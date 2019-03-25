@@ -32,15 +32,14 @@
                 />
 
             <TextView
-                android:id="@+id/phoneTV"
+                android:id="@+id/limitTV"
                 android:gravity="center"
                 android:layout_width="0dp"
                 android:layout_weight="0.25"
                 android:layout_height="wrap_content"
                 android:textSize="13dp"
                 android:textColor="#ffffff"
-                android:text="가맹점명
-연락처"
+                android:text="발급일 만료일"
                 />
 
             <TextView
@@ -51,18 +50,18 @@
                 android:layout_height="wrap_content"
                 android:textSize="13dp"
                 android:textColor="#ffffff"
-                android:text="판매금액"
+                android:text="쿠폰금액"
                 />
 
             <TextView
-                android:id="@+id/grouppriceTV"
+                android:id="@+id/couponnumTV"
                 android:gravity="center"
                 android:layout_width="0dp"
                 android:layout_weight="0.25"
                 android:layout_height="wrap_content"
                 android:textSize="13dp"
                 android:textColor="#ffffff"
-                android:text="추천그룹액"
+                android:text="쿠폰번호"
                 />
 
 

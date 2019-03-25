@@ -397,7 +397,7 @@
                         android:id="@+id/printtype1IV"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@mipmap/radio_on"/>
+                        android:src="@mipmap/radio_off"/>
 
                     <TextView
                         android:layout_marginLeft="3.5dp"

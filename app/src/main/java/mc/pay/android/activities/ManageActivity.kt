@@ -38,6 +38,13 @@ class ManageActivity : RootActivity() {
             autoIV.setImageResource(0)
         }
 
+
+        couponLL.setOnClickListener {
+            var intent = Intent(context, CouponHistoryActivity::class.java)
+            startActivity(intent)
+        }
+
+
         accountLL.setOnClickListener {
             var intent = Intent(context, PrivateAccountActivity::class.java)
             startActivity(intent)
@@ -47,7 +54,6 @@ class ManageActivity : RootActivity() {
         callTV.setOnClickListener {
             val tt = Intent(Intent.ACTION_DIAL, Uri.parse("tel:0221246625"))
             startActivity(tt)
-
         }
 
         saleLL.setOnClickListener {
@@ -118,7 +124,13 @@ class ManageActivity : RootActivity() {
 
                     if ("ok" == result) {
 
+                        var sale_count = response.getInt("sale_count")
+                        var coupon = response.getInt("coupon")
+                        salecountTV.text = sale_count.toString()
+                        couponTV.text = coupon.toString()
+
                         var member = response.getJSONObject("member")
+
                         val name = Utils.getString(member,"name")
                         nameTV.text = name
 

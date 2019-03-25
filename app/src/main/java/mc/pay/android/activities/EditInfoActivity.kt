@@ -107,6 +107,16 @@ class EditInfoActivity : RootActivity() {
                         passwd = Utils.getString(member,"passwd")
                         company_num =  Utils.getInt(member, "company_num")
                         phone = Utils.getString(member,"phone")
+                        print_type = Utils.getInt(member,"print_type")
+
+                        if (print_type ==1){
+                            setmenu()
+                            printtype1IV.setImageResource(R.mipmap.radio_on)
+                        }else{
+                            setmenu()
+                            printtype2IV.setImageResource(R.mipmap.radio_on)
+                        }
+
 
                         phoneET.setText(phone)
                         passwdET.setText(passwd)
@@ -283,8 +293,10 @@ class EditInfoActivity : RootActivity() {
     }
 
 
-
-
+    override fun onResume() {
+        super.onResume()
+        loadInfo()
+    }
 
     override fun onDestroy() {
         super.onDestroy()

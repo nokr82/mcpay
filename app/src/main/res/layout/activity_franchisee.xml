@@ -80,6 +80,7 @@
                     android:layout_height="wrap_content">
 
                 <TextView
+                    android:id="@+id/firstTV"
                     android:layout_marginLeft="12.5dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -110,6 +111,7 @@
                     android:layout_height="wrap_content">
 
                 <TextView
+                    android:id="@+id/endTV"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="12dp"

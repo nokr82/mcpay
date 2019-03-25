@@ -71,6 +71,12 @@ class MainActivity : RootActivity() {
             startActivity(intent)
         }
 
+        couponLL.setOnClickListener {
+            var intent = Intent(context, CouponPayActivity::class.java)
+            startActivity(intent)
+        }
+
+
         oneTV.setOnClickListener {
             priceText(Utils.getString(oneTV))
         }

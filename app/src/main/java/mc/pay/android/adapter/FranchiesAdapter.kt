@@ -4,13 +4,15 @@ import android.content.Context
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
+import android.widget.ImageView
 import android.widget.TextView
+import com.nostra13.universalimageloader.core.ImageLoader
+import org.json.JSONObject
 import mc.pay.android.R
 import mc.pay.android.base.Utils
-import org.json.JSONObject
 
 
-open class CouponAdapter(context: Context, view:Int, data:ArrayList<JSONObject>) : ArrayAdapter<JSONObject>(context,view, data){
+open class FranchiesAdapter(context: Context, view:Int, data:ArrayList<JSONObject>) : ArrayAdapter<JSONObject>(context,view, data){
 
     private lateinit var item: ViewHolder
     var view:Int = view
@@ -35,12 +37,13 @@ open class CouponAdapter(context: Context, view:Int, data:ArrayList<JSONObject>)
         }
 
         var json = data.get(position)
-        var price = Utils.getInt(json,"price")
-        var pay_type = Utils.getString(json,"pay_type")
-        var created_at = Utils.getString(json,"created_at")
-        var confm_no = Utils.getString(json,"confm_no")
+        var name = Utils.getString(json,"name")
+        var phone = Utils.getString(json,"phone")
         item.numTV.text = (position+1).toString()
-        item.priceTV.text = Utils._comma(price.toString())
+        item.priceTV.text =""
+        item.phoneTV.text = name+"\n"+phone
+        item.grouppriceTV.text = ""
+
 
 
 
@@ -73,9 +76,9 @@ open class CouponAdapter(context: Context, view:Int, data:ArrayList<JSONObject>)
 
     class ViewHolder(v: View) {
         var numTV= v.findViewById<View>(R.id.numTV) as TextView
+        var grouppriceTV= v.findViewById<View>(R.id.grouppriceTV) as TextView
         var priceTV= v.findViewById<View>(R.id.priceTV) as TextView
-        var limitTV= v.findViewById<View>(R.id.limitTV) as TextView
-        var couponnumTV= v.findViewById<View>(R.id.couponnumTV) as TextView
+        var phoneTV= v.findViewById<View>(R.id.phoneTV) as TextView
 
     }
 
