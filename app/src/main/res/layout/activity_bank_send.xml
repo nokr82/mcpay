@@ -1,609 +1,586 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:background="#000000"
     android:orientation="vertical"
     android:layout_height="match_parent">
-<RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
 
     <RelativeLayout
-        android:id="@+id/titleRL"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:background="#c99e6b">
+        android:layout_height="match_parent">
 
-        <ImageView
-            android:id="@+id/backIV"
-            android:padding="14dp"
-            android:layout_alignParentLeft="true"
-            android:layout_centerInParent="true"
-            android:layout_width="wrap_content"
+        <RelativeLayout
+            android:id="@+id/titleRL"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="#c99e6b">
+
+            <ImageView
+                android:id="@+id/backIV"
+                android:padding="14dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/arrow_back"/>
+
+            <TextView
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="25dp"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:gravity="center_horizontal"
+                android:text="은행이체-인증" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/userLL"
+            android:layout_below="@id/titleRL"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:src="@mipmap/arrow_back"/>
+            android:orientation="vertical"
+            android:layout_marginTop="13dp">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#c99e6b"/>
+
+            <TextView
+                android:paddingTop="13dp"
+                android:paddingBottom="13dp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="13dp"
+                android:textColor="#c8a27a"
+                android:text="사용자 인증" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#c99e6b"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.25"
+                    android:layout_height="wrap_content"
+                    android:textSize="12dp"
+                    android:textColor="#999999"
+                    android:text="회원아이디" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="0.75"
+                    android:gravity="center_vertical"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/idTV"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#222222"
+                        android:layout_marginRight="14dp"
+                        android:layout_marginTop="6.5dp"
+                        android:layout_marginBottom="6.5dp"
+                        android:textSize="12dp"
+                        android:textColor="#ffffff"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#999999"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.25"
+                    android:layout_height="wrap_content"
+                    android:textSize="12dp"
+                    android:textColor="#999999"
+                    android:text="비밀번호" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="0.75"
+                    android:gravity="center_vertical"
+                    android:layout_height="match_parent">
+
+                    <EditText
+                        android:id="@id/passwdET"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#222222"
+                        android:layout_marginRight="14dp"
+                        android:layout_marginTop="6.5dp"
+                        android:layout_marginBottom="6.5dp"
+                        android:singleLine="true"
+                        android:inputType="textPassword"
+                        android:textSize="12dp"
+                        android:textColor="#ffffff" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#999999"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.25"
+                    android:layout_height="wrap_content"
+                    android:textSize="12dp"
+                    android:textColor="#999999"
+                    android:text="계좌지급번호" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="0.75"
+                    android:gravity="center_vertical"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/millisecondsTV"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#222222"
+                        android:layout_marginRight="14dp"
+                        android:layout_marginTop="6.5dp"
+                        android:layout_marginBottom="6.5dp"
+                        android:textSize="12dp"
+                        android:textColor="#ffffff" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#999999"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.25"
+                    android:layout_height="wrap_content"
+                    android:textSize="12dp"
+                    android:textColor="#999999"
+                    android:text="계좌잔액" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="0.75"
+                    android:gravity="center_vertical"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/balanceTV"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#222222"
+                        android:layout_marginRight="14dp"
+                        android:layout_marginTop="6.5dp"
+                        android:layout_marginBottom="6.5dp"
+                        android:textSize="12dp"
+                        android:textColor="#ffffff" />
+
+                </LinearLayout>
 
 
-        <TextView
-            android:layout_centerInParent="true"
-            android:layout_width="wrap_content"
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#999999"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/infoLL"
+            android:layout_below="@id/userLL"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="25dp"
-            android:textColor="#ffffff"
-            android:textStyle="bold"
-            android:gravity="center_horizontal"
-            android:text="은행이체-인증"
+            android:orientation="vertical"
+            android:layout_marginTop="17.5dp">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#c99e6b"/>
+
+            <TextView
+                android:paddingTop="13dp"
+                android:paddingBottom="13dp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="13dp"
+                android:textColor="#c8a27a"
+                android:text="은행송금정보"
             />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#c99e6b"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <TextView
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.25"
+                    android:layout_height="wrap_content"
+                    android:textSize="12dp"
+                    android:textColor="#999999"
+                    android:text="입금은행" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="0.75"
+                    android:gravity="center_vertical"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/bankNameTV"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#222222"
+                        android:layout_marginRight="14dp"
+                        android:layout_marginTop="6.5dp"
+                        android:layout_marginBottom="6.5dp"
+                        android:gravity="center_vertical"
+                        android:textSize="12dp"
+                        android:textColor="#ffffff" />
+
+                    <TextView
+                        android:id="@+id/bankTV"
+                        android:layout_marginRight="35.5dp"
+                        android:textStyle="bold"
+                        android:paddingRight="17.5dp"
+                        android:paddingLeft="17.5dp"
+                        android:paddingTop="6.5dp"
+                        android:paddingBottom="6.5dp"
+                        android:background="#c99e6b"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12dp"
+                        android:textColor="#000000"
+                        android:text="선택" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#999999"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.25"
+                    android:layout_height="wrap_content"
+                    android:textSize="12dp"
+                    android:textColor="#999999"
+                    android:text="계좌번호" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="0.75"
+                    android:gravity="center_vertical"
+                    android:layout_height="match_parent">
+
+                    <EditText
+                        android:id="@+id/accountNumET"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#222222"
+                        android:layout_marginRight="14dp"
+                        android:layout_marginTop="6.5dp"
+                        android:layout_marginBottom="6.5dp"
+                        android:singleLine="true"
+                        android:inputType="number"
+                        android:textSize="12dp"
+                        android:textColor="#ffffff" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#999999"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.25"
+                    android:layout_height="wrap_content"
+                    android:textSize="12dp"
+                    android:textColor="#999999"
+                    android:text="예금주" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="0.75"
+                    android:gravity="center_vertical"
+                    android:layout_height="match_parent">
+
+                    <EditText
+                        android:id="@+id/accountHolderET"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#222222"
+                        android:layout_marginRight="14dp"
+                        android:layout_marginTop="6.5dp"
+                        android:layout_marginBottom="6.5dp"
+                        android:singleLine="true"
+                        android:textSize="12dp"
+                        android:textColor="#ffffff" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#999999"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.25"
+                    android:layout_height="wrap_content"
+                    android:textSize="12dp"
+                    android:textColor="#999999"
+                    android:text="이체금액" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="0.75"
+                    android:gravity="center_vertical"
+                    android:layout_height="match_parent">
+
+                    <EditText
+                        android:id="@+id/amountET"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#222222"
+                        android:layout_marginRight="14dp"
+                        android:layout_marginTop="6.5dp"
+                        android:layout_marginBottom="6.5dp"
+                        android:singleLine="true"
+                        android:inputType="number"
+                        android:textSize="12dp"
+                        android:textColor="#ffffff" />
+
+                    <TextView
+                        android:layout_marginRight="35.5dp"
+                        android:textStyle="bold"
+                        android:paddingRight="17.5dp"
+                        android:paddingLeft="17.5dp"
+                        android:paddingTop="6.5dp"
+                        android:paddingBottom="6.5dp"
+                        android:background="#c99e6b"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12dp"
+                        android:textColor="#000000"
+                        android:text="조회" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#999999"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/confirmLL"
+            android:gravity="center_vertical"
+            android:layout_below="@id/infoLL"
+            android:layout_marginTop="15.5dp"
+            android:layout_marginLeft="107dp"
+            android:layout_marginRight="37.5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/codeET"
+                android:background="@drawable/background_border_strock_926f4a_solid"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:inputType="number"
+                android:singleLine="true"
+                android:textSize="12dp"
+                android:textColor="#ffffff" />
+
+            <TextView
+                android:layout_marginLeft="4.5dp"
+                android:textStyle="bold"
+                android:paddingRight="17.5dp"
+                android:paddingLeft="17.5dp"
+                android:paddingTop="6.5dp"
+                android:paddingBottom="6.5dp"
+                android:background="#f0ba2f"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12dp"
+                android:textColor="#000000"
+                android:text="인증번호" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/saveLL"
+            android:layout_marginLeft="107dp"
+            android:layout_below="@+id/confirmLL"
+            android:layout_marginTop="9.5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:background="@drawable/background_border_strock_ffffff">
+
+                <ImageView
+                    android:id="@+id/saveIV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/check"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:textSize="14.5dp"
+                android:textColor="#c99e6b"
+                android:gravity="center_horizontal"
+                android:text="은행송금정보 저장" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/doneLL"
+            android:gravity="center"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="#f0ba2f"
+            android:layout_marginBottom="0dp">
+
+            <TextView
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="25dp"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:gravity="center_horizontal"
+                android:text="이체" />
+
+        </LinearLayout>
 
     </RelativeLayout>
-
-
-    
-    <LinearLayout
-        android:id="@+id/userLL"
-        android:layout_below="@id/titleRL"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginTop="13dp">
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#c99e6b"/>
-
-        <TextView
-            android:paddingTop="13dp"
-            android:paddingBottom="13dp"
-            android:textStyle="bold"
-            android:gravity="center"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="13dp"
-            android:textColor="#c8a27a"
-            android:text="사용자 인증"
-            />
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#c99e6b"/>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
-            <TextView
-                android:paddingBottom="10dp"
-                android:paddingTop="10dp"
-                android:gravity="center"
-                android:layout_width="0dp"
-                android:layout_weight="0.25"
-                android:layout_height="wrap_content"
-                android:textSize="12dp"
-                android:textColor="#999999"
-                android:text="회원아이디"
-                />
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_weight="0.75"
-                android:gravity="center_vertical"
-                android:layout_height="match_parent">
-
-                <EditText
-                    android:background="#222222"
-                    android:layout_marginRight="14dp"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:textSize="12dp"
-                    android:textColor="#ffffff"
-                    />
-
-
-
-
-            </LinearLayout>
-
-
-
-
-
-        </LinearLayout>
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#999999"/>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
-            <TextView
-                android:paddingBottom="10dp"
-                android:paddingTop="10dp"
-                android:gravity="center"
-                android:layout_width="0dp"
-                android:layout_weight="0.25"
-                android:layout_height="wrap_content"
-                android:textSize="12dp"
-                android:textColor="#999999"
-                android:text="비밀번호"
-                />
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_weight="0.75"
-                android:gravity="center_vertical"
-                android:layout_height="match_parent">
-
-                <EditText
-                    android:background="#222222"
-                    android:layout_marginRight="14dp"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:textSize="12dp"
-                    android:textColor="#ffffff"
-                    />
-
-
-
-
-            </LinearLayout>
-
-
-
-
-
-        </LinearLayout>
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#999999"/>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
-            <TextView
-                android:paddingBottom="10dp"
-                android:paddingTop="10dp"
-                android:gravity="center"
-                android:layout_width="0dp"
-                android:layout_weight="0.25"
-                android:layout_height="wrap_content"
-                android:textSize="12dp"
-                android:textColor="#999999"
-                android:text="계좌지급번호"
-                />
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_weight="0.75"
-                android:gravity="center_vertical"
-                android:layout_height="match_parent">
-
-                <EditText
-                    android:background="#222222"
-                    android:layout_marginRight="14dp"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:textSize="12dp"
-                    android:textColor="#ffffff"
-                    />
-
-
-
-
-            </LinearLayout>
-
-
-
-
-
-        </LinearLayout>
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#999999"/>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
-            <TextView
-                android:paddingBottom="10dp"
-                android:paddingTop="10dp"
-                android:gravity="center"
-                android:layout_width="0dp"
-                android:layout_weight="0.25"
-                android:layout_height="wrap_content"
-                android:textSize="12dp"
-                android:textColor="#999999"
-                android:text="계좌잔액"
-                />
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_weight="0.75"
-                android:gravity="center_vertical"
-                android:layout_height="match_parent">
-
-                <EditText
-                    android:background="#222222"
-                    android:layout_marginRight="14dp"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:textSize="12dp"
-                    android:textColor="#ffffff"
-                    />
-
-
-
-
-            </LinearLayout>
-
-
-
-
-
-        </LinearLayout>
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#999999"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/infoLL"
-        android:layout_below="@id/userLL"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginTop="17.5dp">
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#c99e6b"/>
-
-        <TextView
-            android:paddingTop="13dp"
-            android:paddingBottom="13dp"
-            android:textStyle="bold"
-            android:gravity="center"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="13dp"
-            android:textColor="#c8a27a"
-            android:text="은행송금정보"
-            />
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#c99e6b"/>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
-            <TextView
-                android:paddingBottom="10dp"
-                android:paddingTop="10dp"
-                android:gravity="center"
-                android:layout_width="0dp"
-                android:layout_weight="0.25"
-                android:layout_height="wrap_content"
-                android:textSize="12dp"
-                android:textColor="#999999"
-                android:text="입금은행"
-                />
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_weight="0.75"
-                android:gravity="center_vertical"
-                android:layout_height="match_parent">
-
-                <TextView
-                    android:id="@+id/bankTV"
-                    android:background="#222222"
-                    android:layout_marginRight="14dp"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:textSize="12dp"
-                    android:textColor="#ffffff"
-                    />
-
-                <TextView
-                    android:id="@+id/selTV"
-                    android:layout_marginRight="35.5dp"
-                    android:textStyle="bold"
-                    android:paddingRight="17.5dp"
-                    android:paddingLeft="17.5dp"
-                    android:paddingTop="6.5dp"
-                    android:paddingBottom="6.5dp"
-                    android:background="#c99e6b"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="12dp"
-                    android:textColor="#000000"
-                    android:text="선택"
-                    />
-
-
-            </LinearLayout>
-
-
-
-
-
-        </LinearLayout>
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#999999"/>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
-            <TextView
-                android:paddingBottom="10dp"
-                android:paddingTop="10dp"
-                android:gravity="center"
-                android:layout_width="0dp"
-                android:layout_weight="0.25"
-                android:layout_height="wrap_content"
-                android:textSize="12dp"
-                android:textColor="#999999"
-                android:text="계좌번호"
-                />
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_weight="0.75"
-                android:gravity="center_vertical"
-                android:layout_height="match_parent">
-
-                <EditText
-                    android:background="#222222"
-                    android:layout_marginRight="14dp"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:textSize="12dp"
-                    android:textColor="#ffffff"
-                    />
-
-
-
-
-            </LinearLayout>
-
-
-
-
-
-        </LinearLayout>
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#999999"/>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
-            <TextView
-                android:paddingBottom="10dp"
-                android:paddingTop="10dp"
-                android:gravity="center"
-                android:layout_width="0dp"
-                android:layout_weight="0.25"
-                android:layout_height="wrap_content"
-                android:textSize="12dp"
-                android:textColor="#999999"
-                android:text="예금주"
-               />
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_weight="0.75"
-                android:gravity="center_vertical"
-                android:layout_height="match_parent">
-
-                <EditText
-                    android:background="#222222"
-                    android:layout_marginRight="14dp"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:textSize="12dp"
-                    android:textColor="#ffffff"
-                    />
-
-
-
-
-            </LinearLayout>
-
-
-
-
-
-        </LinearLayout>
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#999999"/>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
-            <TextView
-                android:paddingBottom="10dp"
-                android:paddingTop="10dp"
-                android:gravity="center"
-                android:layout_width="0dp"
-                android:layout_weight="0.25"
-                android:layout_height="wrap_content"
-                android:textSize="12dp"
-                android:textColor="#999999"
-                android:text="이체금액"
-                />
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_weight="0.75"
-                android:gravity="center_vertical"
-                android:layout_height="match_parent">
-
-                <EditText
-                    android:background="#222222"
-                    android:layout_marginRight="14dp"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:textSize="12dp"
-                    android:textColor="#ffffff"
-                    />
-
-                <TextView
-                    android:layout_marginRight="35.5dp"
-                    android:textStyle="bold"
-                    android:paddingRight="17.5dp"
-                    android:paddingLeft="17.5dp"
-                    android:paddingTop="6.5dp"
-                    android:paddingBottom="6.5dp"
-                    android:background="#c99e6b"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="12dp"
-                    android:textColor="#000000"
-                    android:text="선택"
-                    />
-
-
-            </LinearLayout>
-
-
-
-
-
-        </LinearLayout>
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#999999"/>
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:id="@+id/confirmLL"
-        android:gravity="center_vertical"
-        android:layout_below="@id/infoLL"
-        android:layout_marginTop="15.5dp"
-        android:layout_marginLeft="107dp"
-        android:layout_marginRight="37.5dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        >
-
-
-        <EditText
-            android:background="@drawable/background_border_strock_926f4a_solid"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="match_parent"
-            android:textSize="12dp"
-            android:textColor="#ffffff"
-            />
-
-        <TextView
-            android:layout_marginLeft="4.5dp"
-            android:textStyle="bold"
-            android:paddingRight="17.5dp"
-            android:paddingLeft="17.5dp"
-            android:paddingTop="6.5dp"
-            android:paddingBottom="6.5dp"
-            android:background="#f0ba2f"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="12dp"
-            android:textColor="#000000"
-            android:text="인증번호"
-            />
-    </LinearLayout>
-
-
-
-
-
-    <LinearLayout
-        android:layout_marginLeft="107dp"
-        android:layout_below="@+id/confirmLL"
-        android:layout_marginTop="9.5dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:src="@mipmap/check"
-            android:background="@drawable/background_border_strock_ffffff"/>
-
-        <TextView
-            android:layout_marginLeft="10dp"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:textSize="14.5dp"
-            android:textColor="#c99e6b"
-            android:gravity="center_horizontal"
-            android:text="은행송금정보 저장"
-            />
-
-
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:gravity="center"
-        android:layout_alignParentBottom="true"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:background="#f0ba2f"
-        android:layout_marginBottom="0dp">
-
-        <TextView
-            android:layout_centerInParent="true"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="25dp"
-            android:textColor="#000000"
-            android:textStyle="bold"
-            android:gravity="center_horizontal"
-            android:text="이체"
-            />
-
-    </LinearLayout>
-
-
-
-
-
-</RelativeLayout>
-
-
-
 
 </LinearLayout>
