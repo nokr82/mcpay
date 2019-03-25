@@ -156,8 +156,9 @@ class PrivateAccountActivity : RootActivity() {
                                 adapterData.add(order)
                             }
                             var dd_sum =0
-                            var sum =  adapterData[0].getInt("balance")
+                            var sum = 0
                             if (type ==1){
+                                 sum =  adapterData[0].getInt("balance")
                                 sumTV.text =Utils._comma(sum.toString())
                             }else{
                                 for (i in 0 until adapterData.size){
@@ -166,7 +167,10 @@ class PrivateAccountActivity : RootActivity() {
                                 }
                                 sumTV.text =Utils._comma(dd_sum.toString())
                             }
+                            var r_sum = response.getInt("p_sum") - response.getInt("d_sum")
+                            leftTV.text = Utils._comma(r_sum.toString())
                         }
+
                         adapter.notifyDataSetChanged()
 
 
