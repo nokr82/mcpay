@@ -30,6 +30,9 @@ class SaleHistoryActivity : RootActivity() {
     var month: Int = 1
     var day: Int = 1
 
+    var first_day = ""
+    var last_day = ""
+
     var type = 1
 
 
@@ -100,14 +103,17 @@ class SaleHistoryActivity : RootActivity() {
 
         firstTV.text = msg
         Toast.makeText(context, msg, Toast.LENGTH_SHORT).show()
-//        loadmainData(company_id)
+        first_day = msg
+        pay_history()
+
     }
     private val dateSetListener2 = DatePickerDialog.OnDateSetListener { view, year, monthOfYear, dayOfMonth ->
         val msg = String.format("%d.%d.%d", year, monthOfYear + 1, dayOfMonth)
         val end_msg = String.format("%d-%d-%d", year, monthOfYear + 1, dayOfMonth)
         endTV.text = msg
         Toast.makeText(context, msg, Toast.LENGTH_SHORT).show()
-//        loadmainData(company_id)
+        last_day = msg
+        pay_history()
     }
 
 
@@ -117,6 +123,8 @@ class SaleHistoryActivity : RootActivity() {
         val params = RequestParams()
         params.put("member_id", PrefUtils.getIntPreference(context,"member_id"))
         params.put("type",type)
+        params.put("first_day",first_day)
+        params.put("last_day",last_day)
 
         BankAction.pay_history(params, object : JsonHttpResponseHandler() {
 
