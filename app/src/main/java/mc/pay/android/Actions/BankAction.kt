@@ -16,6 +16,9 @@ object BankAction {
     fun index(params: RequestParams, handler: JsonHttpResponseHandler) {
         HttpClient.post("/api/bank/index", params, handler)
     }
+    fun order_history(params: RequestParams, handler: JsonHttpResponseHandler) {
+        HttpClient.post("/api/bank/order_history", params, handler)
+    }
     fun transfer(params: RequestParams, handler: JsonHttpResponseHandler) {
         HttpClient.post("/api/bank/transfer", params, handler)
     }

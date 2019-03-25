@@ -126,7 +126,7 @@ class SaleHistoryActivity : RootActivity() {
         params.put("first_day",first_day)
         params.put("last_day",last_day)
 
-        BankAction.pay_history(params, object : JsonHttpResponseHandler() {
+        BankAction.order_history(params, object : JsonHttpResponseHandler() {
 
             override fun onSuccess(statusCode: Int, headers: Array<Header>?, response: JSONObject?) {
                 if (progressDialog != null) {
