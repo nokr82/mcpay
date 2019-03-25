@@ -118,7 +118,12 @@ class ManageActivity : RootActivity() {
 
                     if ("ok" == result) {
 
+                        var sale_count = response.getInt("sale_count")
+                        salecountTV.text = sale_count.toString()
+
+
                         var member = response.getJSONObject("member")
+
                         val name = Utils.getString(member,"name")
                         nameTV.text = name
 
