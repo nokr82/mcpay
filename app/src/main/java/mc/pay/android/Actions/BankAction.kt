@@ -10,7 +10,6 @@ import mc.pay.android.base.HttpClient
  */
 object BankAction {
 
-
     fun pay_history(params: RequestParams, handler: JsonHttpResponseHandler) {
         HttpClient.post("/api/bank/pay_history", params, handler)
     }
