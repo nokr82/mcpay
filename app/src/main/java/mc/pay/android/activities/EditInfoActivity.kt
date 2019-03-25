@@ -114,7 +114,7 @@ class EditInfoActivity : RootActivity() {
                             printtype1IV.setImageResource(R.mipmap.radio_on)
                         }else{
                             setmenu()
-                            printtype1IV.setImageResource(R.mipmap.radio_on)
+                            printtype2IV.setImageResource(R.mipmap.radio_on)
                         }
 
 
