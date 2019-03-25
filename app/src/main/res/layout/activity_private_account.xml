@@ -65,7 +65,6 @@
                 android:layout_width="1dp"
                 android:layout_height="match_parent"
                 android:background="#c8a27a"/>
-
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="0dp"
@@ -73,20 +72,26 @@
                 android:gravity="center_vertical"
                 android:layout_height="match_parent">
 
-                <TextView
-                    android:layout_marginLeft="12.5dp"
+                <LinearLayout
+                    android:id="@+id/calLL"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="12dp"
-                    android:textColor="#ffffff"
-                    android:text="2019.01.21"
-                    />
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/firstTV"
+                        android:layout_marginLeft="12.5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12dp"
+                        android:textColor="#ffffff"
+                        android:text=""
+                        />
 
-                <ImageView
-                    android:layout_marginLeft="3.5dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@mipmap/icon_caladar"/>
+                    <ImageView
+                        android:layout_marginLeft="3.5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/icon_caladar"/>
+                </LinearLayout>
 
                 <TextView
                     android:padding="3.5dp"
@@ -95,21 +100,28 @@
                     android:textColor="#ffffff"
                     android:textSize="13dp"
                     android:text="~"/>
+                <LinearLayout
+                    android:id="@+id/cal2LL"
+                    android:orientation="horizontal"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.9"
+                    android:gravity="center_vertical"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:id="@+id/endTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12dp"
+                        android:textColor="#ffffff"
+                        android:text=""
+                        />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="12dp"
-                    android:textColor="#ffffff"
-                    android:text="2019.01.21"
-                    />
-
-                <ImageView
-                    android:layout_marginLeft="3.5dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@mipmap/icon_caladar"/>
-
+                    <ImageView
+                        android:layout_marginLeft="3.5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/icon_caladar"/>
+                </LinearLayout>
 
             </LinearLayout>
 
@@ -148,6 +160,7 @@
                 android:layout_height="match_parent">
 
                 <TextView
+                    android:id="@+id/unuseTV"
                     android:textStyle="bold"
                     android:layout_marginLeft="14dp"
                     android:paddingTop="5.5dp"
@@ -163,6 +176,7 @@
                     />
 
                 <TextView
+                    android:id="@+id/useTV"
                     android:textStyle="bold"
                     android:layout_marginLeft="14dp"
                     android:paddingTop="5.5dp"
@@ -256,6 +270,7 @@
 
 
         <ListView
+            android:scrollbars="none"
             android:id="@+id/listLV"
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -285,6 +300,7 @@
                 android:layout_height="match_parent">
 
                 <TextView
+                    android:id="@+id/sumTV"
                     android:paddingRight="16dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -351,17 +367,18 @@
                 android:textColor="#c8a27a"
                 android:text="계좌잔액"
                 />
-        <TextView
-            android:layout_marginRight="14.5dp"
-            android:textStyle="bold"
-            android:gravity="center"
-            android:layout_marginLeft="7dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="12dp"
-            android:textColor="#ffffff"
-            android:text="7,000,000원"
-            />
+
+            <TextView
+                android:paddingLeft="10dp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12dp"
+                android:textColor="#ffffff"
+                android:text="7,000,000원"
+                />
+
         </LinearLayout>
         <TextView
             android:id="@+id/accountTV"

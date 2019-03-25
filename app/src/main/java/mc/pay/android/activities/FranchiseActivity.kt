@@ -3,6 +3,7 @@ package mc.pay.android.activities
 import android.app.DatePickerDialog
 import android.app.ProgressDialog
 import android.content.Context
+import android.graphics.Color
 import android.os.Bundle
 import android.widget.Toast
 import com.loopj.android.http.JsonHttpResponseHandler
@@ -10,6 +11,7 @@ import com.loopj.android.http.RequestParams
 import cz.msebera.android.httpclient.Header
 import mc.pay.android.R
 import kotlinx.android.synthetic.main.activity_franchisee.*
+import mc.pay.android.Actions.BankAction.pay_history
 import mc.pay.android.Actions.FranchiesAction
 import mc.pay.android.adapter.FranchiesAdapter
 import mc.pay.android.base.PrefUtils
@@ -26,6 +28,7 @@ class FranchiseActivity : RootActivity() {
     var adapterData:ArrayList<JSONObject> = ArrayList<JSONObject>()
     private lateinit var adapter: FranchiesAdapter
 
+    var type = 1
     var first_day = ""
     var last_day = ""
 
@@ -40,6 +43,22 @@ class FranchiseActivity : RootActivity() {
 
         adapter = FranchiesAdapter(context, R.layout.item_franchise_history, adapterData)
         listLV.adapter = adapter
+
+
+        cancelTV.setOnClickListener {
+            type = 2
+            index()
+            setmenu()
+            cancelTV.setBackgroundColor(Color.parseColor("#f0ba2f"))
+            cancelTV.setTextColor(Color.parseColor("#000000"))
+        }
+        payTV.setOnClickListener {
+            type = 1
+            index()
+            setmenu()
+            payTV.setBackgroundColor(Color.parseColor("#f0ba2f"))
+            payTV.setTextColor(Color.parseColor("#000000"))
+        }
 
 
         calLL.setOnClickListener {
@@ -88,15 +107,20 @@ class FranchiseActivity : RootActivity() {
     }
 
 
-
-    //은행정보보
+    fun setmenu(){
+        cancelTV.setBackgroundResource(R.drawable.background_border_strock_926f4a)
+        payTV.setBackgroundResource(R.drawable.background_border_strock_926f4a)
+        cancelTV.setTextColor(Color.parseColor("#926f4a"))
+        payTV.setTextColor(Color.parseColor("#926f4a"))
+    }
+    //가맹점정보
     fun index() {
 
         val params = RequestParams()
         params.put("member_id", PrefUtils.getIntPreference(context,"member_id"))
         params.put("first_day",first_day)
         params.put("last_day",last_day)
-
+        params.put("type",type)
         FranchiesAction.index(params, object : JsonHttpResponseHandler() {
 
             override fun onSuccess(statusCode: Int, headers: Array<Header>?, response: JSONObject?) {

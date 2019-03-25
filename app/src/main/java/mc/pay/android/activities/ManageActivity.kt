@@ -126,8 +126,11 @@ class ManageActivity : RootActivity() {
 
                         var sale_count = response.getInt("sale_count")
                         var coupon = response.getInt("coupon")
-                        salecountTV.text = sale_count.toString()
-                        couponTV.text = coupon.toString()
+                        var amount = response.getInt("amount")
+                        salecountTV.text = Utils._comma(sale_count.toString())
+                        couponTV.text = Utils._comma(coupon.toString())
+                        privateTV.text = Utils._comma(amount.toString())
+
 
                         var member = response.getJSONObject("member")
 

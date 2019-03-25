@@ -4,15 +4,13 @@ import android.content.Context
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
-import android.widget.ImageView
 import android.widget.TextView
-import com.nostra13.universalimageloader.core.ImageLoader
-import org.json.JSONObject
 import mc.pay.android.R
 import mc.pay.android.base.Utils
+import org.json.JSONObject
 
 
-open class FranchiesAdapter(context: Context, view:Int, data:ArrayList<JSONObject>) : ArrayAdapter<JSONObject>(context,view, data){
+open class PrivateAdapter(context: Context, view:Int, data:ArrayList<JSONObject>) : ArrayAdapter<JSONObject>(context,view, data){
 
     private lateinit var item: ViewHolder
     var view:Int = view
@@ -37,25 +35,16 @@ open class FranchiesAdapter(context: Context, view:Int, data:ArrayList<JSONObjec
         }
 
         var json = data.get(position)
-        var name = Utils.getString(json,"name")
-        var phone = Utils.getString(json,"phone")
+        var price = Utils.getInt(json,"price")
+        var vat =  Utils.getInt(json,"vat")
 
-        var sum = 0
-        val orders = json.getJSONArray("order")
-        if (orders.length() > 0){
-            for (i in 0 until orders.length()){
-                val order = orders.get(i) as JSONObject
-                var price = Utils.getInt(order,"price")
-                sum = sum+price
-            }
-        }
-
-
-
+        price = price/vat
+        var pay_type = Utils.getString(json,"pay_type")
+        var created_at = Utils.getString(json,"created_at")
+        var confm_no = Utils.getString(json,"confm_no")
         item.numTV.text = (position+1).toString()
-        item.priceTV.text =Utils._comma(sum.toString())
-        item.phoneTV.text = name+"\n"+phone
-        item.grouppriceTV.text = ""
+        item.priceTV.text = Utils._comma(price.toString())
+        item.limitTV.text = created_at
 
 
 
@@ -89,9 +78,9 @@ open class FranchiesAdapter(context: Context, view:Int, data:ArrayList<JSONObjec
 
     class ViewHolder(v: View) {
         var numTV= v.findViewById<View>(R.id.numTV) as TextView
-        var grouppriceTV= v.findViewById<View>(R.id.grouppriceTV) as TextView
         var priceTV= v.findViewById<View>(R.id.priceTV) as TextView
-        var phoneTV= v.findViewById<View>(R.id.phoneTV) as TextView
+        var limitTV= v.findViewById<View>(R.id.limitTV) as TextView
+        var couponnumTV= v.findViewById<View>(R.id.couponnumTV) as TextView
 
     }
 
