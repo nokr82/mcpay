@@ -136,14 +136,18 @@ class FranchiseActivity : RootActivity() {
                     if ("ok" == result) {
                         val franchies = response.getJSONArray("franchies")
                         adapterData.clear()
+
+                        var r_sum = 0
                         if (franchies.length() > 0){
                             for (i in 0 until franchies.length()){
                                 val fran = franchies.get(i) as JSONObject
+                                var sum = Utils.getInt(fran,"sum")
                                 adapterData.add(fran)
+                                r_sum = r_sum+sum
                             }
                         }
                         adapter.notifyDataSetChanged()
-                        var r_sum = 0
+
 
                         sumTV.text = Utils._comma(r_sum.toString())+"원"
                     } else {
