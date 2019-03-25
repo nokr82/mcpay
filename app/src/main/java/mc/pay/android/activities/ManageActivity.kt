@@ -54,7 +54,6 @@ class ManageActivity : RootActivity() {
         callTV.setOnClickListener {
             val tt = Intent(Intent.ACTION_DIAL, Uri.parse("tel:0221246625"))
             startActivity(tt)
-
         }
 
         saleLL.setOnClickListener {
