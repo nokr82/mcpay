@@ -6,6 +6,7 @@ import android.content.Context
 import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import com.loopj.android.http.JsonHttpResponseHandler
 import com.loopj.android.http.RequestParams
@@ -144,9 +145,18 @@ class PrivateAccountActivity : RootActivity() {
                         val orders = response.getJSONArray("orders")
                         val vat = response.getInt("vat")
                         var sum = response.getInt("sum")
-                        sum = sum/vat
+                        if (sum != 0&&vat != 0 ){
+                            sum = sum/vat
+                        }
 
-                        sumTV.text = sum.toString()+"원"
+
+                        print("------------------"+sum.toString())
+                        if (sum<0){
+                            sumTV.text = "0원"
+                        }else{
+                            sumTV.text = Utils._comma(sum.toString())+"원"
+                        }
+
                         adapterData.clear()
                         if (orders.length() > 0){
                             for (i in 0 until orders.length()){
