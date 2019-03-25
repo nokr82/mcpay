@@ -37,11 +37,11 @@ open class FranchiesAdapter(context: Context, view:Int, data:ArrayList<JSONObjec
         }
 
         var json = data.get(position)
-        var company_name = Utils.getString(json,"company_name")
+        var name = Utils.getString(json,"name")
         var phone = Utils.getString(json,"phone")
         item.numTV.text = (position+1).toString()
         item.priceTV.text =""
-        item.phoneTV.text = company_name+"\n"+phone
+        item.phoneTV.text = name+"\n"+phone
         item.grouppriceTV.text = ""
 
 
