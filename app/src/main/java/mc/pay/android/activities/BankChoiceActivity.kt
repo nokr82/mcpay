@@ -1,8 +1,11 @@
 package mc.pay.android.activities
 
+import android.app.Activity
 import android.app.ProgressDialog
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import com.loopj.android.http.JsonHttpResponseHandler
 import com.loopj.android.http.RequestParams
 import cz.msebera.android.httpclient.Header
@@ -41,6 +44,14 @@ class BankChoiceActivity : RootActivity() {
         adapter = BankAdapter(context, R.layout.item_bank, adapterData)
         listLV.adapter = adapter
 
+        listLV.setOnItemClickListener { parent, view, position, id ->
+            var data = adapterData.get(position)
+            val bank = Utils.getString(data, "bank")
+            var intent = Intent()
+            intent.putExtra("bank", bank)
+            setResult(Activity.RESULT_OK, intent)
+            finish()
+        }
 
 
         closeIV.setOnClickListener {
