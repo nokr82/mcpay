@@ -39,8 +39,21 @@ open class FranchiesAdapter(context: Context, view:Int, data:ArrayList<JSONObjec
         var json = data.get(position)
         var name = Utils.getString(json,"name")
         var phone = Utils.getString(json,"phone")
+
+        var sum = 0
+        val orders = json.getJSONArray("order")
+        if (orders.length() > 0){
+            for (i in 0 until orders.length()){
+                val order = orders.get(i) as JSONObject
+                var price = Utils.getInt(order,"price")
+                sum = sum+price
+            }
+        }
+
+
+
         item.numTV.text = (position+1).toString()
-        item.priceTV.text =""
+        item.priceTV.text =Utils._comma(sum.toString())
         item.phoneTV.text = name+"\n"+phone
         item.grouppriceTV.text = ""
 

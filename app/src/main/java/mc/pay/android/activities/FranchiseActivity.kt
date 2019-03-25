@@ -120,7 +120,7 @@ class FranchiseActivity : RootActivity() {
         params.put("member_id", PrefUtils.getIntPreference(context,"member_id"))
         params.put("first_day",first_day)
         params.put("last_day",last_day)
-
+        params.put("type",type)
         FranchiesAction.index(params, object : JsonHttpResponseHandler() {
 
             override fun onSuccess(statusCode: Int, headers: Array<Header>?, response: JSONObject?) {
