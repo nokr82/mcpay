@@ -52,7 +52,7 @@ open class FranchiesAdapter(context: Context, view:Int, data:ArrayList<JSONObjec
                 sum = sum+price
 
             }
-            json.put("sum",sum)
+
 
         }
 

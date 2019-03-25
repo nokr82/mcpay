@@ -29,6 +29,7 @@ class FranchiseActivity : RootActivity() {
     var adapterData:ArrayList<JSONObject> = ArrayList<JSONObject>()
     lateinit var adapter: FranchiesAdapter
 
+
     var type = 1
     var first_day = ""
     var last_day = ""
@@ -143,15 +144,7 @@ class FranchiseActivity : RootActivity() {
                         }
                         adapter.notifyDataSetChanged()
                         var r_sum = 0
-                        if (adapterData.size > 0){
-                            for (i in 0 until franchies.length()){
-                                val su = adapterData.get(i) as JSONObject
-                                Log.d("수",su.toString())
-                                var sum = Utils.getInt(su,"sum")
-                                r_sum = r_sum+sum
 
-                            }
-                        }
                         sumTV.text = Utils._comma(r_sum.toString())+"원"
                     } else {
                     }
