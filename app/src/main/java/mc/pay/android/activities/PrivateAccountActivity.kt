@@ -6,6 +6,7 @@ import android.content.Context
 import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import com.loopj.android.http.JsonHttpResponseHandler
 import com.loopj.android.http.RequestParams
@@ -46,6 +47,8 @@ class PrivateAccountActivity : RootActivity() {
         adapter = PrivateAdapter(context, R.layout.item_coupon_history, adapterData)
         listLV.adapter = adapter
 
+
+
         calLL.setOnClickListener {
             datedlg()
         }
@@ -58,6 +61,8 @@ class PrivateAccountActivity : RootActivity() {
             setmenu()
             useTV.setBackgroundColor(Color.parseColor("#f0ba2f"))
             useTV.setTextColor(Color.parseColor("#000000"))
+            titleTV.text = "출금총액"
+
         }
         unuseTV.setOnClickListener {
             type = 1
@@ -65,6 +70,8 @@ class PrivateAccountActivity : RootActivity() {
             setmenu()
             unuseTV.setBackgroundColor(Color.parseColor("#f0ba2f"))
             unuseTV.setTextColor(Color.parseColor("#000000"))
+            titleTV.text = "입금총액"
+
         }
 
         backIV.setOnClickListener {
@@ -121,7 +128,6 @@ class PrivateAccountActivity : RootActivity() {
         last_day = msg
         private_history()
     }
-    //은행정보보
     fun private_history() {
 
         val params = RequestParams()
@@ -142,23 +148,32 @@ class PrivateAccountActivity : RootActivity() {
                     print("result : $response")
                     if ("ok" == result) {
                         val orders = response.getJSONArray("orders")
-                        val vat = response.getInt("vat")
-                        var sum = response.getInt("sum")
-                        sum = sum/vat
-
-                        sumTV.text = sum.toString()+"원"
                         adapterData.clear()
                         if (orders.length() > 0){
                             for (i in 0 until orders.length()){
                                 val order = orders.get(i) as JSONObject
-                                if (vat>0){
-                                    order.put("vat",vat)
-                                }
 
                                 adapterData.add(order)
                             }
+                            var dd_sum =0
+                            var sum = 0
+                            if (type ==1){
+                                 sum =  adapterData[0].getInt("balance")
+                                sumTV.text =Utils._comma(sum.toString())
+                            }else{
+                                for (i in 0 until adapterData.size){
+                                  var d_sum =   adapterData[i].getInt("money")
+                                    dd_sum = dd_sum +d_sum
+                                }
+                                sumTV.text =Utils._comma(dd_sum.toString())
+                            }
+                            var r_sum = response.getInt("p_sum") - response.getInt("d_sum")
+                            leftTV.text = Utils._comma(r_sum.toString())
                         }
+
                         adapter.notifyDataSetChanged()
+
+
                     } else {
                     }
 

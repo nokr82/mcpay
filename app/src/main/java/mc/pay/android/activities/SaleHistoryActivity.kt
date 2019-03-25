@@ -12,6 +12,7 @@ import cz.msebera.android.httpclient.Header
 import mc.pay.android.R
 import kotlinx.android.synthetic.main.activity_sale_history.*
 import mc.pay.android.Actions.BankAction
+import mc.pay.android.Actions.BankAction.pay_history
 import mc.pay.android.adapter.SaleAdapter
 import mc.pay.android.base.PrefUtils
 import mc.pay.android.base.RootActivity
@@ -50,14 +51,14 @@ class SaleHistoryActivity : RootActivity() {
 
         cancelTV.setOnClickListener {
             type = 2
-            pay_history()
+            order_history()
             setmenu()
             cancelTV.setBackgroundColor(Color.parseColor("#f0ba2f"))
             cancelTV.setTextColor(Color.parseColor("#000000"))
         }
         payTV.setOnClickListener {
             type = 1
-            pay_history()
+            order_history()
             setmenu()
             payTV.setBackgroundColor(Color.parseColor("#f0ba2f"))
             payTV.setTextColor(Color.parseColor("#000000"))
@@ -75,7 +76,7 @@ class SaleHistoryActivity : RootActivity() {
         backIV.setOnClickListener {
             finish()
         }
-        pay_history()
+        order_history()
     }
 
     fun setmenu(){
@@ -104,7 +105,7 @@ class SaleHistoryActivity : RootActivity() {
         firstTV.text = msg
         Toast.makeText(context, msg, Toast.LENGTH_SHORT).show()
         first_day = msg
-        pay_history()
+        order_history()
 
     }
     private val dateSetListener2 = DatePickerDialog.OnDateSetListener { view, year, monthOfYear, dayOfMonth ->
@@ -113,12 +114,11 @@ class SaleHistoryActivity : RootActivity() {
         endTV.text = msg
         Toast.makeText(context, msg, Toast.LENGTH_SHORT).show()
         last_day = msg
-        pay_history()
+        order_history()
     }
 
 
-    //은행정보보
-    fun pay_history() {
+    fun order_history() {
 
         val params = RequestParams()
         params.put("member_id", PrefUtils.getIntPreference(context,"member_id"))
@@ -126,7 +126,7 @@ class SaleHistoryActivity : RootActivity() {
         params.put("first_day",first_day)
         params.put("last_day",last_day)
 
-        BankAction.pay_history(params, object : JsonHttpResponseHandler() {
+        BankAction.order_history(params, object : JsonHttpResponseHandler() {
 
             override fun onSuccess(statusCode: Int, headers: Array<Header>?, response: JSONObject?) {
                 if (progressDialog != null) {

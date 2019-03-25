@@ -38,12 +38,14 @@ open class PrivateAdapter(context: Context, view:Int, data:ArrayList<JSONObject>
         var price = Utils.getInt(json,"price")
         var vat =  Utils.getInt(json,"vat")
 
-        price = price/vat
+        if (vat != 0&&price != 0){
+            price = price/vat
+        }
         var pay_type = Utils.getString(json,"pay_type")
         var created_at = Utils.getString(json,"created_at")
-        var confm_no = Utils.getString(json,"confm_no")
+        var money = Utils.getString(json,"money")
         item.numTV.text = (position+1).toString()
-        item.priceTV.text = Utils._comma(price.toString())
+        item.priceTV.text = Utils._comma(money.toString())
         item.limitTV.text = created_at
 
 

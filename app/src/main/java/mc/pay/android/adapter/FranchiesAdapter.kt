@@ -9,15 +9,18 @@ import android.widget.TextView
 import com.nostra13.universalimageloader.core.ImageLoader
 import org.json.JSONObject
 import mc.pay.android.R
+import mc.pay.android.activities.FranchiseActivity
+import mc.pay.android.base.RootActivity
 import mc.pay.android.base.Utils
 
 
-open class FranchiesAdapter(context: Context, view:Int, data:ArrayList<JSONObject>) : ArrayAdapter<JSONObject>(context,view, data){
+open class FranchiesAdapter(context: Context, view:Int, data:ArrayList<JSONObject>,activity: FranchiseActivity) : ArrayAdapter<JSONObject>(context,view, data){
 
     private lateinit var item: ViewHolder
     var view:Int = view
     var data:ArrayList<JSONObject> = data
-
+    var activity:FranchiseActivity = activity
+    var sum = 0
     override fun getView(position: Int, convertView: View?, parent : ViewGroup?): View {
 
         lateinit var retView: View
@@ -40,20 +43,24 @@ open class FranchiesAdapter(context: Context, view:Int, data:ArrayList<JSONObjec
         var name = Utils.getString(json,"name")
         var phone = Utils.getString(json,"phone")
 
-        var sum = 0
+
         val orders = json.getJSONArray("order")
         if (orders.length() > 0){
             for (i in 0 until orders.length()){
                 val order = orders.get(i) as JSONObject
                 var price = Utils.getInt(order,"price")
                 sum = sum+price
+
             }
+
+
         }
 
 
 
         item.numTV.text = (position+1).toString()
         item.priceTV.text =Utils._comma(sum.toString())
+        sum = 0
         item.phoneTV.text = name+"\n"+phone
         item.grouppriceTV.text = ""
 

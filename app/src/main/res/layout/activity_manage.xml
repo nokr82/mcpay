@@ -284,6 +284,7 @@
                     android:layout_height="wrap_content">
 
                     <TextView
+                        android:id="@+id/pointTV"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textSize="25dp"
@@ -529,16 +530,21 @@
                 android:text="자동로그인"
                 />
 
-
-            <ImageView
-                android:id="@+id/autoIV"
-                android:layout_marginRight="2dp"
-                android:padding="8dp"
+            <LinearLayout
+                android:gravity="center"
+                android:id="@+id/autoLL"
+                android:layout_marginRight="10dp"
                 android:layout_width="wrap_content"
+                android:layout_marginLeft="50dp"
                 android:layout_height="wrap_content"
-                android:src="@mipmap/check"
-                android:background="@drawable/background_border_strock_ffffff"/>
-
+                android:background="@drawable/background_border_strock_ffffff">
+                <ImageView
+                    android:id="@+id/autoIV"
+                    android:padding="2dp"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/background_border_strock_ffffff"/>
+            </LinearLayout>
         </LinearLayout>
 
         <View
