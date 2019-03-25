@@ -130,6 +130,7 @@ class ManageActivity : RootActivity() {
                         salecountTV.text = Utils._comma(sale_count.toString())
                         couponTV.text = Utils._comma(coupon.toString())
                         privateTV.text = Utils._comma(amount.toString())
+                        pointTV.text = Utils._comma(amount.toString())
 
 
                         var member = response.getJSONObject("member")
