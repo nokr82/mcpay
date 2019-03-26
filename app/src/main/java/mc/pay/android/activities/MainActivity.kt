@@ -34,7 +34,7 @@ class MainActivity : RootActivity() {
     val memberCode = "1903200013"
     val passwd = "6619"
 
-    var pay_type = "CASH"
+    var pay_type = "CARD"
 
     var cardCashSe = ""
     var delngSe = ""
@@ -75,7 +75,6 @@ class MainActivity : RootActivity() {
             var intent = Intent(context, CouponPayActivity::class.java)
             startActivity(intent)
         }
-
 
         oneTV.setOnClickListener {
             priceText(Utils.getString(oneTV))
@@ -328,7 +327,15 @@ class MainActivity : RootActivity() {
                         var query = "order_id__${order_id}_-_type__pay"
                         query = URLEncoder.encode(query, "UTF-8");
 
-                        val str = "fpswipepay://setle?crtftCode=${code}&mberCode=${memberCode}&cardCashSe=${pay_type}&delngSe=1&splpc=${price}&vat=0&admitInfo=${query}"
+
+                        var callback = ""
+                        if (pay_type == "CASH") {
+                            callback = "mc_pay://ok_by_cash"
+                        } else {
+                            callback = "mc_pay://ok_by_card"
+                        }
+
+                        val str = "fpswipepay://setle?crtftCode=${code}&mberCode=${memberCode}&cardCashSe=${pay_type}&delngSe=1&splpc=${price}&vat=0&callbackAppUrl=${callback}&admitInfo=${query}"
 
                         println("str::::::::::::::::::::$str")
 

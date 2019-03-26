@@ -70,7 +70,7 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:gravity="center"
-            android:background="@drawable/background_border_strock_7b593e"
+            android:background="@drawable/background_2d0e6b_border_strock_7b593e"
             android:layout_height="60dp">
             <ImageView
                 android:layout_marginRight="4.5dp"

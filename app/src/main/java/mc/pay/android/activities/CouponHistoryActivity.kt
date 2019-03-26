@@ -56,6 +56,7 @@ class CouponHistoryActivity : RootActivity() {
             useTV.setBackgroundColor(Color.parseColor("#f0ba2f"))
             useTV.setTextColor(Color.parseColor("#000000"))
         }
+
         unuseTV.setOnClickListener {
             type = 1
             coupon_history()
@@ -63,8 +64,6 @@ class CouponHistoryActivity : RootActivity() {
             unuseTV.setBackgroundColor(Color.parseColor("#f0ba2f"))
             unuseTV.setTextColor(Color.parseColor("#000000"))
         }
-
-
 
         backIV.setOnClickListener {
             finish()
@@ -159,12 +158,16 @@ class CouponHistoryActivity : RootActivity() {
 
                 try {
                     val result = response!!.getString("result")
-                    print("result : $response")
+
                     if ("ok" == result) {
+
                         val orders = response.getJSONArray("orders")
                         val sum = response.getInt("sum")
+
                         sumTV.text = sum.toString()+"원"
+
                         adapterData.clear()
+
                         if (orders.length() > 0){
                             for (i in 0 until orders.length()){
                                 val order = orders.get(i) as JSONObject
@@ -172,8 +175,11 @@ class CouponHistoryActivity : RootActivity() {
                                 adapterData.add(order)
                             }
                         }
+
                         adapter.notifyDataSetChanged()
+
                     } else {
+
                     }
 
                 } catch (e: JSONException) {
