@@ -13,6 +13,8 @@ import cz.msebera.android.httpclient.Header
 import mc.pay.android.R
 import kotlinx.android.synthetic.main.activity_coupon_history.*
 import mc.pay.android.Actions.BankAction
+import mc.pay.android.Actions.BankAction.coupon_history
+import mc.pay.android.Actions.BankAction.order_history
 import mc.pay.android.adapter.CouponAdapter
 import mc.pay.android.base.PrefUtils
 import mc.pay.android.base.RootActivity
@@ -84,6 +86,21 @@ class CouponHistoryActivity : RootActivity() {
         }
         coupon_history()
 
+        listLV.setOnItemClickListener { parent, view, position, id ->
+            var json = adapterData[position]
+            val click = Utils.getString(json, "click")
+            val coupon_id = Utils.getInt(json, "id")
+            if (click == "Y"){
+                json.put("click","N")
+            }else{
+                json.put("click","Y")
+            }
+            adapter.notifyDataSetChanged()
+
+        }
+
+
+
     }
     fun setmenu(){
         useTV.setBackgroundResource(R.drawable.background_border_strock_926f4a)
@@ -133,7 +150,7 @@ class CouponHistoryActivity : RootActivity() {
         params.put("first_day",first_day)
         params.put("last_day",last_day)
 
-        BankAction.pay_history(params, object : JsonHttpResponseHandler() {
+        BankAction.coupon_history(params, object : JsonHttpResponseHandler() {
 
             override fun onSuccess(statusCode: Int, headers: Array<Header>?, response: JSONObject?) {
                 if (progressDialog != null) {
@@ -151,6 +168,7 @@ class CouponHistoryActivity : RootActivity() {
                         if (orders.length() > 0){
                             for (i in 0 until orders.length()){
                                 val order = orders.get(i) as JSONObject
+                                order.put("click","N")
                                 adapterData.add(order)
                             }
                         }

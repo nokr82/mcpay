@@ -23,6 +23,8 @@ public class DateUtils {
 			"yyyy-MM-dd HH:mm:ss");
 	private static SimpleDateFormat responseForm = new SimpleDateFormat(
 			"yyyy.MM.dd HH:mm");
+	private static SimpleDateFormat coupondate = new SimpleDateFormat(
+			"yyyy.MM.dd");
 	private static SimpleDateFormat clientForm = new SimpleDateFormat("HH:mm");
 	private static Calendar cal = Calendar.getInstance();
 
