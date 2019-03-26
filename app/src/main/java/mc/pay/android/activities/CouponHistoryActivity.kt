@@ -6,6 +6,7 @@ import android.content.Context
 import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import com.loopj.android.http.JsonHttpResponseHandler
 import com.loopj.android.http.RequestParams
@@ -13,12 +14,11 @@ import cz.msebera.android.httpclient.Header
 import mc.pay.android.R
 import kotlinx.android.synthetic.main.activity_coupon_history.*
 import mc.pay.android.Actions.BankAction
-import mc.pay.android.Actions.BankAction.coupon_history
-import mc.pay.android.Actions.BankAction.order_history
 import mc.pay.android.adapter.CouponAdapter
 import mc.pay.android.base.PrefUtils
 import mc.pay.android.base.RootActivity
 import mc.pay.android.base.Utils
+import org.json.JSONArray
 import org.json.JSONException
 import org.json.JSONObject
 
@@ -30,6 +30,8 @@ class CouponHistoryActivity : RootActivity() {
 
     var adapterData:ArrayList<JSONObject> = ArrayList<JSONObject>()
     private lateinit var adapter: CouponAdapter
+    var coupon_ids :ArrayList<Int> = ArrayList()
+
 
     var first_day = ""
     var last_day = ""
@@ -80,8 +82,7 @@ class CouponHistoryActivity : RootActivity() {
         }
 
         couponpayTV.setOnClickListener {
-            val intent = Intent(context, CouponPayActivity::class.java)
-            startActivity(intent)
+            pay_coupon()
         }
         coupon_history()
 
@@ -91,9 +92,13 @@ class CouponHistoryActivity : RootActivity() {
             val coupon_id = Utils.getInt(json, "id")
             if (click == "Y"){
                 json.put("click","N")
+                coupon_ids.remove(coupon_id)
             }else{
                 json.put("click","Y")
+                coupon_ids.add(coupon_id)
             }
+
+            Log.d("아이디들",coupon_ids.toString())
             adapter.notifyDataSetChanged()
 
         }
@@ -101,6 +106,99 @@ class CouponHistoryActivity : RootActivity() {
 
 
     }
+    //쿠폰결제
+    fun pay_coupon() {
+        val params = RequestParams()
+        params.put("member_id", PrefUtils.getIntPreference(context,"member_id"))
+        params.put("order_ids", coupon_ids)
+
+
+        BankAction.coupon_pay(params, object : JsonHttpResponseHandler() {
+
+            override fun onSuccess(statusCode: Int, headers: Array<Header>?, response: JSONObject?) {
+                if (progressDialog != null) {
+                    progressDialog!!.dismiss()
+                }
+
+                try {
+                    val result = response!!.getString("result")
+
+                    if ("ok" == result) {
+                        coupon_ids.clear()
+                        coupon_history()
+                        Toast.makeText(context, "결제되었습니다.", Toast.LENGTH_SHORT).show()
+
+                    } else {
+
+                        Toast.makeText(context, "오류가 발생하였습니다.", Toast.LENGTH_SHORT).show()
+                    }
+
+                } catch (e: JSONException) {
+                    e.printStackTrace()
+                }
+
+            }
+
+            override fun onSuccess(statusCode: Int, headers: Array<Header>?, response: JSONArray?) {
+                super.onSuccess(statusCode, headers, response)
+            }
+
+            override fun onSuccess(statusCode: Int, headers: Array<Header>?, responseString: String?) {
+
+                // System.out.println(responseString);
+            }
+
+            private fun error() {
+                Utils.alert(context, "조회중 장애가 발생하였습니다.")
+            }
+
+            override fun onFailure(statusCode: Int, headers: Array<Header>?, responseString: String?, throwable: Throwable) {
+                if (progressDialog != null) {
+                    progressDialog!!.dismiss()
+                }
+
+//                 System.out.println(responseString);
+
+                throwable.printStackTrace()
+                error()
+            }
+
+            override fun onFailure(statusCode: Int, headers: Array<Header>?, throwable: Throwable, errorResponse: JSONObject?) {
+                if (progressDialog != null) {
+                    progressDialog!!.dismiss()
+                }
+                throwable.printStackTrace()
+                error()
+            }
+
+            override fun onFailure(statusCode: Int, headers: Array<Header>?, throwable: Throwable, errorResponse: JSONArray?) {
+                if (progressDialog != null) {
+                    progressDialog!!.dismiss()
+                }
+//                println("--------$errorResponse")
+                throwable.printStackTrace()
+                error()
+            }
+
+            override fun onStart() {
+                // show dialog
+                if (progressDialog != null) {
+
+                    progressDialog!!.show()
+                }
+            }
+
+            override fun onFinish() {
+                if (progressDialog != null) {
+                    progressDialog!!.dismiss()
+                }
+            }
+        })
+    }
+
+
+
+
     fun setmenu(){
         useTV.setBackgroundResource(R.drawable.background_border_strock_926f4a)
         unuseTV.setBackgroundResource(R.drawable.background_border_strock_926f4a)

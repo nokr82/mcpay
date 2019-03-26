@@ -9,6 +9,9 @@ import mc.pay.android.base.HttpClient
  * Created by hooni
  */
 object BankAction {
+    fun coupon_pay(params: RequestParams, handler: JsonHttpResponseHandler) {
+        HttpClient.post("/api/bank/coupon_pay", params, handler)
+    }
     fun coupon_history(params: RequestParams, handler: JsonHttpResponseHandler) {
         HttpClient.post("/api/bank/coupon_history", params, handler)
     }
@@ -23,9 +26,5 @@ object BankAction {
     }
     fun transfer(params: RequestParams, handler: JsonHttpResponseHandler) {
         HttpClient.post("/api/bank/transfer", params, handler)
-    }
-
-    fun coupon_history(params: RequestParams, handler: JsonHttpResponseHandler) {
-        HttpClient.post("/api/bank/coupon_history", params, handler)
     }
 }
