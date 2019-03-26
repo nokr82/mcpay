@@ -82,6 +82,10 @@ class CouponHistoryActivity : RootActivity() {
         }
 
         couponpayTV.setOnClickListener {
+            if (coupon_ids.size<1){
+                Toast.makeText(context,"쿠폰을 선택해주세요.",Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
             pay_coupon()
         }
         coupon_history()
@@ -108,9 +112,7 @@ class CouponHistoryActivity : RootActivity() {
     }
     //쿠폰결제
     fun pay_coupon() {
-        if (coupon_ids.size<0){
-            Toast.makeText(context,"쿠폰을 선택해주세요.",Toast.LENGTH_SHORT).show()
-        }
+
 
         val params = RequestParams()
         params.put("member_id", PrefUtils.getIntPreference(context,"member_id"))
