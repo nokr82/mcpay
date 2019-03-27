@@ -1,22 +1,20 @@
 package mc.pay.android.activities
 
-import android.app.Activity
-import android.app.AlertDialog
 import android.app.ProgressDialog
 import android.content.Context
 import android.content.Intent
-import android.os.Bundle
-import kotlinx.android.synthetic.main.activity_main.*
-import mc.pay.android.base.RootActivity
-import mc.pay.android.base.Utils
 import android.net.Uri
+import android.os.Bundle
 import android.widget.Toast
 import com.loopj.android.http.JsonHttpResponseHandler
 import com.loopj.android.http.RequestParams
 import cz.msebera.android.httpclient.Header
+import kotlinx.android.synthetic.main.activity_main.*
 import mc.pay.android.Actions.OrderAction
 import mc.pay.android.R
 import mc.pay.android.base.PrefUtils
+import mc.pay.android.base.RootActivity
+import mc.pay.android.base.Utils
 import org.json.JSONException
 import org.json.JSONObject
 import java.net.URLDecoder
@@ -335,7 +333,7 @@ class MainActivity : RootActivity() {
                             callback = "mc_pay://ok_by_card"
                         }
 
-                        val str = "fpswipepay://setle?crtftCode=${code}&mberCode=${memberCode}&cardCashSe=${pay_type}&delngSe=1&splpc=${price}&vat=0&callbackAppUrl=${callback}&admitInfo=${query}"
+                        val str = "fpswipepay://setle?crtftCode=${code}&mberCode=${memberCode}&cardCashSe=${pay_type}&delngSe=1&splpc=${price}&vat=0&callbackAppUrl=${callback}&admitInfo=${query}&redngTy=BLTH"
 
                         println("str::::::::::::::::::::$str")
 
@@ -426,7 +424,7 @@ class MainActivity : RootActivity() {
                             var query = "order_id__${order_id}_-_type__cancel_-_payment_id__${payment_id}"
                             query = URLEncoder.encode(query, "UTF-8");
 
-                            val str = "fpswipepay://setle?crtftCode=${code}&mberCode=${memberCode}&cardCashSe=${pay_type}&denlgSe=0&splpc=${splpc}&vat=${vat}&admitInfo=${query}&rciptNo=${rcipt_no}"
+                            val str = "fpswipepay://setle?crtftCode=${code}&mberCode=${memberCode}&cardCashSe=${pay_type}&denlgSe=0&splpc=${splpc}&vat=${vat}&admitInfo=${query}&rciptNo=${rcipt_no}&redngTy=BLTH"
 
                             var intent = Intent(Intent.ACTION_VIEW, Uri.parse(str))
                             startActivity(intent)
